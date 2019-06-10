@@ -10,3 +10,6 @@
 [submodule "layers/meta-nanopc-t4"]
 	path = layers/meta-nanopc-t4
 	url = https://github.com/balena-os/meta-nanopc-t4.git
+[submodule "layers/poky"]
+	path = layers/poky
+	url = https://github.com/balena-os/poky
