@@ -1,1 +1,21 @@
-[]
+- commits:
+    - subject: Use poky at version thud-20.0.2
+      hash: 07c0ed1df452f32d2f43197c78d48f5be74eb543
+      body: ''
+      footer:
+        Changelog-entry: Use poky at version thud-20.0.2
+        changelog-entry: Use poky at version thud-20.0.2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Added balena-yocto-scripts at v1.2.0
+      hash: 024eec4bb5f2e15e765f52ca55d53f24db289cb9
+      body: ''
+      footer:
+        Changelog-entry: Added balena-yocto-scripts at v1.2.0
+        changelog-entry: Added balena-yocto-scripts at v1.2.0
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.37.0+rev1
+  date: 2019-06-11T03:16:46.894Z
