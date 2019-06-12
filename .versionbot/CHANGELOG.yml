@@ -1,4 +1,32 @@
 - commits:
+    - subject: >-
+        Disable the systemd watchdog keep-alive in favor of the in-kernel
+        mechanism (CONFIG_DW_WATCHDOG)
+      hash: 7a978c60566ac77052403ac8c4a8e4e238dc9ca9
+      body: |
+        The NanoPC-T4 has CONFIG_DW_WATCHDOG as built-in.
+
+        When using systemd to pet the watchdog in addition to the above kernel
+        watchdog driver, it has been observed that after a random period of time
+        the kernel will complain:
+
+         dw_wdt: keepalive missed, machine will reset
+
+        To work around this we disable the systemd watchdog feature and we rely
+        solely on the in-kernel watchdog keepalive mechanism.
+      footer:
+        Changelog-entry: >-
+          Disable the systemd watchdog keep-alive in favor of the in-kernel
+          mechanism (CONFIG_DW_WATCHDOG)
+        changelog-entry: >-
+          Disable the systemd watchdog keep-alive in favor of the in-kernel
+          mechanism (CONFIG_DW_WATCHDOG)
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.37.0+rev2
+  date: 2019-06-12T14:08:07.878Z
+- commits:
     - subject: Use poky at version thud-20.0.2
       hash: 07c0ed1df452f32d2f43197c78d48f5be74eb543
       body: ''

@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.37.0+rev2
+## (2019-06-12)
+
+* Disable the systemd watchdog keep-alive in favor of the in-kernel mechanism (CONFIG_DW_WATCHDOG) [Florin Sarbu]
+
 # v2.37.0+rev1
 ## (2019-06-11)
 
