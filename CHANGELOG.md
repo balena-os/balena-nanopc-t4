@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.38.3+rev1
+## (2019-07-12)
+
+* Update the balena-yocto-scripts submodule to v1.3.0 [Florin Sarbu]
+
+<details>
+<summary> Update meta-balena from v2.37.0 to v2.38.3 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.38.3
+> ### (2019-07-10)
+> 
+> * resin-proxy-config: fix up incorrect bash subshell command [Matthew McGinn]
+
+> ## meta-balena-2.38.2
+> ### (2019-06-27)
+> 
+> * Update to kernel-modules-headers v0.0.20 to fix missing target modpost binary on kernel 5.0.3 [Florin Sarbu]
+> * Update to kernel-modules-headers v0.0.19 to fix target objtool compile issue on kernel 5.0.3 [Florin Sarbu]
+
+> ## meta-balena-2.38.1
+> ### (2019-06-20)
+> 
+> * Add warrior to compatible layers for meta-balena-common [Florin Sarbu]
+> * Fix image-resin.bbclass to be able to use deprecated layers [Andrei Gherzan]
+> * Fix kernel-devsrc on thud when kernel version < 4.10 [Andrei Gherzan]
+
+> ## meta-balena-2.38.0
+> ### (2019-06-14)
+> 
+> * Fix VERSION_ID os-release to be semver complient [Andrei Gherzan]
+> * Introduce META_BALENA_VERSION in os-release [Andrei Gherzan]
+> * Fix a case where changes to u-boot were not regenerating the config file at build time and using stale values. [Zubair Lutfullah Kakakhel]
+> * Use all.rp_filter=2 as the default value in balenaOS [Andrei Gherzan]
+> * Persist bluetooth storage data over reboots [Andrei Gherzan]
+> * Drop support for morty and krogoth Yocto versions [Andrei Gherzan]
+> * Add Yocto Warrior support [Zubair Lutfullah Kakakhel]
+> * Set both VERSION_ID and VERSION in os-release to host OS version [Andrei Gherzan]
+> * Bump balena-engine to 18.9.6 [Zubair Lutfullah Kakakhel]
+> * Downgrade balena-supervisor to v9.15.7 [Andrei Gherzan]
+> * Switch from dropbear to openSSH [Andrei Gherzan]
+> * Rename meta-resin-common to meta-balena-common [Andrei Gherzan]
+> * Add wifi firmware for rtl8192su [Zubair Lutfullah Kakakhel]
+</details>
+
 # v2.37.0+rev2
 ## (2019-06-12)
 
