@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.38.3+rev3
+## (2019-07-15)
+
+* Update the balena-yocto-scripts submodule to v1.3.5 [Florin Sarbu]
+
 # v2.38.3+rev2
 ## (2019-07-15)
 
