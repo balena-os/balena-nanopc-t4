@@ -1,4 +1,33 @@
 - commits:
+    - subject: >-
+        Rework the resin-u-boot integration patch in order to have it load the
+        newer dtb from kernel 5.2.0
+      hash: 01e9839a5cab1013bae5b8f2c932fc512401fe25
+      body: |
+        Because we are now using kernel 5.2.0 from the BSP, we also
+        need to use the new dtb that this kernel uses.
+      footer:
+        Changelog-entry: >-
+          Rework the resin-u-boot integration patch in order to have it load the
+          newer dtb from kernel 5.2.0
+        changelog-entry: >-
+          Rework the resin-u-boot integration patch in order to have it load the
+          newer dtb from kernel 5.2.0
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: BSP update to latest thud
+      hash: 95d2a69ab333e4ce387135b3c744a26fee59ccd3
+      body: ''
+      footer:
+        Changelog-entry: BSP update to latest thud
+        changelog-entry: BSP update to latest thud
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+  version: 2.38.3+rev6
+  date: 2019-07-30T18:52:24.847Z
+- commits:
     - subject: Fix bootloader hostOS update hook
       hash: 9f1538a8fa51d82dc25d96188ca3c8b02ef4c6b7
       body: |

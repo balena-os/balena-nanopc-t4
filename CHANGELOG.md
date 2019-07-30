@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.38.3+rev6
+## (2019-07-30)
+
+* Rework the resin-u-boot integration patch in order to have it load the newer dtb from kernel 5.2.0 [Florin Sarbu]
+* BSP update to latest thud [Vicentiu Galanopulo]
+
 # v2.38.3+rev5
 ## (2019-07-30)
 
