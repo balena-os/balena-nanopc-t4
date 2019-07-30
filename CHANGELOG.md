@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.38.3+rev5
+## (2019-07-30)
+
+* Fix bootloader hostOS update hook [Florin Sarbu]
+
 # v2.38.3+rev4
 ## (2019-07-30)
 

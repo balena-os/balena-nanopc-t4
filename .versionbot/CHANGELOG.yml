@@ -1,4 +1,19 @@
 - commits:
+    - subject: Fix bootloader hostOS update hook
+      hash: 9f1538a8fa51d82dc25d96188ca3c8b02ef4c6b7
+      body: |
+        The nature of the secure boot on the NanoPC T4 requires us to write
+        all the remaining boot binaries in case one of them was written to the
+        eMMC.
+      footer:
+        Changelog-entry: Fix bootloader hostOS update hook
+        changelog-entry: Fix bootloader hostOS update hook
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.38.3+rev5
+  date: 2019-07-30T13:58:12.624Z
+- commits:
     - subject: Add bootloader update hook
       hash: fb56bc12d7e8716ae845e5a5958246f4c66905f9
       body: ''
