@@ -1,4 +1,34 @@
 - commits:
+    - subject: Add bootloader update hook
+      hash: fb56bc12d7e8716ae845e5a5958246f4c66905f9
+      body: ''
+      footer:
+        Changelog-entry: Add bootloader update hook
+        changelog-entry: Add bootloader update hook
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: >-
+        Add bootloader binaries in the boot partition, required for hostOS
+        updates
+      hash: 18120bd6402e0a2383fc2b1f9227751a85cabd43
+      body: |
+        We need these binaries in the boot partition so that when we do a
+        hostOS update we can also write to the device the new bootloader
+        binaries in case they may have changed.
+      footer:
+        Changelog-entry: >-
+          Add bootloader binaries in the boot partition, required for hostOS
+          updates
+        changelog-entry: >-
+          Add bootloader binaries in the boot partition, required for hostOS
+          updates
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.38.3+rev4
+  date: 2019-07-30T11:54:54.470Z
+- commits:
     - subject: Update the balena-yocto-scripts submodule to v1.3.5
       hash: 582ecc3801f9bf1f8c81cd851b9950dd02fbc6bb
       body: ''

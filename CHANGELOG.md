@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.38.3+rev4
+## (2019-07-30)
+
+* Add bootloader update hook [Florin Sarbu]
+* Add bootloader binaries in the boot partition, required for hostOS updates [Florin Sarbu]
+
 # v2.38.3+rev3
 ## (2019-07-15)
 
