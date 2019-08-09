@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.39.0+rev2
+## (2019-08-08)
+
+* Update BSP to latest thud branch to include Mali kernel driver version r14p0-01rel0 instead of r28p0-01rel0 [Florin Sarbu]
+
 # v2.39.0+rev1
 ## (2019-08-05)
 

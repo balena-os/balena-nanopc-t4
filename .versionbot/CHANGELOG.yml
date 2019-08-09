@@ -1,4 +1,25 @@
 - commits:
+    - subject: >-
+        Update BSP to latest thud branch to include Mali kernel driver version
+        r14p0-01rel0 instead of r28p0-01rel0
+      hash: de435a245f21c99495035e16af79a2f5bf194f5d
+      body: |
+        The BSP layer now downgraded the Mali kernel driver to version
+        r14p0-01rel0 so that it matches the existing userspace DDK which
+        are older.
+      footer:
+        Changelog-entry: >-
+          Update BSP to latest thud branch to include Mali kernel driver version
+          r14p0-01rel0 instead of r28p0-01rel0
+        changelog-entry: >-
+          Update BSP to latest thud branch to include Mali kernel driver version
+          r14p0-01rel0 instead of r28p0-01rel0
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.39.0+rev2
+  date: 2019-08-08T20:08:25.933Z
+- commits:
     - subject: Update BSP to latest thud branch
       hash: 247c5492259bed2750a706c97bf5127340dacb8c
       body: |
