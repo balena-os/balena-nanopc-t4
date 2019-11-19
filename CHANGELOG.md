@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.44.0+rev2
+## (2019-11-19)
+
+* Update balena-yocto-scripts to v1.5.2 [Florin Sarbu]
+
 # v2.44.0+rev1
 ## (2019-10-18)
 
