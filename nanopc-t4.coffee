@@ -12,7 +12,7 @@ module.exports =
 	slug: 'nanopc-t4'
 	name: 'NanoPC-T4'
 	arch: 'aarch64'
-	state: 'experimental'
+	state: 'new'
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
