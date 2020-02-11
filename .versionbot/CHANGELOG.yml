@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update meta-rust to include 1.36
+      hash: 692bb76874d8bf9685109bfbf96f7f6a7469c601
+      body: ''
+      footer:
+        Changelog-entry: Update meta-rust to include 1.36
+        changelog-entry: Update meta-rust to include 1.36
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.46.1+rev2
+  date: 2020-02-11T12:40:15.007Z
+- commits:
     - subject: >-
         Switch back to kernel 4.4.179 in order to have eDP working now that we
         have fixed the kernel panics
