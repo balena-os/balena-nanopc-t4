@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.46.1+rev2
+## (2020-02-12)
+
+* Patches for TCP-based remote denial of service vulnerabilities [Vicentiu Galanopulo]
+* Update meta-rust to include 1.36 [Zubair Lutfullah Kakakhel]
+
 # v2.46.1+rev1
 ## (2020-01-08)
 

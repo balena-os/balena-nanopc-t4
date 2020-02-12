@@ -1,4 +1,32 @@
 - commits:
+    - subject: Patches for TCP-based remote denial of service vulnerabilities
+      hash: 68fbedb7097f2e5b92cf8b24ce97593584bcf713
+      body: >
+        Add patches for multiple TCP-based remote denial
+
+        of service vulnerabilities identified by Netflix.
+
+        Patch source:
+
+        https://github.com/Netflix/security-bulletins/blob/master/advisories/third-party/2019-001.md
+      footer:
+        Changelog-entry: Patches for TCP-based remote denial of service vulnerabilities
+        changelog-entry: Patches for TCP-based remote denial of service vulnerabilities
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+    - subject: Update meta-rust to include 1.36
+      hash: 692bb76874d8bf9685109bfbf96f7f6a7469c601
+      body: ''
+      footer:
+        Changelog-entry: Update meta-rust to include 1.36
+        changelog-entry: Update meta-rust to include 1.36
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.46.1+rev2
+  date: 2020-02-12T16:12:34.286Z
+- commits:
     - subject: >-
         Switch back to kernel 4.4.179 in order to have eDP working now that we
         have fixed the kernel panics
