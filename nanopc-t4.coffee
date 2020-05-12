@@ -13,6 +13,7 @@ module.exports =
 	name: 'NanoPC-T4'
 	arch: 'aarch64'
 	state: 'new'
+	private: false
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
