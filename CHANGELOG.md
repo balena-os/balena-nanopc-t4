@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.46.1+rev2
+## (2020-05-12)
+
+* Set state to new for nanopc-t4 in the .coffee file [Florin Sarbu]
+* Update meta-rust to include 1.36 [Zubair Lutfullah Kakakhel]
+
 # v2.46.1+rev1
 ## (2020-01-08)
 

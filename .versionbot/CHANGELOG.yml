@@ -1,4 +1,25 @@
 - commits:
+    - subject: Set state to new for nanopc-t4 in the .coffee file
+      hash: b2909a0f4fcf711569e4cc2c1d5ca510729560f5
+      body: ''
+      footer:
+        Changelog-entry: Set state to new for nanopc-t4 in the .coffee file
+        changelog-entry: Set state to new for nanopc-t4 in the .coffee file
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Update meta-rust to include 1.36
+      hash: 692bb76874d8bf9685109bfbf96f7f6a7469c601
+      body: ''
+      footer:
+        Changelog-entry: Update meta-rust to include 1.36
+        changelog-entry: Update meta-rust to include 1.36
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.46.1+rev2
+  date: 2020-05-12T09:10:25.513Z
+- commits:
     - subject: >-
         Switch back to kernel 4.4.179 in order to have eDP working now that we
         have fixed the kernel panics
