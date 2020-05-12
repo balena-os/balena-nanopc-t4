@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.46.1+rev3
+## (2020-05-12)
+
+* Set private to false in .coffee files for the public device types [Florin Sarbu]
+
 # v2.46.1+rev2
 ## (2020-05-12)
 

@@ -1,4 +1,16 @@
 - commits:
+    - subject: Set private to false in .coffee files for the public device types
+      hash: 83fa7f61d942cc2b9afcb727e51f3f3ffb794678
+      body: ''
+      footer:
+        Changelog-entry: Set private to false in .coffee files for the public device types
+        changelog-entry: Set private to false in .coffee files for the public device types
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.46.1+rev3
+  date: 2020-05-12T11:34:45.191Z
+- commits:
     - subject: Set state to new for nanopc-t4 in the .coffee file
       hash: b2909a0f4fcf711569e4cc2c1d5ca510729560f5
       body: ''
