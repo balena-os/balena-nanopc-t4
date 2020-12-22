@@ -1,0 +1,68 @@
+From 62636e703e2759f9a3b617e1649bb47bbbbbb25c Mon Sep 17 00:00:00 2001
+From: Florin Sarbu <florin@balena.io>
+Date: Wed, 7 Aug 2019 10:30:35 +0200
+Subject: [PATCH] Revert "mm: Remove return value of zap_vma_ptes()"
+
+This reverts commit 27d036e33237e49801780eb703ea38dad5449e12.
+
+Upstream-Status: Inappropriate [removed from upstream]
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ include/linux/mm.h | 8 ++++----
+ mm/memory.c        | 7 ++++---
+ 2 files changed, 8 insertions(+), 7 deletions(-)
+
+diff --git a/include/linux/mm.h b/include/linux/mm.h
+index dd0b5f4..b709cd6 100644
+--- a/include/linux/mm.h
++++ b/include/linux/mm.h
+@@ -462,7 +462,7 @@ enum page_entry_size {
+ /*
+  * These are the virtual MM functions - opening of an area, closing and
+  * unmapping it (needed to keep files on disk up-to-date etc), pointer
+- * to the functions called when a no-page or a wp-page exception occurs.
++ * to the functions called when a no-page or a wp-page exception occurs. 
+  */
+ struct vm_operations_struct {
+ 	void (*open)(struct vm_area_struct * area);
+@@ -1438,10 +1438,10 @@ struct page *_vm_normal_page(struct vm_area_struct *vma, unsigned long addr,
+ struct page *vm_normal_page_pmd(struct vm_area_struct *vma, unsigned long addr,
+ 				pmd_t pmd);
+ 
+-void zap_vma_ptes(struct vm_area_struct *vma, unsigned long address,
+-		  unsigned long size);
++int zap_vma_ptes(struct vm_area_struct *vma, unsigned long address,
++		unsigned long size);
+ void zap_page_range(struct vm_area_struct *vma, unsigned long address,
+-		    unsigned long size);
++		unsigned long size);
+ void unmap_vmas(struct mmu_gather *tlb, struct vm_area_struct *start_vma,
+ 		unsigned long start, unsigned long end);
+ 
+diff --git a/mm/memory.c b/mm/memory.c
+index ddf20bd..8155fac 100644
+--- a/mm/memory.c
++++ b/mm/memory.c
+@@ -1406,15 +1406,16 @@ static void zap_page_range_single(struct vm_area_struct *vma, unsigned long addr
+  *
+  * The entire address range must be fully contained within the vma.
+  *
++ * Returns 0 if successful.
+  */
+-void zap_vma_ptes(struct vm_area_struct *vma, unsigned long address,
++int zap_vma_ptes(struct vm_area_struct *vma, unsigned long address,
+ 		unsigned long size)
+ {
+ 	if (address < vma->vm_start || address + size > vma->vm_end ||
+ 	    		!(vma->vm_flags & VM_PFNMAP))
+-		return;
+-
++		return -1;
+ 	zap_page_range_single(vma, address, size, NULL);
++	return 0;
+ }
+ EXPORT_SYMBOL_GPL(zap_vma_ptes);
+ 
+-- 
+2.7.4
+
