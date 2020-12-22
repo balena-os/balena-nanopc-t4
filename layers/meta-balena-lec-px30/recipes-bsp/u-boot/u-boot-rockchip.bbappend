@@ -7,5 +7,4 @@ FILESEXTRAPATHS_append := ":${THISDIR}/files"
 SRC_URI_remove = "file://resin-specific-env-integration-kconfig.patch"
 SRC_URI += " \
     file://0001-resin-specific-env-integration-kconfig_REWORKED.patch \
-    file://0002-NanoPC-T4-machine-specific-integration-of-resin-envi.patch \
 "

@@ -15,6 +15,6 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-balena/meta-balena-common \
     ${TOPDIR}/../layers/meta-balena/meta-balena-thud \
     ${TOPDIR}/../layers/meta-rust \
-    ${TOPDIR}/../layers/meta-balena-nanopc-t4 \
-    ${TOPDIR}/../layers/meta-nanopc-t4 \
+    ${TOPDIR}/../layers/meta-balena-lec-px30 \
+    ${TOPDIR}/../layers/meta-lec-px30 \
     "

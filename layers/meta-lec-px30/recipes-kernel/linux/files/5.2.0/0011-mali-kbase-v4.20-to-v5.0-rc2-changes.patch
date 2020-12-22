@@ -1,0 +1,131 @@
+From c797a2ed95d500c1f7750a0703cff5ca2ed0af29 Mon Sep 17 00:00:00 2001
+From: "Miouyouyou (Myy)" <myy@miouyouyou.fr>
+Date: Sun, 20 Jan 2019 22:56:14 +0100
+Subject: [PATCH] mali: kbase: v4.20 to v5.0-rc2 changes
+
+The following changes are due to the following kernel changes :
+* totalram_pages()
+  mm: convert totalram_pages and totalhigh_pages variables to atomic
+  https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=ca79b0c211af63fa3276f0e3fd7dd9ada2439839
+  Kernel 5.0-rc1
+
+* reservation_object_reserve_shared(obj, 1)
+  dma-buf: allow reserving more than one shared fence slot
+  https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=ca05359f1e64cf8303ee532e50efe4ab7563d4a9
+  Kernel 5.0-rc1
+
+* vmf_insert_pfn
+  mm: remove vm_insert_pfn()
+  https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/include/linux/mm.h?id=ae2b01f37044c10e975d22116755df56252b09d8
+  Kernel 4.20-rc1
+
+Signed-off-by: Miouyouyou (Myy) <myy@miouyouyou.fr>
+
+Patch adapted from the one at https://github.com/armbian/build/tree/master/patch/kernel/rockchip-next, revision c55f6ea8bc220bded6695fdae8b0c5bfa891b688
+
+Upstream-Status: Inappropriate [not author]
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ drivers/gpu/arm/midgard/mali_kbase_dma_fence.c |  2 +-
+ drivers/gpu/arm/midgard/mali_kbase_gpuprops.c  |  2 +-
+ drivers/gpu/arm/midgard/mali_kbase_mem_linux.c | 25 ++++++++++++-------------
+ 3 files changed, 14 insertions(+), 15 deletions(-)
+
+diff --git a/drivers/gpu/arm/midgard/mali_kbase_dma_fence.c b/drivers/gpu/arm/midgard/mali_kbase_dma_fence.c
+index 97bb6c5..9292f81 100755
+--- a/drivers/gpu/arm/midgard/mali_kbase_dma_fence.c
++++ b/drivers/gpu/arm/midgard/mali_kbase_dma_fence.c
+@@ -498,7 +498,7 @@ int kbase_dma_fence_wait(struct kbase_jd_atom *katom,
+ 		struct reservation_object *obj = info->resv_objs[i];
+ 
+ 		if (!test_bit(i, info->dma_fence_excl_bitmap)) {
+-			err = reservation_object_reserve_shared(obj);
++			err = reservation_object_reserve_shared(obj, 1);
+ 			if (err) {
+ 				dev_err(katom->kctx->kbdev->dev,
+ 					"Error %d reserving space for shared fence.\n", err);
+diff --git a/drivers/gpu/arm/midgard/mali_kbase_gpuprops.c b/drivers/gpu/arm/midgard/mali_kbase_gpuprops.c
+index 7f77dba..d03a714 100755
+--- a/drivers/gpu/arm/midgard/mali_kbase_gpuprops.c
++++ b/drivers/gpu/arm/midgard/mali_kbase_gpuprops.c
+@@ -219,7 +219,7 @@ static void kbase_gpuprops_calculate_props(base_gpu_props * const gpu_props, str
+ 	gpu_props->core_props.major_revision = KBASE_UBFX32(gpu_props->raw_props.gpu_id, 12U, 4);
+ 	gpu_props->core_props.product_id = KBASE_UBFX32(gpu_props->raw_props.gpu_id, 16U, 16);
+ 	gpu_props->core_props.log2_program_counter_size = KBASE_GPU_PC_SIZE_LOG2;
+-	gpu_props->core_props.gpu_available_memory_size = totalram_pages << PAGE_SHIFT;
++	gpu_props->core_props.gpu_available_memory_size = totalram_pages() << PAGE_SHIFT;
+ 
+ 	for (i = 0; i < BASE_GPU_NUM_TEXTURE_FEATURES_REGISTERS; i++)
+ 		gpu_props->core_props.texture_features[i] = gpu_props->raw_props.texture_features[i];
+diff --git a/drivers/gpu/arm/midgard/mali_kbase_mem_linux.c b/drivers/gpu/arm/midgard/mali_kbase_mem_linux.c
+index c72d654..1f5b3a1 100755
+--- a/drivers/gpu/arm/midgard/mali_kbase_mem_linux.c
++++ b/drivers/gpu/arm/midgard/mali_kbase_mem_linux.c
+@@ -1885,12 +1885,13 @@ static void kbase_cpu_vm_close(struct vm_area_struct *vma)
+ KBASE_EXPORT_TEST_API(kbase_cpu_vm_close);
+ 
+ 
+-static int kbase_cpu_vm_fault(struct vm_fault *vmf)
++static vm_fault_t kbase_cpu_vm_fault(struct vm_fault *vmf)
+ {
+ 	struct vm_area_struct *vma = vmf->vma;
+ 	struct kbase_cpu_mapping *map = vma->vm_private_data;
+ 	pgoff_t rel_pgoff;
+ 	size_t i;
++	vm_fault_t ret = VM_FAULT_NOPAGE;
+ 
+ 	KBASE_DEBUG_ASSERT(map);
+ 	KBASE_DEBUG_ASSERT(map->count > 0);
+@@ -1904,29 +1905,26 @@ static int kbase_cpu_vm_fault(struct vm_fault *vmf)
+ 
+ 	kbase_gpu_vm_lock(map->kctx);
+ 	if (map->page_off + rel_pgoff >= map->alloc->nents)
+-		goto locked_bad_fault;
++		goto out;
+ 
+ 	/* Fault on access to DONT_NEED regions */
+ 	if (map->alloc->reg && (map->alloc->reg->flags & KBASE_REG_DONT_NEED))
+-		goto locked_bad_fault;
++		goto out;
+ 
+ 	/* insert all valid pages from the fault location */
+ 	for (i = rel_pgoff;
+ 	     i < MIN((vma->vm_end - vma->vm_start) >> PAGE_SHIFT,
+ 	     map->alloc->nents - map->page_off); i++) {
+-		int ret = vm_insert_pfn(vma, map->vm_start + (i << PAGE_SHIFT),
++		ret = vmf_insert_pfn(vma, map->vm_start + (i << PAGE_SHIFT),
+ 		    PFN_DOWN(map->alloc->pages[map->page_off + i]));
+-		if (ret < 0 && ret != -EBUSY)
+-			goto locked_bad_fault;
++		if (ret != VM_FAULT_NOPAGE) // It's either OOM or SIGBUS
++			goto out;
+ 	}
+ 
++out:
+ 	kbase_gpu_vm_unlock(map->kctx);
+ 	/* we resolved it, nothing for VM to do */
+-	return VM_FAULT_NOPAGE;
+-
+-locked_bad_fault:
+-	kbase_gpu_vm_unlock(map->kctx);
+-	return VM_FAULT_SIGBUS;
++	return ret;
+ }
+ 
+ static const struct vm_operations_struct kbase_vm_ops = {
+@@ -1993,9 +1991,10 @@ static int kbase_cpu_mmap(struct kbase_va_region *reg, struct vm_area_struct *vm
+ 		for (i = 0; i < nr_pages; i++) {
+ 			unsigned long pfn = PFN_DOWN(page_array[i + start_off]);
+ 
+-			err = vm_insert_pfn(vma, addr, pfn);
+-			if (WARN_ON(err))
++			if (WARN_ON(vmf_insert_pfn(vma, addr, pfn) != VM_FAULT_NOPAGE)) {
++				err = -ENOMEM;
+ 				break;
++			}
+ 
+ 			addr += PAGE_SIZE;
+ 		}
+-- 
+2.7.4
+

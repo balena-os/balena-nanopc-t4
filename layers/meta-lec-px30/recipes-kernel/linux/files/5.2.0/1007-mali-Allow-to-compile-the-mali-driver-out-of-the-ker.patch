@@ -1,0 +1,41 @@
+From a45b2b84c832a69c6a072e5a61decd97ad4c3a07 Mon Sep 17 00:00:00 2001
+From: Florin Sarbu <florin@balena.io>
+Date: Wed, 7 Aug 2019 06:04:59 +0200
+Subject: [PATCH] mali: Allow to compile the mali driver out of the kernel
+ source tree
+
+These changes allow to compile the mali driver out of the kernel source
+tree (in yocto we compile the entire kernel tree in a separate build
+directory, outside the kernel source tree).
+
+Upstream-Status: Pending
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ drivers/gpu/arm/midgard/Kbuild | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/gpu/arm/midgard/Kbuild b/drivers/gpu/arm/midgard/Kbuild
+index 4348704..3d6d4cc 100755
+--- a/drivers/gpu/arm/midgard/Kbuild
++++ b/drivers/gpu/arm/midgard/Kbuild
+@@ -188,7 +188,7 @@ ifeq ($(CONFIG_MALI_PLATFORM_THIRDPARTY),y)
+ # remove begin and end quotes from the Kconfig string type
+ platform_name := $(shell echo $(CONFIG_MALI_PLATFORM_THIRDPARTY_NAME))
+ MALI_PLATFORM_THIRDPARTY_DIR := platform/$(platform_name)
+-ccflags-y += -I$(src)/$(MALI_PLATFORM_THIRDPARTY_DIR)
++ccflags-y += -I$(srctree)/$(src)/$(MALI_PLATFORM_THIRDPARTY_DIR)
+ ifeq ($(CONFIG_MALI_MIDGARD),m)
+ include  $(src)/platform/$(platform_name)/Kbuild
+ else ifeq ($(CONFIG_MALI_MIDGARD),y)
+@@ -218,7 +218,7 @@ endif
+ include  $(src)/$(MALI_BACKEND_PATH)/$(CONFIG_MALI_BACKEND_REAL)/Kbuild
+ mali_kbase-y += $(BACKEND:.c=.o)
+ 
+-ccflags-y += -I$(src)/$(MALI_BACKEND_PATH)/$(CONFIG_MALI_BACKEND_REAL)
++ccflags-y += -I$(srctree)/$(src)/$(MALI_BACKEND_PATH)/$(CONFIG_MALI_BACKEND_REAL)
+ subdir-ccflags-y += -I$(src)/$(MALI_BACKEND_PATH)/$(CONFIG_MALI_BACKEND_REAL)
+ 
+ # Default to devicetree platform if neither a fake platform or a thirdparty
+-- 
+2.7.4
+

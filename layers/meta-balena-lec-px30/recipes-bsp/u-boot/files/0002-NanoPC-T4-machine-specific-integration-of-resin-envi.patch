@@ -7,13 +7,13 @@ configuration
 Upstream-Status: Inappropriate [configuration]
 Signed-off-by: Florin Sarbu <florin@balena.io>
 ---
- configs/nanopi4_defconfig | 1 +
+ configs/nanopc-t4-rk3399_defconfig | 1 +
  1 file changed, 1 insertions(+)
 
-diff --git a/configs/nanopi4_defconfig b/configs/nanopi4_defconfig
+diff --git a/configs/nanopc-t4-rk3399_defconfig b/configs/nanopc-t4-rk3399_defconfig
 index b298071..58e2450 100644
---- a/configs/nanopi4_defconfig
-+++ b/configs/nanopi4_defconfig
+--- a/configs/nanopc-t4-rk3399_defconfig
++++ b/configs/nanopc-t4-rk3399_defconfig
 @@ -4,6 +4,7 @@ CONFIG_SYS_TEXT_BASE=0x00200000
  CONFIG_SPL_LIBCOMMON_SUPPORT=y
  CONFIG_SPL_LIBGENERIC_SUPPORT=y

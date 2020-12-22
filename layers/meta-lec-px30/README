@@ -1,0 +1,5 @@
+OpenEmbedded/Yocto BSP layer for FriendlyElec NanoPC-T4 board
+================================================================
+
+This layer provides support for FriendlyElec NanoPC-T4 board for
+use with Yocto and OpenEmbedded.
