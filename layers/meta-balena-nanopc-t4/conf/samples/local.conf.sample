@@ -1,6 +1,6 @@
 # Supported machines
 #MACHINE ?= "nanopc-t4"
-
+#MACHINE ?= "lec-px30"
 BALENA_STORAGE = "overlay2"
 
 # More info meta-resin/README.md
