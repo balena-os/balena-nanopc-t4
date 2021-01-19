@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.9.0
+      hash: 141e27cbc261ac0a27dc38b98bbf86806fc64254
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.9.0
+        changelog-entry: Update balena-yocto-scripts to v1.9.0
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.67.3+rev2
+  date: 2021-01-19T15:32:16.483Z
+- commits:
     - subject: Update meta-balena from v2.46.1 to v2.67.3
       hash: c82ee7ca29929911835c50c24e31ad2575e44a62
       body: |
