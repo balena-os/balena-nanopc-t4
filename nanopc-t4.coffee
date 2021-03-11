@@ -33,10 +33,10 @@ module.exports =
 
 	yocto:
 		machine: 'nanopc-t4'
-		image: 'resin-image-flasher'
-		fstype: 'resinos-img'
+		image: 'balena-image-flasher'
+		fstype: 'balenaos-img'
 		version: 'yocto-thud'
-		deployArtifact: 'resin-image-flasher-nanopc-t4.resinos-img'
+		deployArtifact: 'balena-image-flasher-nanopc-t4.balenaos-img'
 		compressed: true
 
 	options: [ networkOptions.group ]

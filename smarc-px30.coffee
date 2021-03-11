@@ -18,10 +18,10 @@ module.exports =
 
 	yocto:
 		machine: 'smarc-px30'
-		image: 'resin-image'
-		fstype: 'resinos-img'
+		image: 'balena-image'
+		fstype: 'balenaos-img'
 		version: 'yocto-thud'
-		deployArtifact: 'resin-image-smarc-px30.resinos-img'
+		deployArtifact: 'balena-image-smarc-px30.balenaos-img'
 		compressed: true
 
 	options: [ networkOptions.group ]
