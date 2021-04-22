@@ -6,7 +6,7 @@ module.exports =
 	slug: 'smarc-px30'
 	name: 'I-Pi SMARC PX30 SD-CARD'
 	arch: 'aarch64'
-	state: 'new'
+	state: 'released'
 	community: true
 
 	instructions: commonImg.instructions
