@@ -21,3 +21,5 @@ do_deploy_append() {
     install ${B}/idbloader.bin ${DEPLOYDIR}
     install ${B}/uboot.img ${DEPLOYDIR}
 }
+
+do_compile[depends] += "rkbin:do_deploy"
