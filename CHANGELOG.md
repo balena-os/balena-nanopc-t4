@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.72.0+rev2
+## (2021-05-18)
+
+* recipes-bsp: Update lec occurrences [David Tischler]
+
 # v2.72.0+rev1
 ## (2021-03-11)
 

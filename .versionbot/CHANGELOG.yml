@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'recipes-bsp: Update lec occurrences'
+      hash: 92c68dc94dcb61d139b15795b87d2dbdd8bb24e6
+      body: ''
+      footer:
+        Changelog-entry: 'recipes-bsp: Update lec occurrences'
+        changelog-entry: 'recipes-bsp: Update lec occurrences'
+        Signed-off-by: David Tischler <david@balena.io>
+        signed-off-by: David Tischler <david@balena.io>
+      author: David Tischler
+      nested: []
+  version: 2.72.0+rev2
+  date: 2021-05-18T16:23:28.006Z
+- commits:
     - subject: Rename resin image types to balena
       hash: ae358351497628f142418c9cf692983f40f64537
       body: |
