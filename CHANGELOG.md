@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.80.5+rev1
+## (2021-06-19)
+
+
+<details>
+<summary> Update meta-balena from v2.80.3 to v2.80.5 [Alexandru Costache] </summary>
+
+> ## meta-balena-2.80.5
+> ### (2021-06-17)
+> 
+> * update-balena-supervisor: Improve obtaining the supervisor directory name [Alexandru Costache]
+> * Update balena-supervisor from v12.7.0 to v12.8.7 [Miguel Casqueira]
+> 
+> ## meta-balena-2.80.4
+> ### (2021-06-14)
+> 
+> * kernel-headers-test: simplify example module Makefile [Joseph Kogut]
+> 
+</details>
+
+* Update balena-yocto-scripts to v1.14.6 [Alexandru Costache]
+
 # v2.80.3+rev1
 ## (2021-06-14)
 
