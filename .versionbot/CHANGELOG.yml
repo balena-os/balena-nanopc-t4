@@ -1,4 +1,20 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.16.3
+      hash: bd6b7f4cfb4b83b29d7e8996ed0008ae2ab4cd72
+      body: |
+        Update balena-yocto-scripts from v1.16.2 to v1.16.3
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update balena-yocto-scripts to v1.16.3
+        changelog-entry: Update balena-yocto-scripts to v1.16.3
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.80.5+rev5
+  date: 2022-01-17T19:09:55.994Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.16.2
       hash: ca46235aab669114e21125a5c03e39273ff81a79
       body: |
