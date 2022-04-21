@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.80.5+rev11
+## (2022-04-21)
+
+
+<details>
+<summary> Update balena-yocto-scripts to v1.19.0 [Florin Sarbu] </summary>
+
+> ## balena-yocto-scripts-1.19.0
+> ### (2022-04-13)
+> 
+> * deploy: push image variant artifacts [Joseph Kogut]
+> 
+</details>
+
 # v2.80.5+rev10
 ## (2022-04-21)
 

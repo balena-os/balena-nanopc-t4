@@ -1,4 +1,33 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.19.0
+      hash: f724328ae920da8b9d5f7444baff104ac4c5b5d4
+      body: |
+        Update balena-yocto-scripts from v1.18.0 to v1.19.0
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.19.0
+        changelog-entry: Update balena-yocto-scripts to v1.19.0
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: "deploy: push image variant artifacts"
+              hash: f5b7ae35f2f2996d93ba572919e26e1487a79f79
+              body: ""
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: balena-yocto-scripts-1.19.0
+          title: "'deploy: push image variant artifacts'"
+          date: 2022-04-13T14:36:11.268Z
+  version: 2.80.5+rev11
+  title: "'balena-yocto-scripts: Update to v1.19.0'"
+  date: 2022-04-21T21:28:23.573Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.18.0
       hash: 7f5d05047d1558e8e1a6f972edb77fba8c1a2984
       body: |
