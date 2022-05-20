@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.80.5+rev12
+## (2022-05-20)
+
+* Add contracts submodule [Alex Gonzalez]
+
 # v2.80.5+rev11
 ## (2022-04-21)
 
