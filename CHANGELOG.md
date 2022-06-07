@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.80.5+rev13
+## (2022-06-06)
+
+* Add build and deploy workflow [Alex Gonzalez]
+
 # v2.80.5+rev12
 ## (2022-05-20)
 
