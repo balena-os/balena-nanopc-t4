@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.80.5+rev18
+## (2022-08-03)
+
+* Remove final argument from build and deploy workflow [Alex Gonzalez]
+* Update build and deploy workflow to v0.0.9 [Alex Gonzalez]
+
 # v2.80.5+rev17
 ## (2022-08-03)
 
