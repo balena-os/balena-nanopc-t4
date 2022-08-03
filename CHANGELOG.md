@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.80.5+rev17
+## (2022-08-03)
+
+
+<details>
+<summary> Update contracts to b48eaf24e3b0cf67116e4adbe1a12d349825fda5 [renovate[bot]] </summary>
+
+> ## contracts-2.0.8
+> ### (2022-08-03)
+> 
+> * Update dotnet contract to latest v6.x and v3.x [Trong Nghia Nguyen]
+> * Add node v18.7.0 [Trong Nghia Nguyen]
+> 
+</details>
+
 # v2.80.5+rev16
 ## (2022-08-02)
 
