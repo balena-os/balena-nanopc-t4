@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.80.5+rev21
+## (2022-08-11)
+
+* Modify layer ordering [Alex Gonzalez]
+
 # v2.80.5+rev20
 ## (2022-08-11)
 
