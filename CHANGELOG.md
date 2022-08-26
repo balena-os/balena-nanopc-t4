@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.80.5+rev22
+## (2022-08-26)
+
+
+<details>
+<summary> Update contracts to 3bd4b2097a2796afc9a56a580e555982aad4f10b [renovate[bot]] </summary>
+
+> ## contracts-2.0.13
+> ### (2022-08-26)
+> 
+> * imx8mm-var-som: Add device type [Alexandru Costache]
+> 
+</details>
+
 # v2.80.5+rev21
 ## (2022-08-19)
 
