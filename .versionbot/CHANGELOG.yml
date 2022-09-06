@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update contracts to e7520599758cae5f507d7189a3415e95e2ff0309
+      hash: ee187612df99266b3564ebeabc1eedb5a432a70c
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to e7520599758cae5f507d7189a3415e95e2ff0309
+        changelog-entry: Update contracts to e7520599758cae5f507d7189a3415e95e2ff0309
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Add node v18.8.0
+              hash: 22cc7c47e7582fa9ecf05d0b607b0e8619b5ac4e
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+                signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+              author: Trong Nghia Nguyen
+          version: contracts-2.0.14
+          title: "'Add node v18.8.0'"
+          date: 2022-09-06T04:10:31.763Z
+  version: 2.80.5+rev24
+  title: "'Update contracts digest to e752059'"
+  date: 2022-09-06T06:17:56.482Z
+- commits:
     - subject: Update balena-yocto-scripts to 99807501efffc8c5034c88361049650a02511a78
       hash: a3f8df7648c5b37e49d4f1f1391cf620f1b4e252
       body: Update balena-yocto-scripts
