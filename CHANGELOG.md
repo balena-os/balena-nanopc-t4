@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.80.5+rev25
+## (2022-09-14)
+
+
+<details>
+<summary> Update contracts to 7ea918011dc38f509a7ae3bce30c3391bc839dd9 [renovate[bot]] </summary>
+
+> ## contracts-2.0.15
+> ### (2022-09-14)
+> 
+> * hw.device-type: Set LED to false for rockpi-4b [Alexandru Costache]
+> 
+</details>
+
 # v2.80.5+rev24
 ## (2022-09-06)
 
