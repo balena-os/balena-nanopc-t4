@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.80.5+rev26
+## (2022-09-21)
+
+
+<details>
+<summary> Update contracts to f2ace726406411ac4202d114ec8264a1a2c7af97 [renovate[bot]] </summary>
+
+> ## contracts-2.0.16
+> ### (2022-09-21)
+> 
+> * hw.device-type: Remove led for RockPro64 [Alexandru Costache]
+> 
+</details>
+
 # v2.80.5+rev25
 ## (2022-09-14)
 
