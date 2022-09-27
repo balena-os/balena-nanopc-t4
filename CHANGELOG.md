@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.80.5+rev27
+## (2022-09-27)
+
+
+<details>
+<summary> Update contracts to 766eb7591fe2b2f2cbc36af68d58627057f38193 [renovate[bot]] </summary>
+
+> ## contracts-2.0.17
+> ### (2022-09-27)
+> 
+> * Add node v18.9.1, v16.17.1 and v14.20.1 [Trong Nghia Nguyen]
+> * Add Golang v1.19.1 and v1.18.6 [Trong Nghia Nguyen]
+> 
+</details>
+
 # v2.80.5+rev26
 ## (2022-09-21)
 
