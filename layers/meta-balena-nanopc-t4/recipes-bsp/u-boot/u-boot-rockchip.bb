@@ -7,7 +7,7 @@ require recipes-bsp/u-boot/u-boot.inc
 DEPENDS_append = " bison-native rkbin "
 
 SRC_URI = " \
-    git://github.com/u-boot/u-boot \
+    git://github.com/u-boot/u-boot;protocol=https \
 "
 
 S = "${WORKDIR}/git"
