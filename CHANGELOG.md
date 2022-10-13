@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.105.11
+## (2022-10-13)
+
+
+<details>
+<summary> Update layers/meta-balena to 433b72275aa61da736904aa3f55c7b987824d523 [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.11
+> ### (2022-10-13)
+> 
+> * Update balena-os/balena-supervisor to v14.2.10 [renovate[bot]]
+> 
+> ## meta-balena-2.105.10
+> ### (2022-10-12)
+> 
+> * classes: kernel-balena: improve aufs branch selection [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.9
+> ### (2022-10-11)
+> 
+> * meta-balena-rust: Fix ABI for arm [Alex Gonzalez]
+> 
+</details>
+
+* unify Rust toolchains [Alex Gonzalez]
+* Modify layer ordering [Alex Gonzalez]
+* Fix u-boot-rockchip recipe build [Alex Gonzalez]
+
+<details>
+<summary> Update layers/meta-balena to ee77950ea892204938cf5681c9550952b423ede0 [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.11
+> ### (2022-10-13)
+> 
+> * Update balena-os/balena-supervisor to v14.2.10 [renovate[bot]]
+> 
+> ## meta-balena-2.105.10
+> ### (2022-10-12)
+> 
+> * classes: kernel-balena: improve aufs branch selection [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.9
+> ### (2022-10-11)
+> 
+> * meta-balena-rust: Fix ABI for arm [Alex Gonzalez]
+> 
+</details>
+
 # v2.80.5+rev28
 ## (2022-10-11)
 

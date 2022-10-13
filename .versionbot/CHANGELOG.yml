@@ -1,4 +1,216 @@
 - commits:
+    - subject: Update layers/meta-balena to 433b72275aa61da736904aa3f55c7b987824d523
+      hash: 1c733288eb7cc1f7f37665fcfa242d66d47bcaa7
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 433b72275aa61da736904aa3f55c7b987824d523
+        changelog-entry: Update layers/meta-balena to 433b72275aa61da736904aa3f55c7b987824d523
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-os/balena-supervisor to v14.2.10
+              hash: e6a6abbb3994937bbb5e5d2e1479e97a76faec88
+              body: Update balena-supervisor
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested: []
+          version: meta-balena-2.105.11
+          title: ""
+          date: 2022-10-13T20:48:28.279Z
+        - commits:
+            - subject: "classes: kernel-balena: improve aufs branch selection"
+              hash: 83f866691184df43c5b08b9da646a5bf99227b7b
+              body: >
+                The task that applies the aufs patches is still required to
+                support
+
+                hostOS updates between aufs and overlay2 balenaOS versions.
+
+
+                This commit adds support for 5.15 kernels and improves the branch
+
+                selection logic to cover some corner cases.
+
+
+                It also adds a test task so that we can test regressions.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.105.10
+          title: ""
+          date: 2022-10-12T13:48:37.596Z
+        - commits:
+            - subject: "meta-balena-rust: Fix ABI for arm"
+              hash: efe707f06134a345ef4d6f396555b4c3e057f23d
+              body: >
+                The move to include the ABI in the target definition was done in
+                Poky:
+
+                d6b563710e6cc0857843433d85023d47f9f2037d
+
+
+                Without much explanation in the commit, the ABI was removed in Poky:
+
+                e4c16d11128f0e9cc2567fc9e3579e9a94988b2e
+
+
+                Only to be re-introduced, also without much explanation in Poky:
+
+                0bf2fd16273436f1cd9ea2ab99ad882e879f965d
+
+
+                Then, there was a partial revert to remove the ABI again in Poky:
+
+                66ff1fb3a164fa794ee186960809e3fa9e938b48
+
+
+                This last 66ff1fb3a164fa794ee186960809e3fa9e938b48 commit is reverted here as
+
+                it fails to build for ARM targets. All our boards that cover all the
+
+                possible ABIs build with this change.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.105.9
+          title: ""
+          date: 2022-10-11T21:36:12.907Z
+    - subject: unify Rust toolchains
+      hash: ec7e522f478206ff733ad67cf822fb0463eaf1a1
+      body: |
+        Replace the use of the meta-rust layer with meta-balena-rust which
+        unifies the Rust toolchain version for all Yocto versions.
+      footer:
+        Changelog-entry: unify Rust toolchains
+        changelog-entry: unify Rust toolchains
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Modify layer ordering
+      hash: 9ce9aaa8c36616fd12baf6c3f6ef1a870a1a9c53
+      body: |
+        Yocto classes and conf files ignore layer priorities and are parsed
+        in order instead.
+      footer:
+        Changelog-entry: Modify layer ordering
+        changelog-entry: Modify layer ordering
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Fix u-boot-rockchip recipe build
+      hash: 1fb8f009ef8ccc413fd219f998e342f96d37f3cd
+      body: |
+        The recipe needs to use the https protocol to fetch from github as well
+        as to bring the missing patch into the layer.
+      footer:
+        Changelog-entry: Fix u-boot-rockchip recipe build
+        changelog-entry: Fix u-boot-rockchip recipe build
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Update layers/meta-balena to ee77950ea892204938cf5681c9550952b423ede0
+      hash: ae26cd65561f7adfaa0f35bfde612480be265479
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ee77950ea892204938cf5681c9550952b423ede0
+        changelog-entry: Update layers/meta-balena to ee77950ea892204938cf5681c9550952b423ede0
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-os/balena-supervisor to v14.2.10
+              hash: e6a6abbb3994937bbb5e5d2e1479e97a76faec88
+              body: Update balena-supervisor
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested: []
+          version: meta-balena-2.105.11
+          title: ""
+          date: 2022-10-13T20:48:28.279Z
+        - commits:
+            - subject: "classes: kernel-balena: improve aufs branch selection"
+              hash: 83f866691184df43c5b08b9da646a5bf99227b7b
+              body: >
+                The task that applies the aufs patches is still required to
+                support
+
+                hostOS updates between aufs and overlay2 balenaOS versions.
+
+
+                This commit adds support for 5.15 kernels and improves the branch
+
+                selection logic to cover some corner cases.
+
+
+                It also adds a test task so that we can test regressions.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.105.10
+          title: ""
+          date: 2022-10-12T13:48:37.596Z
+        - commits:
+            - subject: "meta-balena-rust: Fix ABI for arm"
+              hash: efe707f06134a345ef4d6f396555b4c3e057f23d
+              body: >
+                The move to include the ABI in the target definition was done in
+                Poky:
+
+                d6b563710e6cc0857843433d85023d47f9f2037d
+
+
+                Without much explanation in the commit, the ABI was removed in Poky:
+
+                e4c16d11128f0e9cc2567fc9e3579e9a94988b2e
+
+
+                Only to be re-introduced, also without much explanation in Poky:
+
+                0bf2fd16273436f1cd9ea2ab99ad882e879f965d
+
+
+                Then, there was a partial revert to remove the ABI again in Poky:
+
+                66ff1fb3a164fa794ee186960809e3fa9e938b48
+
+
+                This last 66ff1fb3a164fa794ee186960809e3fa9e938b48 commit is reverted here as
+
+                it fails to build for ARM targets. All our boards that cover all the
+
+                possible ABIs build with this change.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.105.9
+          title: ""
+          date: 2022-10-11T21:36:12.907Z
+  version: 2.105.11
+  title: "'Update layers/meta-balena digest to 433b722'"
+  date: 2022-10-13T22:24:29.417Z
+- commits:
     - subject: Update contracts to 6f3ccc3060c64de164d6fd60a0bc65b2d8ceb5d3
       hash: a77105d6ff8d603444e02631c52952a6ac92d67d
       body: Update contracts
