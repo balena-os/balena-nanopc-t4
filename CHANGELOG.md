@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.105.11+rev1
+## (2022-10-14)
+
+* Switch from balenaCI to flowzone [Alex Gonzalez]
+
 # v2.105.11
 ## (2022-10-13)
 
