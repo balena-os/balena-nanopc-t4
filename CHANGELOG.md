@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.105.11+rev3
+## (2022-10-15)
+
+* Update build and deploy workflow to v0.0.12 [Alex Gonzalez]
+
 # v2.105.11+rev2
 ## (2022-10-14)
 
