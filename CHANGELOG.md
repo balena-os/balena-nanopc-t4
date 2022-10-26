@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.105.19
+## (2022-10-26)
+
+
+<details>
+<summary> Update layers/meta-balena to 38055be70d9113801797d97ddeac00012c5b151c [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.19
+> ### (2022-10-26)
+> 
+> * meta-resin-sumo: keep tpm2-tools in 5.0 [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.18
+> ### (2022-10-25)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to f83df7d [renovate[bot]] </summary>
+> 
+>> ### leviathan-2.10.0
+>> #### (2022-10-25)
+>> 
+>> * minor: Add @balena/leviathan-test-helpers package [Vipul Gupta (@vipulgupta2048)]
+>> 
+> </details>
+> 
+> 
+</details>
+
 # v2.105.17
 ## (2022-10-24)
 
