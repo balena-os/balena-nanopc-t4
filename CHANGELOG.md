@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.105.21
+## (2022-10-27)
+
+
+<details>
+<summary> Update layers/meta-balena to 2e9f69012d326b5925304c9d25427c5cc46dfbd4 [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.21
+> ### (2022-10-27)
+> 
+> * openssh: allow RSA signatures with SHA1 algorithms [Alex Gonzalez]
+> 
+</details>
+
 # v2.105.20+rev1
 ## (2022-10-27)
 
