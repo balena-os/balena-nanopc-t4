@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.105.31+rev1
+## (2022-11-09)
+
+
+<details>
+<summary> Update contracts to b20827d63cbe7b1168f2b63b3bde216231e1b4ba [renovate[bot]] </summary>
+
+> ## contracts-2.0.28
+> ### (2022-11-09)
+> 
+> * Add node v18.12.1 [Trong Nghia Nguyen]
+> 
+</details>
+
 # v2.105.31
 ## (2022-11-08)
 
