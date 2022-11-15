@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.106.7
+## (2022-11-15)
+
+
+<details>
+<summary> Update layers/meta-balena to f64f63370e54d5ed14e124578ed9193c765ade92 [renovate[bot]] </summary>
+
+> ## meta-balena-2.106.7
+> ### (2022-11-15)
+> 
+> * test: ssh-auth: fix test cases using custom keys [Alex Gonzalez]
+> 
+</details>
+
 # v2.106.6
 ## (2022-11-15)
 
