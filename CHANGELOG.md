@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.106.6
+## (2022-11-15)
+
+
+<details>
+<summary> Update layers/meta-balena to 0bcd2db1e6e5bf04ad2882028aa26cbab0ee49ea [renovate[bot]] </summary>
+
+> ## meta-balena-2.106.6
+> ### (2022-11-15)
+> 
+> * Update balena-os/balena-supervisor to v14.3.3 [renovate[bot]]
+> 
+</details>
+
 # v2.106.5
 ## (2022-11-14)
 
