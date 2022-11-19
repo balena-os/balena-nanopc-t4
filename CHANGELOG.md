@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.107.3
+## (2022-11-19)
+
+
+<details>
+<summary> Update layers/meta-balena to 8aed005616dd0baa4605440cca234be049354070 [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.3
+> ### (2022-11-19)
+> 
+> * kernel-balena: Kernel version check should include provided version [Alex Gonzalez]
+> 
+</details>
+
 # v2.107.2
 ## (2022-11-18)
 
