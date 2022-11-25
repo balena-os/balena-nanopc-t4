@@ -1,4 +1,34 @@
 - commits:
+    - subject: Update layers/meta-balena to fbf651fead37336e826d709f48255897962bdbd5
+      hash: cb136cd4226bc1f64788ba6964fb617cea187763
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to fbf651fead37336e826d709f48255897962bdbd5
+        changelog-entry: Update layers/meta-balena to fbf651fead37336e826d709f48255897962bdbd5
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-image.bb: Include bits for LUKS when FDE is enabled"
+              hash: 57670e3d2538729cb17c882edf75bc523cd72bef
+              body: >
+                We want meta-balena to pull in these packages automatically when FDE is
+                enabled
+
+                rather than relying on device types to have them.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.107.10
+          title: ""
+          date: 2022-11-25T09:31:14.957Z
+  version: 2.107.10
+  title: ""
+  date: 2022-11-25T11:38:24.041Z
+- commits:
     - subject: Update layers/meta-balena to f54177209d23bcc33c32aac8dea7fa40273f3156
       hash: 5cf735dacc41c6477ee9bbfff8919eb6e9049c44
       body: Update layers/meta-balena
