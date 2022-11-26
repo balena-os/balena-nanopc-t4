@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.107.11
+## (2022-11-26)
+
+
+<details>
+<summary> Update layers/meta-balena to a539a5fb1d5c036bf513e52e243634722344d4c7 [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.11
+> ### (2022-11-25)
+> 
+> * add os testing docs [rcooke-warwick]
+> 
+</details>
+
 # v2.107.10
 ## (2022-11-25)
 
