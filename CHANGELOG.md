@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.107.15
+## (2022-12-01)
+
+
+<details>
+<summary> Update layers/meta-balena to 57b65123e0804b4447c6808db5780dd26cd31dc0 [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.15
+> ### (2022-12-01)
+> 
+> * Updated CBS Docs Updated link to the CDS Product Repo [Ryan H]
+> 
+</details>
+
 # v2.107.14
 ## (2022-12-01)
 
