@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.107.20
+## (2022-12-08)
+
+
+<details>
+<summary> Update layers/meta-balena to 867c3a93cf533c63fc57703d08f3b3d2af554746 [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.20
+> ### (2022-12-07)
+> 
+> * kernel-balena: enable zstd compression [Joseph Kogut]
+> 
+
+</details>
+
 # v2.107.19
 ## (2022-12-06)
 
