@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.107.26
+## (2022-12-12)
+
+
+<details>
+<summary> Update layers/meta-balena to d5e33e207a60caaf8fe6b83326cad8b6e94a47e5 [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.26
+> ### (2022-12-12)
+> 
+> * connectivity: Add linux firmware for iwlwifi 9260 [Alex Gonzalez]
+> 
+
+</details>
+
 # v2.107.25+rev1
 ## (2022-12-12)
 
