@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.107.25
+## (2022-12-12)
+
+
+<details>
+<summary> Update layers/meta-balena to 1b077510cb474b222865c24677995d59687af06a [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.25
+> ### (2022-12-11)
+> 
+> * image_types_balena: fix inconsistency with flasher image partition naming [Alex Gonzalez]
+> 
+> ## meta-balena-2.107.24
+> ### (2022-12-09)
+> 
+> * Update balena-os/balena-supervisor to v14.4.6 [renovate[bot]]
+> 
+
+</details>
+
 # v2.107.23
 ## (2022-12-09)
 

@@ -1,4 +1,57 @@
 - commits:
+    - subject: Update layers/meta-balena to 1b077510cb474b222865c24677995d59687af06a
+      hash: acf5ae864e4c238af180f1897327a8898ee87a92
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 1b077510cb474b222865c24677995d59687af06a
+        changelog-entry: Update layers/meta-balena to 1b077510cb474b222865c24677995d59687af06a
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "image_types_balena: fix inconsistency with flasher image partition
+                naming"
+              hash: 795e2427821d28fcf894da1cba9afc245efc38b3
+              body: >
+                Partitions in flasher images are being created with different LABEL and
+
+                PARTLABEL, for example:
+
+                ```
+
+                /dev/sdd2: LABEL="flash-rootA" UUID="5585296a-c183-4b10-89ae-20607e5604be" TYPE="ext4" PARTLABEL="resin-rootA" PARTUUID="582478f2-be4b-4279-9124-536385c9551d"
+
+                ```
+
+
+                This commit fixes the inconsistency as the PARTLABEL is used as a fallback
+
+                method to identify devices.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.107.25
+          title: ""
+          date: 2022-12-11T20:05:22.123Z
+        - commits:
+            - subject: Update balena-os/balena-supervisor to v14.4.6
+              hash: 70a888685d33267af60e53ac70a6169b744416bd
+              body: Update balena-supervisor
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested: []
+          version: meta-balena-2.107.24
+          title: ""
+          date: 2022-12-09T20:45:04.709Z
+  version: 2.107.25
+  title: ""
+  date: 2022-12-12T00:12:00.604Z
+- commits:
     - subject: Update layers/meta-balena to 581e322552bf300bc136f2bc553558d020cc313c
       hash: 42ddae140b1080fa838e1070d24fb65f74f5d40d
       body: Update layers/meta-balena
