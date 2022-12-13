@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.107.28
+## (2022-12-13)
+
+
+<details>
+<summary> Update layers/meta-balena to 0359cad249077b459a6dbc7bb9ba026fcae91a15 [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.28
+> ### (2022-12-12)
+> 
+> * initrdscripts: Only unlock LUKS partitions on the OS drive [Michal Toman]
+> 
+
+</details>
+
 # v2.107.27
 ## (2022-12-12)
 
