@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.107.33
+## (2022-12-14)
+
+
+<details>
+<summary> Update layers/meta-balena to 9811fd442944eca14af2c590bb4dde64949f09b7 [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.33
+> ### (2022-12-14)
+> 
+> * tests: hup: clean up inactive partition pre hup [rcooke-warwick]
+> 
+
+</details>
+
 # v2.107.32
 ## (2022-12-14)
 
