@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.107.34
+## (2022-12-14)
+
+
+<details>
+<summary> Update layers/meta-balena to 47c8a998af71d0285ba0029aea1aa145fdc2a4b4 [renovate[bot]] </summary>
+
+> ## meta-balena-2.107.34
+> ### (2022-12-14)
+> 
+> * initrdscripts: Wait for udev processing to complete when unlocking LUKS devices [Michal Toman]
+> 
+
+</details>
+
 # v2.107.33
 ## (2022-12-14)
 
