@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.108.1
+## (2022-12-18)
+
+
+<details>
+<summary> Update layers/meta-balena to 1d8c6eeed258f1205d6b1e0b78088ea867308b80 [renovate[bot]] </summary>
+
+> ## meta-balena-2.108.1
+> ### (2022-12-18)
+> 
+> * common: signing: improve debug output on failure [Joseph Kogut]
+> 
+
+</details>
+
 # v2.108.0
 ## (2022-12-17)
 
