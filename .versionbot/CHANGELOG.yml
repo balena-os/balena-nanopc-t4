@@ -1,4 +1,33 @@
 - commits:
+    - subject: Update layers/meta-balena to d8168e9bcdba5a017acb33a611182b9889e4c50b
+      hash: 0485d65eb834b269e63b72fc6166f22f2c2b7ca3
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to d8168e9bcdba5a017acb33a611182b9889e4c50b
+        changelog-entry: Update layers/meta-balena to d8168e9bcdba5a017acb33a611182b9889e4c50b
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "distro: For OS development, enable serial console"
+              hash: 82df437d84bec2e2bb03c33b5f153bab82003d8a
+              body: >
+                Add graphical and serial console output when building in OS development
+
+                mode.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.108.4
+          title: ""
+          date: 2022-12-20T13:39:26.550Z
+  version: 2.108.4
+  title: ""
+  date: 2022-12-20T19:42:12.570Z
+- commits:
     - subject: Update contracts to b65d5bd372587d4aaabba526d34f67c3f63ea90b
       hash: 4bddc6ae1dc014169a701c978c126037c49a9f67
       body: Update contracts

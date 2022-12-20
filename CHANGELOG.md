@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.108.4
+## (2022-12-20)
+
+
+<details>
+<summary> Update layers/meta-balena to d8168e9bcdba5a017acb33a611182b9889e4c50b [renovate[bot]] </summary>
+
+> ## meta-balena-2.108.4
+> ### (2022-12-20)
+> 
+> * distro: For OS development, enable serial console [Alex Gonzalez]
+> 
+
+</details>
+
 # v2.108.3+rev1
 ## (2022-12-20)
 
