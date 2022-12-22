@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.108.5
+## (2022-12-22)
+
+
+<details>
+<summary> Update layers/meta-balena to 4f5dc08a949432990996fbb0e9955d261c1282b3 [renovate[bot]] </summary>
+
+> ## meta-balena-2.108.5
+> ### (2022-12-21)
+> 
+> * Engine healthcheck: deal with empty uuid file [Leandro Motta Barros]
+> 
+
+</details>
+
 # v2.108.4
 ## (2022-12-20)
 
