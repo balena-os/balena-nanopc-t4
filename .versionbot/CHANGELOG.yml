@@ -1,4 +1,33 @@
 - commits:
+    - subject: Update layers/meta-balena to 610fc18f387665f4077ce1bed538bd2da4ba516b
+      hash: 86fb7e91cd1388d55e7815844de45eba60f664ef
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 610fc18f387665f4077ce1bed538bd2da4ba516b
+        changelog-entry: Update layers/meta-balena to 610fc18f387665f4077ce1bed538bd2da4ba516b
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-supervisor: Set the supervisor package version"
+              hash: 950cbe5dd708511e37d707d4121032cc06376d1a
+              body: >
+                This should reflect the included supervisor version in the hostapp
+
+                manifest.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.108.16
+          title: ""
+          date: 2023-01-09T10:35:58.184Z
+  version: 2.108.16
+  title: ""
+  date: 2023-01-09T17:44:59.597Z
+- commits:
     - subject: Update balena-yocto-scripts to 56bb055d91481023a6b6cff92d61ebfffa884139
       hash: c12fbf97d66260992ebf640b6bfa65b808a605cd
       body: Update balena-yocto-scripts
