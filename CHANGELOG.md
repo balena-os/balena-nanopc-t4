@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.108.19+rev2
+## (2023-01-26)
+
+* add meta-perl to bblayers.conf [Alex Gonzalez]
+
 # v2.108.19+rev1
 ## (2023-01-12)
 
