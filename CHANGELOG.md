@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.111.1
+## (2023-02-13)
+
+
+<details>
+<summary> Update layers/meta-balena to ad77fa3dacfa32044deb80c2266e3c2d8e1e13dd [Renovate Bot] </summary>
+
+> ## meta-balena-2.111.1
+> ### (2023-02-13)
+> 
+> * resin-init-flasher: do not report progress if unprovisioned [Alex Gonzalez]
+> * resin-init-flasher: check splash configuration exists before copying [Alex Gonzalez]
+> * resin-init-flasher: Move configuration data definitions to config file [Alex Gonzalez]
+> 
+
+</details>
+
 # v2.111.0
 ## (2023-02-11)
 
