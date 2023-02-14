@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.112.0
+## (2023-02-14)
+
+
+<details>
+<summary> Update layers/meta-balena to 7cc56305880ded60850c3440840dcdba823bd179 [Renovate Bot] </summary>
+
+> ## meta-balena-2.112.0
+> ### (2023-02-14)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.9.0 [Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.9.0
+>> #### (2023-02-14)
+>> 
+>> * Find and remove duplicate networks [Felipe Lalanne]
+>> * Reference networks by Id instead of by name [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v2.111.4
 ## (2023-02-14)
 
