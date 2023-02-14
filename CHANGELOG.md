@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.111.4
+## (2023-02-14)
+
+
+<details>
+<summary> Update layers/meta-balena to b48ce7abc1eb2506eb81ebbb18a1c4b90e55c4d4 [Renovate Bot] </summary>
+
+> ## meta-balena-2.111.4
+> ### (2023-02-14)
+> 
+> * tests: hup: fix flashing for tx2 [rcooke-warwick]
+> 
+
+</details>
+
 # v2.111.3
 ## (2023-02-14)
 
