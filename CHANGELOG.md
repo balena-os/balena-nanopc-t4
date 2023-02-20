@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.112.8+rev2
+## (2023-02-20)
+
+
+<details>
+<summary> Update contracts to 93ba80ca1ffeced474d0567cc58703cdbeb629d5 [Renovate Bot] </summary>
+
+> ## contracts-2.0.46
+> ### (2023-02-20)
+> 
+> * <owa5X logo> Updated owa5X logo. [Alvaro Guzman]
+> 
+
+</details>
+
 # v2.112.8+rev1
 ## (2023-02-18)
 
