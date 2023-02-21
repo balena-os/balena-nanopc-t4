@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.112.12
+## (2023-02-21)
+
+
+<details>
+<summary> Update layers/meta-balena to 2e4f0c9530e0c8ea71b52a6e6a4f12fd01f1643b [Renovate Bot] </summary>
+
+> ## meta-balena-2.112.12
+> ### (2023-02-20)
+> 
+> * os-helpers-fs: get_internal_device() skip disks w/out media [Joseph Kogut]
+> 
+
+</details>
+
 # v2.112.11
 ## (2023-02-20)
 
