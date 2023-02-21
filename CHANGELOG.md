@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.112.12+rev2
+## (2023-02-21)
+
+* Update CI workflow to allow external contributions [Kyle Harding]
+
 # v2.112.12+rev1
 ## (2023-02-21)
 
