@@ -1,4 +1,59 @@
 - commits:
+    - subject: Update contracts to 40d6eaa3f0455babd1abcc1d11a6e6db60387797
+      hash: 5221a658fe34abde16a68ef059e0cb0f944edc6c
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 40d6eaa3f0455babd1abcc1d11a6e6db60387797
+        changelog-entry: Update contracts to 40d6eaa3f0455babd1abcc1d11a6e6db60387797
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "node: do not set unsafe-perm with npm 9 and newer"
+              hash: c1950ce76e44b48196c44874e09c8857651bddd8
+              body: >
+                The unsafe-perm config option has been dropped in npm 9, trying to set it
+
+                ends with an error and therefore fails the build. With this patch
+
+                the build script parses the major version from `npm --version` and only
+
+                sets unsafe-perm on npm 8 and older.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+          version: contracts-2.0.51
+          title: ""
+          date: 2023-02-24T21:25:17.414Z
+    - subject: trigger deploy builds on multi-digit revisions too
+      hash: aea15239db9a9a3eb1fba7a513f95329f507627e
+      body: >
+        According to github action syntax [1], there is no special character
+
+        to denote a match on zero or more of the preceding character, so
+
+        replace `[0-9]?` which only matches zero or one of the preceding
+
+        characters with a `*`.
+
+
+        [1] https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+
+
+        [skip ci]
+      footer:
+        Changelog-entry: trigger deploy builds on multi-digit revisions too
+        changelog-entry: trigger deploy builds on multi-digit revisions too
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.112.14+rev1
+  title: ""
+  date: 2023-03-15T14:20:37.027Z
+- commits:
     - subject: Update layers/meta-balena to 80ca81f9e4ec9d4b2e4d21bc1cf12bd59220be5a
       hash: 5dc6fd4c474de67ab9b9dc0e0682db16be7a8b9f
       body: Update layers/meta-balena
