@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.112.14+rev3
+## (2023-03-16)
+
+* Prevent duplicate CI workflow executions [Kyle Harding]
+
 # v2.112.14+rev2
 ## (2023-03-15)
 
