@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v2.112.14+rev6
+## (2023-04-12)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 66e817cc08c391f06d0cf16dded7e6cf2082d0ca [Renovate Bot] </summary>
+
+> ## balena-yocto-scripts-1.19.26
+> ### (2023-04-12)
+> 
+> * balena-lib: Do not return error if no balena user token is available [Alex Gonzalez]
+> 
+
+</details>
+
 # v2.112.14+rev5
 ## (2023-04-07)
 
