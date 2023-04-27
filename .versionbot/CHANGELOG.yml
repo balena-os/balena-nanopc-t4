@@ -1,4 +1,34 @@
 - commits:
+    - subject: Update contracts to 6c6ed28d459bc48102a69cdf0850d2eb4c778ce7
+      hash: 2a476eca94a5beddf003a8d7e99f03afbb3a9542
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 6c6ed28d459bc48102a69cdf0850d2eb4c778ce7
+        changelog-entry: Update contracts to 6c6ed28d459bc48102a69cdf0850d2eb4c778ce7
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "jetson-agx-orin-devkit: Mention the RAM configuration in the device
+                name"
+              hash: 82d3a94938956376eeafa518a863a344acd2190b
+              body: |
+                By default the AGX Orin Devkit has 32GB RAM, however, new
+                production modules have been released with L4T 35.3.1 so we
+                should emphasize that newer modules may not work with this
+                image.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.58
+          title: ""
+          date: 2023-04-27T11:52:02.405Z
+  version: 2.112.14+rev8
+  title: ""
+  date: 2023-04-27T14:45:07.154Z
+- commits:
     - subject: Update balena-yocto-scripts to 34c8434ffcaeeeb14853082bbf2b4ecc5e0ec769
       hash: 0957f1ac4e726ef68bbe370fbf27afabeef6c07b
       body: Update balena-yocto-scripts
@@ -11,7 +41,8 @@
             - subject: "barys: fix removal of equals sign from argval"
               hash: 8855ad4d31b45187e4007763b6bb084e08974807
               body: >
-                When parsing additional variables to be passed to the bitbake build,
+                When parsing additional variables to be passed to the bitbake
+                build,
 
                 keys and values are split using equals as a delimiter. However, the
 
@@ -51,7 +82,8 @@
             - subject: "balena-lib: Do not return error if no balena user token is available"
               hash: e335e248305cda86ce55f934b2b3ba8202f17454
               body: >
-                The balena API token is only required for private device access so don't
+                The balena API token is only required for private device access
+                so don't
 
                 fail if there is not one available.
               footer:
@@ -231,7 +263,8 @@
             - subject: "balena-api: ignore quotes from API replies"
               hash: ad7065112eee4e6e3865ef5581e4c53676536459
               body: >
-                The balenaAPI has replied both `OK` and `"OK"` to patch requests. Accept
+                The balenaAPI has replied both `OK` and `"OK"` to patch
+                requests. Accept
 
                 any of them as long as they contain OK.
               footer:
@@ -260,7 +293,8 @@
             - subject: "node: do not set unsafe-perm with npm 9 and newer"
               hash: c1950ce76e44b48196c44874e09c8857651bddd8
               body: >
-                The unsafe-perm config option has been dropped in npm 9, trying to set it
+                The unsafe-perm config option has been dropped in npm 9, trying
+                to set it
 
                 ends with an error and therefore fails the build. With this patch
 
@@ -315,7 +349,8 @@
             - subject: "balena-config-vars: Remove dependency on fatrw"
               hash: 57facfad07b7dd1de5687ab20258f6387575bd79
               body: >
-                There is nothing in `balena-config-vars` itself that needs `fatrw`, so
+                There is nothing in `balena-config-vars` itself that needs
+                `fatrw`, so
 
                 change it so scripts don't exit if it is not available. For example,
 
@@ -348,7 +383,8 @@
             - subject: Add raid support based on machine features
               hash: 4f43052ba8fbd74fb5af92fd8d818ef2512d08ab
               body: >
-                Not all device types need to support RAID, and its components increase
+                Not all device types need to support RAID, and its components
+                increase
 
                 the images size significantly.
 
@@ -366,7 +402,8 @@
             - subject: "packagegroup-resin: add resin-device-progress dependency"
               hash: deb0fd28613ef26a0bbe1f588b8ed152b01b90cd
               body: >
-                As we removed the dependency from `resin-init-flasher` given that it
+                As we removed the dependency from `resin-init-flasher` given
+                that it
 
                 will also be used from the initramfs, move the dependency to
 
@@ -384,7 +421,8 @@
                 dependencies"
               hash: da696aff03e0080d67c87f1b4d3e7e12904b8e48
               body: >
-                These are not always required for the flasher to work, only when the
+                These are not always required for the flasher to work, only when
+                the
 
                 flasher is not running from initramfs.
 
@@ -404,7 +442,8 @@
             - subject: "resin-init-flasher: reduce dependencies"
               hash: b4b6dded00d2710f29f1bbef97dd6937a4766821
               body: >
-                As we are pulling resin-init-flasher into the initramfs optimise the
+                As we are pulling resin-init-flasher into the initramfs optimise
+                the
 
                 dependencies by removing the whole util-linux package and adding
 
@@ -431,7 +470,8 @@
                 for flasher device types"
               hash: 33e33381ce8353bc539a1c61eec75ade2447eddc
               body: >
-                Now that the installer script is added to the initramfs and is included
+                Now that the installer script is added to the initramfs and is
+                included
 
                 both for flasher and non-flasher device types, limit the
 
@@ -453,7 +493,8 @@
             - subject: "resin-init-flasher: wait for the by-label links to be created"
               hash: 21e7b74a4f8af7baf751859e5a5477c2ae99c8fa
               body: >
-                The by-label links can be used both for physical and mapper devices (used
+                The by-label links can be used both for physical and mapper
+                devices (used
 
                 in disk encryption).
 
@@ -652,7 +693,8 @@
             - subject: "os-helpers-fs: get_internal_device() skip disks w/out media"
               hash: 1da9ea7a3ea1fb87ce31c9281376c2ad5110c1dd
               body: >
-                Block device nodes are sometimes created without attached media. These
+                Block device nodes are sometimes created without attached media.
+                These
 
                 devices can neither be read from, nor written to. In this case, the
 
@@ -724,7 +766,8 @@
             - subject: "tests: os: secureboot: skip if system is not locked down"
               hash: 00ad363a00eef7805f9f0569d43b933b28504abb
               body: >
-                Secure boot is now opt-in, even in the case where the image is signed,
+                Secure boot is now opt-in, even in the case where the image is
+                signed,
 
                 and it's supported in firmware. Skip the secure boot tests when it's not
 
@@ -779,7 +822,8 @@
                     - subject: "client: throw errors instead of blanket handling"
                       hash: 0f4b4b55b01bbfb023bcddba0ea585bcbe968a07
                       body: >
-                        Remove try/catch block surrounding client code that blanket handles all
+                        Remove try/catch block surrounding client code that
+                        blanket handles all
 
                         exceptions, and makes debugging and log messages worse.
 
@@ -816,8 +860,8 @@
             - subject: <owa5X logo> Updated owa5X logo.
               hash: 65dc08be089c25740fdc53ea86b4e8037fff600b
               body: >
-                The previous logo had some problems when show in Balena's dashboard and
-                other places.
+                The previous logo had some problems when show in Balena's
+                dashboard and other places.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -1055,7 +1099,8 @@
             - subject: "workflows: update-backports: remove skipping tests"
               hash: 36ee78634fdc2c95644fcf2ad303d48b6193b6f2
               body: >
-                It's not clear how the feature to skip tests work, so modify the commit
+                It's not clear how the feature to skip tests work, so modify the
+                commit
 
                 message to be of type patch to avoid balenaCI errors on type none.
               footer:
@@ -1072,7 +1117,8 @@
             - subject: "workflows: add update-backports"
               hash: 04b6db97ced04eeae3204c9c88d162355abd297c
               body: >
-                This workflow will update the backports entry in repo.yml after a new
+                This workflow will update the backports entry in repo.yml after
+                a new
 
                 ESR release is created.
               footer:
@@ -1101,8 +1147,8 @@
             - subject: Update aufs5 kernel patches for 5.10 versions
               hash: 525ae72f84fe7092dd642cb1068238e0593f9e2e
               body: >
-                We update to the newest patch revisions for 5.10 kernel versions from
-                upstream
+                We update to the newest patch revisions for 5.10 kernel versions
+                from upstream
               footer:
                 Change-type: patch
                 change-type: patch
@@ -1141,7 +1187,8 @@
                     - subject: Find and remove duplicate networks
                       hash: 89175432af9beb9f9765a6cfdbc8914a8eae251e
                       body: >
-                        We have seen a few times devices with duplicated network names for some
+                        We have seen a few times devices with duplicated network
+                        names for some
 
                         reason. While we don't know the cause the networks get duplicates, this
 
@@ -1174,7 +1221,8 @@
                     - subject: Reference networks by Id instead of by name
                       hash: 180c4ff31ad719fb2b00217548514d42a4b5c4cf
                       body: >
-                        We have seen a few times devices with duplicated network names for some
+                        We have seen a few times devices with duplicated network
+                        names for some
 
                         reason. While we don't know the cause the networks get duplicates,
 
@@ -1292,7 +1340,8 @@
             - subject: "docs: add section for sb/fde opt-in"
               hash: 0b6b034cbb0ca5a9cd7a13690d1f8b0b7485e674
               body: >
-                Document the opt-in boolean for secure boot and full-disk encryption.
+                Document the opt-in boolean for secure boot and full-disk
+                encryption.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -1319,7 +1368,8 @@
             - subject: "resin-init-flasher: do not report progress if unprovisioned"
               hash: c6e81823002c1b7f73373fc5eee9434c8805f5b5
               body: >
-                If we know we have not provisioned, let's not print errors when the
+                If we know we have not provisioned, let's not print errors when
+                the
 
                 report cannot be sent.
               footer:
@@ -1332,7 +1382,8 @@
             - subject: "resin-init-flasher: check splash configuration exists before copying"
               hash: 150bef07e330695cc2abcc1e46d533ed43b0a732
               body: >
-                Otherwise, if the flasher is configured without a splash configuration
+                Otherwise, if the flasher is configured without a splash
+                configuration
 
                 directory, the boot partition content is overwritten.
               footer:
@@ -1344,7 +1395,8 @@
                 file"
               hash: be9f8c76eab4494d6dfaaca81ec2c695d9f78d8c
               body: >
-                This exposes a file based interface for configuration sharing. The
+                This exposes a file based interface for configuration sharing.
+                The
 
                 clarity is needed while working on the migrator.
               footer:
@@ -1501,7 +1553,8 @@
             - subject: "os-helpers: remove shebangs as these are not meant to be executed"
               hash: 5ffda998055973cb6f4cb68a355b1a73bdea7c48
               body: >
-                The os-helpers scripts are meant to be sourced by other scripts, not
+                The os-helpers scripts are meant to be sourced by other scripts,
+                not
 
                 executed. When sourced, the shebang should be ignored.
 
@@ -1553,7 +1606,8 @@
             - subject: "resin-init-flasher: remove unused variable"
               hash: 800db4f0ce54dcd9d2f9b1ef8300c1534a3a55c1
               body: >
-                The INTERNAL_DEVICE_CONF_PART_MOUNTPOINT is no longer used in the code.
+                The INTERNAL_DEVICE_CONF_PART_MOUNTPOINT is no longer used in
+                the code.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -1565,7 +1619,8 @@
                 mount"
               hash: 9599a70c6e7440dde993d847e1e1800f5f5d4409
               body: >
-                This simplifies the code as we only set the boot partition mount in one
+                This simplifies the code as we only set the boot partition mount
+                in one
 
                 place.
               footer:
@@ -1579,7 +1634,8 @@
                 paths"
               hash: c261dbf4c96ee4204001be8e96654ebadf490516
               body: >
-                The files will live in different places depending on whether the script
+                The files will live in different places depending on whether the
+                script
 
                 is run from a flasher image or from initramfs.
               footer:
@@ -1593,7 +1649,8 @@
                 device"
               hash: 60f130fabd947f1d929213196419bc2153258b2c
               body: >
-                Make sure the internal boot device we mount is the one we have just
+                Make sure the internal boot device we mount is the one we have
+                just
 
                 programmed - using the resin-boot label might clash.
               footer:
@@ -1606,7 +1663,8 @@
             - subject: "resin-init-flasher: remove systemd dependency"
               hash: dbda0afade7c575f0b1f4ac3146e9760a5bcda26
               body: >
-                Allow to run the script from initramfs where no systemd is installed.
+                Allow to run the script from initramfs where no systemd is
+                installed.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -1617,7 +1675,8 @@
             - subject: "resin-init-flasher: Do not hardcode path to the raw image"
               hash: e48c090e1285ac03281c80d44644961d3f253d96
               body: >
-                Allow the script to search for the raw balena image in the rootfs. This
+                Allow the script to search for the raw balena image in the
+                rootfs. This
 
                 allows to use the raw image from different sources.
               footer:
@@ -1641,7 +1700,8 @@
             - subject: "initrdscript: resindataexpander: skip for flasher images"
               hash: f3448518b30f2cb41c4ee38e246b35f5ba7b77df
               body: >
-                The code outside of the enabled and run functions is not meant to be
+                The code outside of the enabled and run functions is not meant
+                to be
 
                 executed for flasher images and it prints verbose errors.
               footer:
@@ -1780,7 +1840,8 @@
             - subject: "efitools: fix cross-compilation on arm"
               hash: 86887855e9023e56cd9c96fdfc29053f649366f5
               body: >
-                efitools defaults ARCH to x86_64 when unset, leading to architecture
+                efitools defaults ARCH to x86_64 when unset, leading to
+                architecture
 
                 specific flags being misapplied, breaking the build
 
@@ -1813,7 +1874,8 @@
                 updated"
               hash: 75dd55660bcb9e37f458b505e23acc3f19dfddc7
               body: >
-                This recipe has now been renamed to extra-udev-rules across all device
+                This recipe has now been renamed to extra-udev-rules across all
+                device
 
                 types repositories.
               footer:
@@ -1830,7 +1892,8 @@
             - subject: "kernel-balena: Remove apparmor support"
               hash: 18cd233a83554b58b3540164afd768fdeda60b03
               body: >
-                Newer releases of moby expect appArmor userland tools when appArmor is
+                Newer releases of moby expect appArmor userland tools when
+                appArmor is
 
                 enabled in the kernel.
               footer:
@@ -1847,7 +1910,8 @@
             - subject: "flasher: handle user mode system w/out secure boot"
               hash: 73ca2d64f9bc22764694f774898db02a6c9e9825
               body: >
-                When a user runs the flasher with secure boot enabled in `config.json`,
+                When a user runs the flasher with secure boot enabled in
+                `config.json`,
 
                 the public keys used to validate the bootloader are enrolled. If any
 
@@ -1882,7 +1946,8 @@
             - subject: "flasher: fix keys not enrolling with secure boot enabled"
               hash: e9622bc5bb415d98bfd3c3277db96e5b585c583b
               body: >
-                Extended globbing is not enabled by default, which makes the substring
+                Extended globbing is not enabled by default, which makes the
+                substring
 
                 match for trimming leading zeroes not work. This causes SETUPMODEVAR to
 
@@ -1901,7 +1966,8 @@
             - subject: "flasher: fix secure boot setup with enrolled keys"
               hash: 2116dc08fbc8e0df3739fc1067a3884712a55ade
               body: >
-                When refactoring secure boot setup, a logic mistake in the purpose and
+                When refactoring secure boot setup, a logic mistake in the
+                purpose and
 
                 use of SECUREBOOT_VAR meant that devices booting the flasher with keys already
 
@@ -2012,7 +2078,8 @@
                     - subject: split swtpm service into separate compose file
                       hash: 93d0160eb9a07c86c309cb2c0c2f1b709185884d
                       body: >
-                        Not all platforms support secure boot, notably aarch64 using tianocore
+                        Not all platforms support secure boot, notably aarch64
+                        using tianocore
 
                         firmware. Additionally, swtpm may not be available for all platforms.
 
@@ -2075,7 +2142,8 @@
                     - subject: "compose: qemu: add swtpm service"
                       hash: 302446a90ceedf0e406ed5edef7600925cf55c8c
                       body: >
-                        QEMU is capable of using an emulated software TPM exposed via socket. A
+                        QEMU is capable of using an emulated software TPM
+                        exposed via socket. A
 
                         TPM is necessary for full disk encryption (FDE), so add a service to
 
@@ -2119,7 +2187,8 @@
             - subject: "flasher: create EFI boot entry"
               hash: 5979409faeaaa2b0df7503b408e202d87c6d2f7b
               body: >
-                Some firmwares will not boot balenaOS by default without explicitly
+                Some firmwares will not boot balenaOS by default without
+                explicitly
 
                 creating a boot entry, so create one on EFI platforms after flashing.
               footer:
@@ -2132,7 +2201,8 @@
             - subject: "common: os-helpers-fs: fix get_dev_path_from_label w/ luks"
               hash: 3b7ad68f938776db770a067de6b2973876cc7430
               body: >
-                get_dev_path_from_label() calls lsblk to get the name and label of a
+                get_dev_path_from_label() calls lsblk to get the name and label
+                of a
 
                 disk, then filters the list using the label and returns a /dev path.
 
@@ -2162,7 +2232,8 @@
             - subject: "flasher: make secure boot opt-in"
               hash: c6b84df2e571231bea8283e88750af949ca78df9
               body: >
-                Opt-in to secure boot, full-disk encryption, and kernel lockdown with
+                Opt-in to secure boot, full-disk encryption, and kernel lockdown
+                with
 
                 the `secureboot` boolean in the `installer` object contained in
 
@@ -2177,7 +2248,8 @@
             - subject: "flasher: ensure image is signed before enrollment"
               hash: 765ec79b9760a8822fab5801459398b798bd5e31
               body: >
-                The flasher image enrolls the secure boot keys before rebooting into
+                The flasher image enrolls the secure boot keys before rebooting
+                into
 
                 secured user mode and creating the encrypted luks volumes on disk.
 
@@ -2200,7 +2272,8 @@
             - subject: "flasher: refactor secure boot block"
               hash: 7127247bdabe96827b13837a573fc0c3966b1557
               body: >
-                Improve readability and formatting of secure boot configuration section
+                Improve readability and formatting of secure boot configuration
+                section
               footer:
                 Change-type: patch
                 change-type: patch
@@ -2239,7 +2312,8 @@
             - subject: "hostapp-update-hooks: Fail if new keys are used"
               hash: e61b8183fc046b733f18c55ae21cdde29ec28064
               body: >
-                Abort the hostOS update if new keys are detected so the device is
+                Abort the hostOS update if new keys are detected so the device
+                is
 
                 not bricked until updating keys is supported.
               footer:
@@ -2252,7 +2326,8 @@
             - subject: "resin-init-flasher: In setupmode program new keys"
               hash: 46a0b3839eccb69e00d15fd69027b904a8613a89
               body: >
-                If the device has been configured in setupmode, make the flasher images
+                If the device has been configured in setupmode, make the flasher
+                images
 
                 program the balena keys from the boot partition.
               footer:
@@ -2285,7 +2360,8 @@
             - subject: "efitools: Allow builds for ARM architecture"
               hash: 03962bda4860726332715df5fbdec05a475b6026
               body: >
-                There are ARM systems that use UEFI, and for example the `efivar` package
+                There are ARM systems that use UEFI, and for example the
+                `efivar` package
 
                 can also be built for ARM architectures.
               footer:
@@ -2403,7 +2479,8 @@
             - subject: Enable back connectivity check in NetworkManager
               hash: b4ae8c2df204107054316e8b9f78075155c1f606
               body: >
-                In v2.108.0 we did a major NetworkManager upgrade as we started using
+                In v2.108.0 we did a major NetworkManager upgrade as we started
+                using
 
                 meson as a build system. The connectivity check feature was left
 
@@ -2513,7 +2590,8 @@
             - subject: "efitools: Package lock down EFI image into its own package"
               hash: 461ad62f13732cd325f3f532fda4fac4b9ffb3da
               body: >
-                This EFI image contains the secure boot certificates and when executed it
+                This EFI image contains the secure boot certificates and when
+                executed it
 
                 is supposed to load the keys into the respective secure boot slots.
 
@@ -2535,7 +2613,8 @@
             - subject: "workflows: meta-balena-esr: Fix version calculation"
               hash: b56da33230839f4af74bac954cf834c2116e6209
               body: >
-                Correct the calculation of the version to include in the yml file.
+                Correct the calculation of the version to include in the yml
+                file.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -2668,7 +2747,8 @@
             - subject: "balena-generate-ami: match instance type with image type"
               hash: 98c1601e106a1fe194fd6c1339b33b67a57a578a
               body: >
-                When using an amd64 AMI, use a suitable A1 Graviton instance to test it.
+                When using an amd64 AMI, use a suitable A1 Graviton instance to
+                test it.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -2717,7 +2797,8 @@
             - subject: "balene-generate-ami: remove key name"
               hash: cebc5f30447785bdbad8260f0975bd1f9f261a9b
               body: >
-                No need to provide a key name as the instance only needs to be accessible
+                No need to provide a key name as the instance only needs to be
+                accessible
 
                 via balenaCloud.
               footer:
@@ -2735,7 +2816,8 @@
                 balena_os"
               hash: 0e3f9ca33265d1fc84244a4e3e86b9e7a7c85715
               body: >
-                These applications have been moved to the `balena_os` organization.
+                These applications have been moved to the `balena_os`
+                organization.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -2750,7 +2832,8 @@
             - subject: "balena-generate-ami: do not remove AMI snapshot"
               hash: 7022aa4933c5134d22b1f9f7e60c9e76fecca36a
               body: >
-                This snapshot is attached to the AMI and can only be removed after
+                This snapshot is attached to the AMI and can only be removed
+                after
 
                 de-registering the AMI.
               footer:
@@ -2764,7 +2847,8 @@
                 token"
               hash: 526fe49137cd619162d4e1307b977d1aa85401b0
               body: >
-                No need to complicate the job configuration with two tokens if we can do
+                No need to complicate the job configuration with two tokens if
+                we can do
 
                 with one.
               footer:
@@ -2777,7 +2861,8 @@
             - subject: "jenkins_build: respect the preserve build flag"
               hash: 30ff6dc19dafe9f7860df65c5552e4a25061a37b
               body: >
-                Do not remove the build directory if the preserve build flag is set.
+                Do not remove the build directory if the preserve build flag is
+                set.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -2856,7 +2941,8 @@
             - subject: "redsocks: Increase maximum number of open files"
               hash: e90b9159ed5f0dac3d9fe1b1b486201ee85f1161
               body: >
-                This increases the number of open connections that redsocks can support
+                This increases the number of open connections that redsocks can
+                support
 
                 to a new maximum of 2048.
 
@@ -2888,7 +2974,8 @@
             - subject: 'Revert "flasher: output logs to serial console"'
               hash: 406317b15726798d0c11928851897a530c980170
               body: >
-                In development mode, the flasher service is killed by getty. Revert this
+                In development mode, the flasher service is killed by getty.
+                Revert this
 
                 change to unbreak the flasher when OS development is enabled.
 
@@ -2944,7 +3031,8 @@
             - subject: "balena-supervisor: Set the supervisor package version"
               hash: 950cbe5dd708511e37d707d4121032cc06376d1a
               body: >
-                This should reflect the included supervisor version in the hostapp
+                This should reflect the included supervisor version in the
+                hostapp
 
                 manifest.
               footer:
@@ -3091,7 +3179,8 @@
                     - subject: "core: Increase the default timeout for worker connections to 30s"
                       hash: 44002ac3e50fbbbf70bbb5abc325da4b92acbf02
                       body: >
-                        This is a further attempt to avoid ETIMEOUT errors when running
+                        This is a further attempt to avoid ETIMEOUT errors when
+                        running
 
                         on GH actions and connecting to real testbots.
                       footer:
@@ -3253,7 +3342,8 @@
                 rpi"
               hash: 6a47531bd8c1a3a032e57efe6b1c2d764d6d0570
               body: >
-                This has since been fixed in the engine but since it impacts the HUP from
+                This has since been fixed in the engine but since it impacts the
+                HUP from
 
                 version we need to handle it in the test suite.
               footer:
@@ -3291,7 +3381,8 @@
                     - subject: 'Revert "minor: Add @balena/leviathan-test-helpers package"'
                       hash: d662f07d297dc130c1592552f8ef1bcdcdabe37f
                       body: >
-                        This reverts PR https://github.com/balena-os/leviathan/pull/826.
+                        This reverts PR
+                        https://github.com/balena-os/leviathan/pull/826.
                       footer:
                         Change-type: minor
                         change-type: minor
@@ -3348,7 +3439,8 @@
                     - subject: Run out-of-band e2e tests after Flowzone passes
                       hash: 4c82cc453f44736e05b2917be7357ac24348c212
                       body: >
-                        Custom actions can only use certain secrets and single-dimension
+                        Custom actions can only use certain secrets and
+                        single-dimension
 
                         run matrices. By running an entirely separate job after Flowzone
 
@@ -3432,7 +3524,8 @@
                     - subject: 'Revert "minor: Add @balena/leviathan-test-helpers package"'
                       hash: d662f07d297dc130c1592552f8ef1bcdcdabe37f
                       body: >
-                        This reverts PR https://github.com/balena-os/leviathan/pull/826.
+                        This reverts PR
+                        https://github.com/balena-os/leviathan/pull/826.
                       footer:
                         Change-type: minor
                         change-type: minor
@@ -3489,7 +3582,8 @@
                     - subject: Run out-of-band e2e tests after Flowzone passes
                       hash: 4c82cc453f44736e05b2917be7357ac24348c212
                       body: >
-                        Custom actions can only use certain secrets and single-dimension
+                        Custom actions can only use certain secrets and
+                        single-dimension
 
                         run matrices. By running an entirely separate job after Flowzone
 
@@ -3573,7 +3667,8 @@
                     - subject: 'Revert "minor: Add @balena/leviathan-test-helpers package"'
                       hash: d662f07d297dc130c1592552f8ef1bcdcdabe37f
                       body: >
-                        This reverts PR https://github.com/balena-os/leviathan/pull/826.
+                        This reverts PR
+                        https://github.com/balena-os/leviathan/pull/826.
                       footer:
                         Change-type: minor
                         change-type: minor
@@ -3630,7 +3725,8 @@
                     - subject: Run out-of-band e2e tests after Flowzone passes
                       hash: 4c82cc453f44736e05b2917be7357ac24348c212
                       body: >
-                        Custom actions can only use certain secrets and single-dimension
+                        Custom actions can only use certain secrets and
+                        single-dimension
 
                         run matrices. By running an entirely separate job after Flowzone
 
@@ -3735,7 +3831,8 @@
             - subject: "flasher: output logs to serial console"
               hash: 131893e433ef64a1f3b05dfcd44b0e022f13646d
               body: >
-                Improve debugging experience of flasher service by outputting logs to
+                Improve debugging experience of flasher service by outputting
+                logs to
 
                 serial console.
               footer:
@@ -3786,7 +3883,8 @@
             - subject: "jenkins_build: add argument to build OS development images"
               hash: 07f20dae6f06831181fc2ae306f9c4a52499ca24
               body: >
-                Building OS development images is useful for example when debugging and
+                Building OS development images is useful for example when
+                debugging and
 
                 testing AMI images.
               footer:
@@ -3841,7 +3939,8 @@
             - subject: "Engine healthcheck: deal with empty uuid file"
               hash: 345d1440d34fe042f03884c4ae32f0ba7e7768e8
               body: >
-                In rare cases (believed to be caused by a non-atomic file creation and
+                In rare cases (believed to be caused by a non-atomic file
+                creation and
 
                 writing operation in containerd), we end up with an empty file at
 
@@ -3890,7 +3989,8 @@
             - subject: "distro: For OS development, enable serial console"
               hash: 82df437d84bec2e2bb03c33b5f153bab82003d8a
               body: >
-                Add graphical and serial console output when building in OS development
+                Add graphical and serial console output when building in OS
+                development
 
                 mode.
               footer:
@@ -4034,7 +4134,8 @@
             - subject: "common: signing: improve debug output on failure"
               hash: 18599bd74eacf844674f508c612014349575ba55
               body: >
-                If the signing server's response is anything other than successful, such
+                If the signing server's response is anything other than
+                successful, such
 
                 as with an authentication failure or bad request, the HTTP status code
 
@@ -4118,8 +4219,8 @@
             - subject: Add upstream resolvconf 1.91 recipe for kirkstone
               hash: af89ddb51d7829dc045cd3434fb4cf0bec7fba37
               body: >
-                Current resolvconf version is broken for kirkstone, which is fixed
-                upstream,
+                Current resolvconf version is broken for kirkstone, which is
+                fixed upstream,
 
                 so we reuse the fixed version from upstream.
 
@@ -4204,7 +4305,8 @@
                     - subject: Disable renovate config for now
                       hash: f0dd47cafe9fe2addc506a9c3fc2295ef0f483a3
                       body: >
-                        There is a conflict with the balena-os Renovate GitHub App
+                        There is a conflict with the balena-os Renovate GitHub
+                        App
 
                         and the balena-io/renovate-config self-hosted job.
 
@@ -4224,7 +4326,8 @@
                     - subject: Restore worker release env var
                       hash: 83c46ab5d605f64f2cee2b42f460aa403e95f1e9
                       body: >
-                        This env var is still used by the leviathan-worker project
+                        This env var is still used by the leviathan-worker
+                        project
 
                         for e3e tests against draft worker releases.
                       footer:
@@ -4266,7 +4369,8 @@
                     - subject: Pin worker to a release and add renovate regex template
                       hash: ee8d737587d3ad511c75d0c986825dfa30bba35a
                       body: >
-                        This will allow Renovate to bump the worker block reference
+                        This will allow Renovate to bump the worker block
+                        reference
 
                         to point to the latest GitHub tag.
                       footer:
@@ -4327,7 +4431,8 @@
             - subject: "dockerfile: balena-push-env: update balena CLI version to v14.5.15"
               hash: 06f4be81c2dd37eb6a6da51024d6857b32200d20
               body: >
-                Newer supervisor require a CLI >= v13.5.1 to migrate from v2 apps.json
+                Newer supervisor require a CLI >= v13.5.1 to migrate from v2
+                apps.json
               footer:
                 Change-type: patch
                 change-type: patch
@@ -4338,7 +4443,8 @@
             - subject: "jenkins_generate_ami: add balena org for preloaded app"
               hash: ee48444b36d3597264a7694b2246b3fee4f6b659
               body: >
-                Specify the organization and block name when preloading so it is not
+                Specify the organization and block name when preloading so it is
+                not
 
                 ambiguous.
               footer:
@@ -4476,7 +4582,8 @@
                     - subject: Avoid conflicting docker networks
                       hash: 5e04208a9f07567c6aa7fdc55dc95d2cacb6c8c3
                       body: >
-                        The `make subnet` command can be called on Jenkins and similar to generate
+                        The `make subnet` command can be called on Jenkins and
+                        similar to generate
 
                         a unique subnet that is not in use.
 
@@ -4538,8 +4645,8 @@
                 LUKS devices"
               hash: dc31885048db9a1ef5e1aaa705af9bf3d04052a3
               body: >
-                When unlocking LUKS devices, udev events initializing the DM devices are
-                still
+                When unlocking LUKS devices, udev events initializing the DM
+                devices are still
 
                 generated in the background even after cryptsetup luksOpen returns. We need to
 
@@ -4701,7 +4808,8 @@
             - subject: "balena-image-initramfs: disable redundant compression"
               hash: 91213a65ab83794be274757c8598c4c3495ceece
               body: >
-                Our initramfs is built into the kernel, which is always compressed.
+                Our initramfs is built into the kernel, which is always
+                compressed.
 
                 Disable redundant initramfs compression, which should save some CPU
 
@@ -4732,7 +4840,8 @@
             - subject: "initrdscripts: Only unlock LUKS partitions on the OS drive"
               hash: f5e8488e7b87c38829d241f788413433526d2f78
               body: >
-                In the current state the cryptsetup initrd script tries to unlock all
+                In the current state the cryptsetup initrd script tries to
+                unlock all
 
                 LUKS volumes in the system using the TPM. This includes user-defined LUKS
 
@@ -4796,7 +4905,8 @@
             - subject: "connectivity: Add linux firmware for iwlwifi 9260"
               hash: 6857496c1a03282375f40a5621ea1ee39171cb0d
               body: >
-                Some device types are being sold with this WiFi chipset so let's include
+                Some device types are being sold with this WiFi chipset so let's
+                include
 
                 the firmware.
 
@@ -4895,7 +5005,8 @@
                 naming"
               hash: 795e2427821d28fcf894da1cba9afc245efc38b3
               body: >
-                Partitions in flasher images are being created with different LABEL and
+                Partitions in flasher images are being created with different
+                LABEL and
 
                 PARTLABEL, for example:
 
@@ -4998,8 +5109,8 @@
                 of the DUT"
               hash: 17b49075804ea85aadfbb20d557025c1a4c2ee4f
               body: >
-                Not all the boards we support have the redsocks uid as 995 in their rootfs
-                so let's
+                Not all the boards we support have the redsocks uid as 995 in
+                their rootfs so let's
 
                 fetch the actual redsocks uid from the DUT before running the proxy tests and
 
@@ -5034,7 +5145,8 @@
             - subject: "kernel-balena: enable zstd compression"
               hash: 0473815cdf1210936b2110bdafb5294ae527db50
               body: >
-                Enabling CONFIG_KERNEL_ZSTD=y improves the compression ratio compared
+                Enabling CONFIG_KERNEL_ZSTD=y improves the compression ratio
+                compared
 
                 to gzip while being faster to decompress. With kernel 5.15 in balenaOS
 
@@ -5077,7 +5189,8 @@
             - subject: "image_types_balena: generate bmap file"
               hash: 73541251086eeecf19ddfe89f84af432c137f1f1
               body: >
-                Generate a bmap file from the sparse image to allow for punching holes
+                Generate a bmap file from the sparse image to allow for punching
+                holes
 
                 in the disk image ranges that were unmapped after building. This data is
 
@@ -5106,7 +5219,8 @@
             - subject: "image_types_balena: create sparse disk image"
               hash: 7d4d1c40fc11088f2b17c3297021c15c31596462
               body: >
-                Create filesystem images sparsely allocated. Write filesystems to final
+                Create filesystem images sparsely allocated. Write filesystems
+                to final
 
                 disk image skipping sparse blocks.
               footer:
@@ -5144,7 +5258,8 @@
                     - subject: 'Revert "docker-compose: stop using the default docker bridge"'
                       hash: 957acc6a86c610835a9567fca172a812ff1d54bd
                       body: >
-                        This reverts commit eb69ff445fe0cac4f2060e67fa6994e61c3ca4b9.
+                        This reverts commit
+                        eb69ff445fe0cac4f2060e67fa6994e61c3ca4b9.
 
 
                         Hardcoding the bridge address like this results in conflicts
@@ -5202,8 +5317,8 @@
                         address of the DUT"
                       hash: 02b270e1c55429c7316a9c65f70362185bbe3aec
                       body: >
-                        Instead of retrying to get the DUT IP address 120 times on a 1 seconds
-                        interval,
+                        Instead of retrying to get the DUT IP address 120 times
+                        on a 1 seconds interval,
 
                         let's reduce it to 30 times because the resolveLocalTarget which we call will
 
@@ -5228,7 +5343,8 @@
                     - subject: "docker-compose: stop using the default docker bridge"
                       hash: eb69ff445fe0cac4f2060e67fa6994e61c3ca4b9
                       body: >
-                        This causes problems for make-local tests when the user apps in the
+                        This causes problems for make-local tests when the user
+                        apps in the
 
                         DUT also uses the default docker bridge network range.
                       footer:
@@ -5246,7 +5362,8 @@
                         file"
                       hash: 5046eaae99fb0ba2edf8c15ef6ad2e34e54260d8
                       body: >
-                        The testbot AP is visible and is discovered during a scan.
+                        The testbot AP is visible and is discovered during a
+                        scan.
 
                         Let's remove the hidden attribute as it may cause problems
 
@@ -5399,7 +5516,8 @@
                 place"
               hash: 87b65de7f8506b0a7796d007145a230228b5ae06
               body: >
-                There are two GRUB config variants - one for regular devices and one
+                There are two GRUB config variants - one for regular devices and
+                one
 
                 for devices with FDE enabled. This commit makes flasher include the latter
 
@@ -5497,8 +5615,8 @@
             - subject: "balena-image.bb: Include bits for LUKS when FDE is enabled"
               hash: 57670e3d2538729cb17c882edf75bc523cd72bef
               body: >
-                We want meta-balena to pull in these packages automatically when FDE is
-                enabled
+                We want meta-balena to pull in these packages automatically when
+                FDE is enabled
 
                 rather than relying on device types to have them.
               footer:
@@ -5528,7 +5646,8 @@
                 partitions"
               hash: 96186d604c40d804226ddb20790797c67c4337b2
               body: >
-                get_part_number_by_label expects the block device name without the /dev/
+                get_part_number_by_label expects the block device name without
+                the /dev/
 
                 prefix, flasher uses this correctly in all but one place, this patch fixes it.
               footer:
@@ -5566,7 +5685,8 @@
                 LUKS"
               hash: bd97f35a3a0f50652b3ac1e26849e25b8330292e
               body: >
-                We are using two variants of GRUB configs - one for LUKS-encrypted OS
+                We are using two variants of GRUB configs - one for
+                LUKS-encrypted OS
 
                 and the other one for the rest. HUP needs to acknowledge this and use
 
@@ -5592,7 +5712,8 @@
             - subject: "balena-rollback: Find following symbolic links"
               hash: 27efb90747605d0ca8e853d65b08f95bc726a32e
               body: >
-                On full disk encrypted devices the EFI partition is a soft link in the
+                On full disk encrypted devices the EFI partition is a soft link
+                in the
 
                 boot partition. This commit fixes detecting files in the EFI partition
 
@@ -5607,7 +5728,8 @@
             - subject: "hostapp-update-hooks: Find following symlinks"
               hash: f29fd0e4bb5fdcf84055636c0888048343d15c97
               body: >
-                On full disk encrypted devices the EFI partition is a soft link in the
+                On full disk encrypted devices the EFI partition is a soft link
+                in the
 
                 boot partition. This commit fixes detecting files in the EFI partition
 
@@ -5683,7 +5805,8 @@
                     - subject: Add conditions for Apple Silicon workstations
                       hash: ff3d9fee035d2aa7a7c04e47dfbddb638c564878
                       body: >
-                        Convert Darwin to lowercase and arm64 -> aarch64 as needed.
+                        Convert Darwin to lowercase and arm64 -> aarch64 as
+                        needed.
                       footer:
                         Change-type: patch
                         change-type: patch
@@ -5702,7 +5825,8 @@
                 in testbots"
               hash: f93065327126d39069e5d1d19a4c78b41e582b17
               body: >
-                The tunnel to port 22222 used by testbots communicate between the core
+                The tunnel to port 22222 used by testbots communicate between
+                the core
 
                 container and the DUT does not allow to ssh as a non-root user.
 
@@ -5720,7 +5844,8 @@
             - subject: "ssh-auth: do not use a separate custom key"
               hash: abf5936f0ada2d7af15c87a147e4416a403b3607
               body: >
-                Given that testbot devices use a tunnel to specific ports to communicate
+                Given that testbot devices use a tunnel to specific ports to
+                communicate
 
                 with the DUT that is established with the suite-generated keys, using
 
@@ -5740,7 +5865,8 @@
             - subject: 'Revert "test: ssh-auth: fix test cases using custom keys"'
               hash: b2450a9df2c1a773b807652bc37e6c92ccecef35
               body: >
-                Using two set of keys, the one created by the suite to authenticate by
+                Using two set of keys, the one created by the suite to
+                authenticate by
 
                 the proxy and a new custom key, is tricky as when running on testbot the
 
@@ -5851,7 +5977,8 @@
             - subject: "kernel-balena: Kernel version check should include provided version"
               hash: 42ec259c4d1c6e9a7c8171f21157562ed3a07cc9
               body: >
-                When adding a kernel configuration conditional in a provided kernel
+                When adding a kernel configuration conditional in a provided
+                kernel
 
                 version, make the check include the provided kernel version as that is
 
@@ -5984,7 +6111,8 @@
             - subject: "classes: kernel-balena: add wireguard module"
               hash: a3491c4ba4161ca7b6e9c25e6e0beb33f0f67a04
               body: >
-                Add the wireguard module by default so it is included in all device
+                Add the wireguard module by default so it is included in all
+                device
 
                 types. This is a frequently requested by customers and will avoid having
 
@@ -6015,7 +6143,8 @@
             - subject: "test: ssh-auth: fix test cases using custom keys"
               hash: b24d92774a67cf0c0b83a29848bdcf6ed8a574db
               body: >
-                There are two sets of keys used in this test, one stored in `/root/id`
+                There are two sets of keys used in this test, one stored in
+                `/root/id`
 
                 which is created by the cloud suite to SSH via the proxy server, and
 
@@ -6074,7 +6203,8 @@
                 supervisor"
               hash: fd788120e5915820e75240e548760fd107cc0580
               body: >
-                The `os-config` application stops the supervisor before fetching openvpn
+                The `os-config` application stops the supervisor before fetching
+                openvpn
 
                 configuration and starting the `openvpn` service unit.
 
@@ -6116,7 +6246,8 @@
             - subject: "ssh-auth: setConfig: run synchronously"
               hash: 5534839614a5221068d25fb703658b780d6c7463
               body: >
-                Most tests expects a specific device configuration so having the setting
+                Most tests expects a specific device configuration so having the
+                setting
 
                 run asynchronously leads to unexpected failures.
               footer:
@@ -6129,7 +6260,8 @@
             - subject: "cloud: ssh-auth: use custom path for custom key"
               hash: 6c83fd02383baf7b6932858a3e88ae207cbecc3b
               body: >
-                Right now it overwrites the key created by the cloud suite to connect
+                Right now it overwrites the key created by the cloud suite to
+                connect
 
                 to the proxy.
               footer:
@@ -6142,7 +6274,8 @@
             - subject: "balena-config-vars: Set permissions for cache file"
               hash: 3406f9a45a5a97542972c442f1c8a8e3e80a7d37
               body: >
-                The sshd daemon is configured to fetch keys from the API for local
+                The sshd daemon is configured to fetch keys from the API for
+                local
 
                 user connections. The script that fetches the keys, cloud-public-sshkeys,
 
@@ -6186,7 +6319,8 @@
             - subject: "common: kernel-devsrc: fix pseudo abort"
               hash: e5307d7c7459ac977914122edc11d9ae7222e54b
               body: >
-                Yocto builds will abort due to inconsistencies between the pseudo
+                Yocto builds will abort due to inconsistencies between the
+                pseudo
 
                 database and files modified outside of the pseudo context [0].
 
@@ -6233,7 +6367,8 @@
             - subject: "jenkins_generate_ami: use a different token"
               hash: 3fcb9cb302b3f50e5fd8943fdafe2934fb0de182
               body: >
-                The AMI preload application no longer lives in the balena_os organization
+                The AMI preload application no longer lives in the balena_os
+                organization
 
                 so allow to provide a different token.
               footer:
@@ -6272,7 +6407,8 @@
             - subject: "flasher: fix detection and exclusion of installation media"
               hash: 02ba95a7f2b3889443f8fc2857723898140ff05e
               body: >
-                The old test no longer matches on full disk paths including /dev, which
+                The old test no longer matches on full disk paths including
+                /dev, which
 
                 can potentially result in the installation disk not being excluded from
 
@@ -6292,7 +6428,8 @@
             - subject: "flasher: properly expand device_pattern globs"
               hash: 1b8059cf553b99de9a854dbbc7d81d7c079fe2a5
               body: >
-                Previously, globs such as 'md/balena{,_*}' and 'mmcblk?' weren't being
+                Previously, globs such as 'md/balena{,_*}' and 'mmcblk?' weren't
+                being
 
                 properly expanded, resulting in the old behavior of explicit lists of
 
@@ -6378,7 +6515,8 @@
             - subject: Enable network access for tasks talking to the signing service
               hash: ab1d75a0db11cde16d93cb7b3ebe734f61583e28
               body: >
-                Since kirkstone tasks have network access disabled by default so we need
+                Since kirkstone tasks have network access disabled by default so
+                we need
 
                 to enable it explicitly for tasks that talk to the signing service.
               footer:
@@ -6432,7 +6570,8 @@
             - subject: Add meta-balena-esr workflow
               hash: bcaddc164814569a9971c728bfbae316bbae88b3
               body: >
-                This workflow will create an ESR branch from the latest patch of the
+                This workflow will create an ESR branch from the latest patch of
+                the
 
                 previous minor version the first day of each quarter.
               footer:
@@ -6476,7 +6615,8 @@
             - subject: "prepare-openvpn: do not use cached configuration"
               hash: 021495a07f736c7a80497e18dea33e23ac63318b
               body: >
-                This script needs to update the VPN authentication with the currently
+                This script needs to update the VPN authentication with the
+                currently
 
                 configured keys so do not use cached values.
               footer:
@@ -6667,7 +6807,8 @@
             - subject: "tests: hup: handle exception when unwrapping non-flasher image"
               hash: 4d020e008232c29a8d9ab316f7c71d7fb161d98e
               body: >
-                Handle ENOENT ErrnoException when attempting to unwrap a non-flasher
+                Handle ENOENT ErrnoException when attempting to unwrap a
+                non-flasher
 
                 image in HUP tests. This mirrors a similar change made in ce2d33ad8.
               footer:
@@ -6799,7 +6940,8 @@
             - subject: "openssh: allow RSA signatures with SHA1 algorithms"
               hash: df5e9dcd4a8f61ace849d5bb437798d16a440191
               body: >
-                Openssh v8.8 removes this support by default but the backend still
+                Openssh v8.8 removes this support by default but the backend
+                still
 
                 needs to be updated to drop these.
               footer:
@@ -7054,7 +7196,8 @@
             - subject: "common: openvpn: remove resin.conf"
               hash: ce288ba9138ab385370e2375a64ef8c185feb2c9
               body: >
-                This config file hasn't been used since commit 2db88c2, which unified
+                This config file hasn't been used since commit 2db88c2, which
+                unified
 
                 how managed and unmanaged images operate. Since that commit, openvpn
 
@@ -7090,7 +7233,8 @@
             - subject: "Revert \"chrony: update to version 4.1 to match kirkstone's version\""
               hash: 3ea5184c30f3051d58f1a1befd19c76c17ee4334
               body: >
-                With the updated version the systemd watchdog events are not received.
+                With the updated version the systemd watchdog events are not
+                received.
 
 
                 Fixes #2823
@@ -7305,7 +7449,8 @@
             - subject: "classes: kernel-balena: improve aufs branch selection"
               hash: 83f866691184df43c5b08b9da646a5bf99227b7b
               body: >
-                The task that applies the aufs patches is still required to support
+                The task that applies the aufs patches is still required to
+                support
 
                 hostOS updates between aufs and overlay2 balenaOS versions.
 
@@ -7330,7 +7475,8 @@
             - subject: "meta-balena-rust: Fix ABI for arm"
               hash: efe707f06134a345ef4d6f396555b4c3e057f23d
               body: >
-                The move to include the ABI in the target definition was done in Poky:
+                The move to include the ABI in the target definition was done in
+                Poky:
 
                 d6b563710e6cc0857843433d85023d47f9f2037d
 
@@ -7425,7 +7571,8 @@
             - subject: "classes: kernel-balena: improve aufs branch selection"
               hash: 83f866691184df43c5b08b9da646a5bf99227b7b
               body: >
-                The task that applies the aufs patches is still required to support
+                The task that applies the aufs patches is still required to
+                support
 
                 hostOS updates between aufs and overlay2 balenaOS versions.
 
@@ -7450,7 +7597,8 @@
             - subject: "meta-balena-rust: Fix ABI for arm"
               hash: efe707f06134a345ef4d6f396555b4c3e057f23d
               body: >
-                The move to include the ABI in the target definition was done in Poky:
+                The move to include the ABI in the target definition was done in
+                Poky:
 
                 d6b563710e6cc0857843433d85023d47f9f2037d
 
@@ -7665,7 +7813,8 @@
             - subject: "barys: Add balena-rust to syntax conversion step"
               hash: 2fb2b25a2bc6c226f3d4d570a2bfb261585ed283
               body: >
-                Recent versions of meta-balena include a balena-rust layer used to
+                Recent versions of meta-balena include a balena-rust layer used
+                to
 
                 specify a distro-set Rust version across all supported Yocto versions
 
@@ -7795,7 +7944,8 @@
             - subject: "generic-amd64: match genericx86-64-ext connectivity"
               hash: ed449edbd6504f97e94f11f1f97075582cf27e7b
               body: >
-                Disable bluetooth/wifi in generic-amd64 to match genericx86-64-ext.
+                Disable bluetooth/wifi in generic-amd64 to match
+                genericx86-64-ext.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -7805,7 +7955,8 @@
             - subject: "generic-amd64: update name to include GPT qualifier"
               hash: ab8af4bff6ccff7d650c794ec8dc3e31be6f1671
               body: >
-                Update the long name for generic-amd64 to include the MBR qualifier,
+                Update the long name for generic-amd64 to include the MBR
+                qualifier,
 
                 matching the device type coffeescript file.
 
@@ -7820,7 +7971,8 @@
             - subject: "genericx86-64-ext: update name to include MBR qualifier"
               hash: d511fa372a606ddbc1814b35d109c4cc0aef57e2
               body: >
-                Update the long name for genericx86-64-ext to include the MBR qualifier,
+                Update the long name for genericx86-64-ext to include the MBR
+                qualifier,
 
                 matching the device type coffeescript file.
 
@@ -7995,8 +8147,8 @@
             - subject: Add Python v3.10.5 and v3.9.13
               hash: 971223d30b9bf7391ffe57b36182c4857bf4c3aa
               body: >
-                Update checksum for v3.8.13 and v3.7.13 since they were rebuilt to add
-                tkinter modules
+                Update checksum for v3.8.13 and v3.7.13 since they were rebuilt
+                to add tkinter modules
               footer:
                 Change-type: patch
                 change-type: patch
@@ -8053,9 +8205,9 @@
             - subject: Remove the wrapper shim that base images have around sh on first run
               hash: cb3c0138081af7b73498e22f201af71277ec532c
               body: >
-                The wrapper will potentially break other packages that expect sh to be a
-                real shell (In case the real sh shell binary is not restored
-                yet)
+                The wrapper will potentially break other packages that expect sh
+                to be a real shell (In case the real sh shell binary is not
+                restored yet)
               footer:
                 Change-type: patch
                 change-type: patch
@@ -8100,7 +8252,8 @@
             - subject: "sw.os-image: Add balena-image software image"
               hash: 4473a99902a3793a33b63300778ad0118b8366cf
               body: >
-                This is used by the OS builders to deploy releases. This contract contains
+                This is used by the OS builders to deploy releases. This
+                contract contains
 
                 details related to the balena-image artifact generated in the balenaOS
 
@@ -8153,7 +8306,8 @@
             - subject: "balena-api: On hostapp creation, set class to app"
               hash: 3bb4995b8bedcfe83b75c3ef6151725828dd1eb8
               body: >
-                Applications can be fleet, blocks or apps, and hostapps need to be set
+                Applications can be fleet, blocks or apps, and hostapps need to
+                be set
 
                 as apps.
               footer:
@@ -8170,7 +8324,8 @@
             - subject: "balena-deploy: Use balena-img instead of resin-img"
               hash: 93a91f27b8538d60b45d0f25eb1fddf512e31e52
               body: >
-                The resin-img is no longer maintained and the deployment of raw images
+                The resin-img is no longer maintained and the deployment of raw
+                images
 
                 as well as flasher requires features only available in balena-img.
               footer:
@@ -8208,7 +8363,8 @@
             - subject: "balena-deploy: pin balena-img to v4.1.2"
               hash: 5a9efbc151127e6bb806627ba4949327cd54b776
               body: >
-                Pin balena-img to v4.1.2, to ensure that upstream changes never break
+                Pin balena-img to v4.1.2, to ensure that upstream changes never
+                break
 
                 the deployment.
               footer:
@@ -8221,7 +8377,8 @@
             - subject: "balena-deploy: s/resin-img/balena-img"
               hash: c632941d9f54549df6e9464b317c18bf6a313040
               body: >
-                As part of rebranding, resin docker repos were renamed to balena, and
+                As part of rebranding, resin docker repos were renamed to
+                balena, and
 
                 resin/resin-img no longer receives updates. Change the image we pull to
 
@@ -8240,7 +8397,8 @@
             - subject: "balena-lib: release_finalize: Do not retag phase for ESR branch patch"
               hash: ffdcb572e75b6bddc890710a6c1e4702d08a86a7
               body: >
-                When we patch an ESR branch, for example from v2022.1.0 to v2022.1.1,
+                When we patch an ESR branch, for example from v2022.1.0 to
+                v2022.1.1,
 
                 do not update the next, current, sunset ESR  phases as they remain the
 
@@ -8259,7 +8417,8 @@
             - subject: "balena-lib: balena_lib_release_finalize: Pass the correct arguments"
               hash: e28b745d4ba121b639ba79dad2377f051fe5d3e2
               body: >
-                The balena_api_fetch_fleet_tag requires a slug as first argument, not
+                The balena_api_fetch_fleet_tag requires a slug as first
+                argument, not
 
                 a fleet that can contain the organization too.
               footer:
@@ -8272,7 +8431,8 @@
             - subject: "balena-lib: Tag ESR fleets with patch independent tags"
               hash: d51ecb6d91fe6ecf91de1ecde4fff700f7f88e67
               body: >
-                Otherwise patch updates of ESR branches move the ESR phase when they
+                Otherwise patch updates of ESR branches move the ESR phase when
+                they
 
                 should not. For example, if 2022.1.1 is current, 2022.1.2 is also
 
@@ -8291,7 +8451,8 @@
             - subject: "balena-lib: Check versions before finalizing"
               hash: 0ae1389a69b857b466b4eef81396d5f1b6bc4ae6
               body: >
-                Only allow to finalize draft releases that have matching semver with
+                Only allow to finalize draft releases that have matching semver
+                with
 
                 the device repository being deployed.
               footer:
@@ -8304,7 +8465,8 @@
             - subject: "balena-deploy-block: Do not always finalise on deploy"
               hash: 754833d6ef773b68a9eecafb426783ac70eb8767
               body: >
-                Introduce a new final step after draft deployment to finalise releases.
+                Introduce a new final step after draft deployment to finalise
+                releases.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -8315,7 +8477,8 @@
             - subject: "balena-deploy-block: Add OS version to contract"
               hash: 2c692984079215c2c916c5e4df79e200486be1ff
               body: >
-                If there is an OS contract, add the OS version we are building for.
+                If there is an OS contract, add the OS version we are building
+                for.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -8336,7 +8499,8 @@
             - subject: "balena-lib: Build contracts"
               hash: b8c08faf2a86434793bcad67e063ade9754142ff
               body: >
-                Add a function to build all OS contracts and return the one for the
+                Add a function to build all OS contracts and return the one for
+                the
 
                 specified slug.
               footer:
@@ -8375,7 +8539,8 @@
             - subject: "balena-lib: Finalise release before tagging"
               hash: 2243ff38f3589c021c0013477b92e6888f57eba8
               body: >
-                This is so we can check that we are tagging the correct version before
+                This is so we can check that we are tagging the correct version
+                before
 
                 doing it, as tagging makes the release visible.
               footer:
@@ -8398,7 +8563,8 @@
             - subject: "balena-lib: Extract release finalization as function"
               hash: 969f6b941bd9fb34d82fbc0d48838b7b4898b2e1
               body: >
-                This allows it to be called from other context, like the OS automation
+                This allows it to be called from other context, like the OS
+                automation
 
                 test suite.
               footer:
@@ -8421,7 +8587,8 @@
             - subject: "balena-deploy: Fix header on balena_deploy_block()"
               hash: dbbf059bf9b8df60b7578c7a41e0678fbff60043
               body: >
-                The arguments to this function have been re-ordered but the header had
+                The arguments to this function have been re-ordered but the
+                header had
 
                 not been modified.
               footer:
@@ -8508,7 +8675,8 @@
     - subject: Add build and deploy workflow
       hash: 8a78a6c314d9a27d676f6570f9ce10a096a7d0b1
       body: >
-        This workflow will launch a Jenkins build and draft deploy job when a new
+        This workflow will launch a Jenkins build and draft deploy job when a
+        new
 
         tag is made.
       footer:
@@ -8552,7 +8720,8 @@
             - subject: "deploy: ensure deployRawArtifact is empty instead of null"
               hash: 56edfe62d6ecede3e07b0b51653ca605a2e4ba83
               body: >
-                jq returns null by default when a given key isn't found, ensure that
+                jq returns null by default when a given key isn't found, ensure
+                that
 
                 when getting the value of deployRawArtifact, we get an empty variable
 
@@ -8663,7 +8832,8 @@
             - subject: "automation: ami: make BALENA_PRELOAD_COMMIT optional"
               hash: b365cb9ba359637a3a6a8451b8d83142bb167571
               body: >
-                Remove BALENA_PRELOAD_COMMIT from required env vars, as we have a
+                Remove BALENA_PRELOAD_COMMIT from required env vars, as we have
+                a
 
                 default if it's not specified.
               footer:
@@ -8694,7 +8864,8 @@
             - subject: "jenkins_generate_ami: surface preload app commit as variable"
               hash: 7248b344198ba09a219ee227ffea4b6f0a4850d7
               body: >
-                Surface the preloaded app commit as a variable that can be overridden in
+                Surface the preloaded app commit as a variable that can be
+                overridden in
 
                 the build job. Default to "current" to maintain existing behavior when
 
@@ -8728,7 +8899,8 @@
             - subject: "balena-deploy: Avoid patching test suites config.js during deploy"
               hash: 21c27cd41cda7ee7f5041752cca1f79280c51a7e
               body: >
-                This will allow us to make changes to config.js in meta-balena without
+                This will allow us to make changes to config.js in meta-balena
+                without
 
                 breaking the deploy steps. If additional changes are needed at runtime
 
@@ -8766,7 +8938,8 @@
             - subject: "jenkins_build: Use recurse-submodules when checking out meta-balena"
               hash: 00fb29b9a7a00dc1209be497ef171736e6229954
               body: >
-                If meta-balena has submodule updates we want to make sure to use them.
+                If meta-balena has submodule updates we want to make sure to use
+                them.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -8873,7 +9046,8 @@
             - subject: "balena-lib: Fix fetching meta-balena base version"
               hash: d5d838339ed23ecd242092bf4214fe2505ccd181
               body: >
-                On an ESR branch the VERSION file contains the ESR version, not the
+                On an ESR branch the VERSION file contains the ESR version, not
+                the
 
                 base meta-balena version.
 
@@ -8902,7 +9076,8 @@
             - subject: "balena-deploy-block: Label ESR hostapps"
               hash: 1c6561daf9f16e579d55305471274e7793dc3619
               body: >
-                ESR hostapps need special labels in order to be recognized. This commit
+                ESR hostapps need special labels in order to be recognized. This
+                commit
 
                 adds the esr-current, esr-next and esr-sunset labels.
               footer:
@@ -8926,7 +9101,8 @@
             - subject: "balena-api: Set policy on ESR hostapps"
               hash: 6e4d7b3d2ccbd1a5c67d94cc73c4552775ce3b94
               body: >
-                ESR hostapps need an esr release-policy in order to be recognized.
+                ESR hostapps need an esr release-policy in order to be
+                recognized.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -8937,7 +9113,8 @@
             - subject: "balena-deploy: Pass ESR variable when creating apps"
               hash: 2497bfb59ae16810169718e6d383d0bc9d564a04
               body: >
-                ESR hostapps need special labels in order to be recognized. This allows
+                ESR hostapps need special labels in order to be recognized. This
+                allows
 
                 to add those flags when creating the hostapp.
               footer:
@@ -8954,7 +9131,8 @@
                 tag"
               hash: 9d5fa316dbda3d4782e782abaceed41efe3e5a99
               body: >
-                The last meta-balena version and tag might not be the same, like in the
+                The last meta-balena version and tag might not be the same, like
+                in the
 
                 case of ESR branches.
 
@@ -8970,7 +9148,8 @@
             - subject: "balena-lib: Add balena_lib_get_meta_balena_base_version"
               hash: 25840dc98e138781e78530be0437f3950970f263
               body: >
-                Retrieves the last meta-balena version, which may not be the same as the
+                Retrieves the last meta-balena version, which may not be the
+                same as the
 
                 last meta-balena tag.
 
@@ -9119,7 +9298,8 @@
             - subject: "kernel-headers-test: simplify example module Makefile"
               hash: 88df9d672d45b7d0bf59d4656654091c3bbfd56b
               body: >
-                The example kernel module has some unnecessary variables and targets.
+                The example kernel module has some unnecessary variables and
+                targets.
 
                 Simplify this makefile by passing the kernel source directory to make,
 
@@ -9173,7 +9353,8 @@
             - subject: Add oneshot service to migrate supervisor state config
               hash: d965d23fe60db6254eaabd81a0d48b5718e01a3a
               body: >
-                The hostapp-update hooks would run before the supervisor update step
+                The hostapp-update hooks would run before the supervisor update
+                step
 
                 when using balenahup via the dashboard. This resulted in the balena
 
@@ -9215,8 +9396,8 @@
             - subject: "bluez5: Disable PnP Device Information service"
               hash: afb3dc0441e9ed0f2f9a08de5dd2a9cc75f09ac3
               body: >
-                This reverts to the behavior before v5.56 as it interferes with user
-                defined
+                This reverts to the behavior before v5.56 as it interferes with
+                user defined
 
                 Device Information profiles.
 
@@ -9249,7 +9430,8 @@
             - subject: Revert Go 1.16 recipes
               hash: 4303346ccda6d3e3c4f83cc3782c73a6d1adb494
               body: >
-                balena-engine requires fixes backported from upstream to support a newer
+                balena-engine requires fixes backported from upstream to support
+                a newer
 
                 version of Go, and retaining the new recipes while switching back to the
 
@@ -9288,7 +9470,8 @@
             - subject: "hostapp-update-hooks: Migrate resin-supervisor to balena-supervisor"
               hash: 19a9bfc2f172368c8652a448e77a77563a5c32a4
               body: >
-                After a hostapp-update we need to migrate the supervisor.conf currently
+                After a hostapp-update we need to migrate the supervisor.conf
+                currently
 
                 mounted from /etc/resin-supervisor in the state cache partition.
 
@@ -9322,7 +9505,8 @@
             - subject: "hostapp-update-hooks: Sync to disk when hook is done"
               hash: 9688de53a3d6ae143b74bb1a7ea446b073755b27
               body: >
-                This makes sure the hook changes are committed if the power is lost.
+                This makes sure the hook changes are committed if the power is
+                lost.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -9333,7 +9517,8 @@
             - subject: "extract-balena-ca: Sync changes to disk in case of power loss"
               hash: 62302a2149b886b5e44cd2cc93bdc70e55227bb0
               body: >
-                Sync changes to disk once the certificates have been updated. This
+                Sync changes to disk once the certificates have been updated.
+                This
 
                 minimizes the risk of the custom CA to be committed without having the
 
@@ -9349,7 +9534,8 @@
                 loss"
               hash: e5733363c4ba2a3e31c4613b34e66e072517d1c8
               body: >
-                Commit disk modifications to minimize data loss in event of power loss.
+                Commit disk modifications to minimize data loss in event of
+                power loss.
 
 
                 Fixes #2141
@@ -9366,7 +9552,8 @@
             - subject: "bluez: Set policy configuration to AutoEnable"
               hash: 614eaf745b29f6e5f373f9c712a7c533373a6187
               body: >
-                Since bluez 5.35, the bluetooth daemon has the ability to power on
+                Since bluez 5.35, the bluetooth daemon has the ability to power
+                on
 
                 controllers instead of using the unreliable `hciconfig hci0 up`.
 
@@ -9385,7 +9572,8 @@
             - subject: "bluez5: Replace executable path directory in unit file"
               hash: 809da983829e97e5cddc424c4ff95054e2404ef0
               body: >
-                The unit file is left with a placeholder to perform the substitution.
+                The unit file is left with a placeholder to perform the
+                substitution.
 
                 Previously this was replaced by autoconf.
               footer:
@@ -9435,7 +9623,8 @@
             - subject: "README: Update supported Yocto versions"
               hash: cdbf76ccbaaf6e265f8432eca10d42e55b6969e8
               body: >
-                Add the warrior and dunfell versions to the list of tested releases.
+                Add the warrior and dunfell versions to the list of tested
+                releases.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -9581,7 +9770,8 @@
             - subject: "balena-os: Add preferred provider for Go native"
               hash: 20dd5fb4384e78f24d3e3304be38666fdcb859a8
               body: >
-                With Go 1.16 a precompiled go-binary-native that provides go-native was
+                With Go 1.16 a precompiled go-binary-native that provides
+                go-native was
 
                 introduced to bootstrap the Go compilation.
 
@@ -9601,7 +9791,8 @@
             - subject: "balena-engine: build in GOPATH mode"
               hash: 342a9621b5416d2a1f6aec3948dfdcfe15395d13
               body: >
-                balena-engine hasn't transitioned to building with modules yet, and Go
+                balena-engine hasn't transitioned to building with modules yet,
+                and Go
 
                 1.16 enabled them by default. Revert to the old behavior for now to fix
                   the build.
@@ -9622,7 +9813,8 @@
             - subject: "recipes-devtools: go: backport get_linuxloader"
               hash: 283e7d279ed26c2855b4916c24bb502e2d87a189
               body: >
-                Hardknott introduces get_linuxloader() to linuxloader.bbclass that
+                Hardknott introduces get_linuxloader() to linuxloader.bbclass
+                that
 
                 allows for dynamically choosing between different c libraries, which go
 
@@ -9809,7 +10001,8 @@
                     - subject: Show warning instead of exception for invalid network config
                       hash: 5197a1330d69cbff97f3c53a77f640638e074b8a
                       body: >
-                        A previous PR (#1656) fixed validation for network ipam config,
+                        A previous PR (#1656) fixed validation for network ipam
+                        config,
 
                         checking that both network and subnet are defined for each ipam config entry
 
@@ -9881,7 +10074,8 @@
                     - subject: Update balena-register-device and send extra info at provision time
                       hash: 9e52bb33ac931a035b4cd0fd80173bf10db771c0
                       body: >
-                        This extra info will mean the API is able to immediately set default
+                        This extra info will mean the API is able to immediately
+                        set default
 
                         config vars based on the os/supervisor version so that they are
 
@@ -9991,7 +10185,8 @@
                     - subject: Log error responses from API when reporting state
                       hash: 2203f78d517a9edf75a261dd3c77cdf5b609548c
                       body: >
-                        This adds the error message from the API to journal logs to better
+                        This adds the error message from the API to journal logs
+                        to better
 
                         identify those cases where patching to the API fails.
                       footer:
@@ -10022,7 +10217,8 @@
                     - subject: Remove version tag from livepush generated image
                       hash: 9c1d10dc318bb7c207608ed197c5713960642af3
                       body: >
-                        The `start-resin-supervisor` script in newer OS version no longer uses the
+                        The `start-resin-supervisor` script in newer OS version
+                        no longer uses the
 
                         SUPERVISOR_TAG environment variable setup on supervisor.conf and
 
@@ -10063,8 +10259,8 @@
                     - subject: Bump dockerode types to 2.5.34
                       hash: 95fb568aaeb0d5a0fa8b4b88f650b51d3b96786d
                       body: >
-                        This commit updates dockerode types to the latest 2.x version, removing
-                        the need
+                        This commit updates dockerode types to the latest 2.x
+                        version, removing the need
 
                         for custom composer types for network.
 
@@ -10138,7 +10334,8 @@
                     - subject: Bump ssri from 6.0.1 to 6.0.2
                       hash: ae8dc8ff227237444ae532cf7e817bfc463fbac5
                       body: >
-                        Bumps [ssri](https://github.com/npm/ssri) from 6.0.1 to 6.0.2.
+                        Bumps [ssri](https://github.com/npm/ssri) from 6.0.1 to
+                        6.0.2.
 
                         - [Release notes](https://github.com/npm/ssri/releases)
 
@@ -10187,7 +10384,8 @@
             - subject: "grub update hook: move variables from grub.cfg to grubenv"
               hash: 76c82dd987215982dbfcbdf950588dafdc4c129e
               body: >
-                In order to verify GPG signature of grub.cfg it must be immutable.
+                In order to verify GPG signature of grub.cfg it must be
+                immutable.
 
                 All the variables should be stored in grubenv file. This means
 
@@ -10239,7 +10437,8 @@
             - subject: Update mobynit to the new multi-container hostOS specification
               hash: 93335381320815dbe7b2d21233106910a200e2f5
               body: >
-                Update mobynit to use the new multi-container hostOS specification
+                Update mobynit to use the new multi-container hostOS
+                specification
               footer:
                 Change-type: minor
                 change-type: minor
@@ -10255,7 +10454,8 @@
             - subject: "balena-engine: Update to 19.03.18"
               hash: 32705abbf93971bdddb980fe0c7a01b40d229560
               body: >
-                This brings in the aufs-to-overlay migrator. Which won't run until we
+                This brings in the aufs-to-overlay migrator. Which won't run
+                until we
 
                 configure the engine service to include an `BALENA_MIGRATE_OVERLAY=1`
 
@@ -10281,7 +10481,8 @@
                 mode"
               hash: 9de54188ea47e121a7f408ae1c65f70f53d3a634
               body: >
-                We need to make sure the modem is completely initialized before sending
+                We need to make sure the modem is completely initialized before
+                sending
 
                 the AT commands that do the switch to ECM mode. To achieve this we
 
@@ -10310,8 +10511,8 @@
             - subject: "device-progress: do not force an exit code"
               hash: f080936299781d121866de112e6930fa2f261fac
               body: >
-                this script is only used during provisioning and HUP. in provisioning we
-                `|| true` anyway, and
+                this script is only used during provisioning and HUP. in
+                provisioning we `|| true` anyway, and
 
                 in HUP we would like to use the exit code for retrying
               footer:
@@ -10340,7 +10541,8 @@
             - subject: "meta-balena: rename resin-vars to balena-config-vars"
               hash: 7d019abde039a469212c59bcf6e1b7a94ed365d6
               body: >
-                Rename the 'resin-vars' script to 'balena-config-vars' and update all
+                Rename the 'resin-vars' script to 'balena-config-vars' and
+                update all
 
                 references.
               footer:
@@ -10377,7 +10579,8 @@
             - subject: "repo.yml: Move balena-supervisor reference to balena-os"
               hash: 7d9433e3c41c37ba3d9cea51d894b520be81d899
               body: >
-                The balena-supervisor repository has been moved to balena-os so the
+                The balena-supervisor repository has been moved to balena-os so
+                the
 
                 repo.yml file needs to be corrected for nested changelogs to work again.
               footer:
@@ -10408,7 +10611,8 @@
             - subject: "resin-mounts/etc-fake-hwclock: add dependency on resin-state services"
               hash: 2b07011844a2738aec033d88af29e3f6e0dd28a2
               body: >
-                Added a dependency on resin-state.service and resin-state-reset.service
+                Added a dependency on resin-state.service and
+                resin-state-reset.service
 
                 to etc-fake-hwclock.mount.
 
@@ -10501,7 +10705,8 @@
             - subject: "udev: Silence warnings from resin_update_state_probe"
               hash: 5a0bed933fd9730e507305c6098698c4a1970c6e
               body: >
-                At this moment resin_update_state_probe is scanning pretty much every
+                At this moment resin_update_state_probe is scanning pretty much
+                every
 
                 block device for rootfs. This include ramdisks, zram and loop devices
 
@@ -10566,7 +10771,8 @@
             - subject: "hostapp-update: convert absolute symlinks to relative"
               hash: fa8b5a4d2836510c5257d75c65542d374f628407
               body: >
-                Symlinks to /boot and /sbin/init are absolute, which breaks them when
+                Symlinks to /boot and /sbin/init are absolute, which breaks them
+                when
 
                 the sysroot is mounted under another system.
 
@@ -10610,7 +10816,8 @@
             - subject: "image_types_balena: make agnostic to root fstype"
               hash: 71553d47174d8dc28777b0d0a6723418192ad8e4
               body: >
-                Build BALENA_HOSTAPP_IMG path using BALENA_ROOT_FSTYPE instead of assuming
+                Build BALENA_HOSTAPP_IMG path using BALENA_ROOT_FSTYPE instead
+                of assuming
 
                 the root is ext4.
               footer:
@@ -10623,7 +10830,8 @@
             - subject: "mkfs-hostapp-native: make agnostic to fstype"
               hash: 295976261f44650bd108eafcb53b3d24f6a28671
               body: >
-                Remove assumptions about root fstype. Rename create to create.ext4,
+                Remove assumptions about root fstype. Rename create to
+                create.ext4,
 
                 mkfs.hostapp-ext4 to mkfs.hostapp, and add an argument to mkfs.hostapp
 
@@ -10643,7 +10851,8 @@
             - subject: "balena: dissolve healthcheck-image-load into healthcheck script"
               hash: 7983e9bfd716aaedad1ef5f1468b2771e1f5a71c
               body: >
-                Previously we were loading the healthcheck image from it's own service
+                Previously we were loading the healthcheck image from it's own
+                service
 
                 that was previously made `PartOf=` the balena.service.
 
@@ -10687,7 +10896,8 @@
             - subject: Fix disablement of userspace firmware loading requests
               hash: 98fad0bbfd179f16c5985a3281af25b4801af6e9
               body: >
-                This option depends on FW_LOADER_USER_HELPER which will be enabled if
+                This option depends on FW_LOADER_USER_HELPER which will be
+                enabled if
 
                 _FALLBACK is set to 'y', which is the default in the arm64 defconfig
 
@@ -10757,7 +10967,8 @@
                     - subject: "os-config: rename flasher flag path"
                       hash: 3622cc8cdf38f42c1f38fb6d5c67dde16631d6f0
                       body: >
-                        As part of a full rename away from legacy resin namespaces the
+                        As part of a full rename away from legacy resin
+                        namespaces the
 
                         following os-config compatibility changes are required to align
 
@@ -10802,7 +11013,8 @@
             - subject: Apply aufs patches if aufs is present in kernel config
               hash: 8094dc7a3a36cfc4f1c0da5be66dc666e29b7dbe
               body: >
-                Allow installing and patching aufs even if BALENA_STORAGE is overlay2
+                Allow installing and patching aufs even if BALENA_STORAGE is
+                overlay2
               footer:
                 Change-type: patch
                 change-type: patch
@@ -10818,7 +11030,8 @@
             - subject: "grub-efi: build required modules into grub image"
               hash: 5e1004d6753025166c40b11af117e008feb875f1
               body: >
-                grub-efi requires modules to be installed in the boot partition, and
+                grub-efi requires modules to be installed in the boot partition,
+                and
 
                 resin-image installs them from ${DEPLOYDIR}.
 
@@ -10861,8 +11074,8 @@
             - subject: "initrdscripts: always use by-uuid symlink looking for flasher rootfs"
               hash: d16ad58f6efe76c9313226735de88648e54d2420
               body: >
-                If the device with flasher rootfs is slow to bring up and rootfs is
-                defined
+                If the device with flasher rootfs is slow to bring up and rootfs
+                is defined
 
                 as UUID=xxx the waiting loop in rootfs initrd script would assume UUIDs have
 
@@ -10897,7 +11110,8 @@
             - subject: "balena: Make the healthcheck loading service part of balena.service"
               hash: c26f2d203a87d1578d9d52d5bbd8b0b18869916e
               body: >
-                This prevents issues with the health check when the image is manually
+                This prevents issues with the health check when the image is
+                manually
 
                 removed.
               footer:
@@ -10915,7 +11129,8 @@
             - subject: "dnsmasq: enable dbus support"
               hash: 372980ca6aa6bd2793ac856c303c3b3ac4eeffdb
               body: >
-                This config option is disabled by default in the upstream package
+                This config option is disabled by default in the upstream
+                package
 
                 so I'm including the change here as a separate commit.
               footer:
@@ -10948,7 +11163,8 @@
             - subject: "recipes-bsp: grub: install only release modules"
               hash: 78a8049218d8ce3a9172b7fca6fe00270544e7f1
               body: >
-                GRUB builds modules with both debug and release variants, with *.module
+                GRUB builds modules with both debug and release variants, with
+                *.module
 
                 and *.mod extensions respectively.
 
@@ -10969,7 +11185,8 @@
             - subject: "meta-balena-common: add grub-efi support"
               hash: 3bfbd05d81d59c82fb131117700325416fb152cb
               body: >
-                Use upstream grub and grub-efi recipes with a new grub-conf recipe
+                Use upstream grub and grub-efi recipes with a new grub-conf
+                recipe
 
                 employing a config template.
               footer:
@@ -10985,7 +11202,8 @@
             - subject: Update PR template to specify test coverage in more detail
               hash: ce0bb95e1d045ef32c377d4fc9de959c6ebbfd88
               body: >
-                All PRs should include details about test coverage, including whether the
+                All PRs should include details about test coverage, including
+                whether the
 
                 tests are automated on manually recorded.
               footer:
@@ -11140,7 +11358,8 @@
             - subject: "networkmanager: add improved dispatcher scripts for NTP handling"
               hash: 23e52eaca7f0983ac6da27289fc293e43e7dbebd
               body: >
-                Update the existing DHCP dispatcher script for adding NTP sources to
+                Update the existing DHCP dispatcher script for adding NTP
+                sources to
 
                 make use of dynamic chrony source configuration. Any DHCP configured
 
@@ -11178,7 +11397,8 @@
             - subject: "chrony: add sourcedir support and helper script"
               hash: d6c64b0a08b64593d6684605bd5268f28ff1b1c9
               body: >
-                Add the 'sourcedir' parameter to the chrony configuration to support
+                Add the 'sourcedir' parameter to the chrony configuration to
+                support
 
                 dynamic source configuration files. Any NTP source files that are
 
@@ -11488,7 +11708,8 @@
             - subject: Respect custom CA in supervisor
               hash: 4cf82392c78d804a18737de80dcfa6f8f34d0494
               body: >
-                This is necessary because node has its own built-in CA bundle and ignores
+                This is necessary because node has its own built-in CA bundle
+                and ignores
 
                 the system-wide bundle. Bind-mount the system-wide bundle to the supervisor
 
@@ -11510,7 +11731,8 @@
             - subject: "README: Rename resin-logo to balena-logo."
               hash: 47a7a0ab9a99ea45b4fcf4e684d973088328eca9
               body: >
-                The file rename happened in v2.51 but the README has not been updated
+                The file rename happened in v2.51 but the README has not been
+                updated
 
                 accordingly.
               footer:
@@ -11590,7 +11812,8 @@
             - subject: "u-boot: Add required configuration for BalenaOS environment"
               hash: 401345c86a3a017dc548a94c7afa3977d547fc21
               body: >
-                The BalenaOS u-boot environment patch requires u-boot to support importing
+                The BalenaOS u-boot environment patch requires u-boot to support
+                importing
 
                 and exporting of the environment as well as the fsuuid command.
               footer:
@@ -11621,7 +11844,8 @@
             - subject: Add IPV6 multicast routing capability
               hash: 510bb7a7107f538f56c35a87a7426e7c12a3cdb3
               body: >
-                Add IPV6 multicast routing capability to the default configuration.
+                Add IPV6 multicast routing capability to the default
+                configuration.
 
 
                 Fixes #2051
@@ -11676,7 +11900,8 @@
             - subject: "resin-supervisor: Make sure the database directory exists"
               hash: d070fe38a3b2a91fcc7c07d716fa90fdd3e9d078
               body: >
-                If this directory is removed by mistake, the supervisor will not be
+                If this directory is removed by mistake, the supervisor will not
+                be
 
                 able to start.
 
@@ -11766,7 +11991,8 @@
             - subject: "systemd: update patches to avoid fuzzy matching"
               hash: 03d64e57466c66acd710b089c4ae8d777f963554
               body: >
-                The content applied by the patches has not changed, just the context
+                The content applied by the patches has not changed, just the
+                context
 
                 in order to properly inject changes without fuzzy matching since the source
 
@@ -11837,7 +12063,8 @@
             - subject: "networkmanager: remove deprecated bluetooth inherit"
               hash: 1993db9f3027936119248bd193e350456ba035bc
               body: >
-                In poky dunfell and newer the bluetooth class has been deprecated.
+                In poky dunfell and newer the bluetooth class has been
+                deprecated.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -11848,7 +12075,8 @@
             - subject: "meta-balena-common: replace distro_features_check with features_check"
               hash: c907611d66aa4d2ff27f9940178cbcdbc2273459
               body: >
-                Replace distro_features_check that was deprecated upstream in dunfell.
+                Replace distro_features_check that was deprecated upstream in
+                dunfell.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -11859,7 +12087,8 @@
             - subject: "avahi: remove example services"
               hash: 317c7a6404195e78a21c76e43f8743a47cf542d1
               body: >
-                In dunfell the example ssh service files don't exist so avoid failing
+                In dunfell the example ssh service files don't exist so avoid
+                failing
 
                 during do_install for services that we don't use anyway.
               footer:
@@ -11914,7 +12143,8 @@
             - subject: "mtools: remove initialize-direntry patch"
               hash: c35b98165cc698188b978c34c7fb20f58a4c83e1
               body: >
-                Remove initialize-direntry.patch that has been fixed in mtools 4.0.23
+                Remove initialize-direntry.patch that has been fixed in mtools
+                4.0.23
               footer:
                 Change-type: patch
                 change-type: patch
@@ -11925,7 +12155,8 @@
             - subject: "meta-balena-dunfell: dunfell compatibility layer support"
               hash: e8c34101f13d0327ac278207c8d7d500214f5f6f
               body: >
-                Create meta-balena-dunfell layer base by copying meta-balena-warrior
+                Create meta-balena-dunfell layer base by copying
+                meta-balena-warrior
               footer:
                 Change-type: minor
                 change-type: minor
@@ -11941,7 +12172,8 @@
             - subject: "start-resin-supervisor: fix directory creation for 'balena start'"
               hash: ce9e4f211a2356a866edee5ca3dbada3faa27689
               body: >
-                Ensure that the /var/log/supervisor-log directory exists prior to
+                Ensure that the /var/log/supervisor-log directory exists prior
+                to
 
                 running 'balena start --attach resin_supervisor' as well as
 
@@ -11988,7 +12220,8 @@
             - subject: "zram-swap-init: adjust default to lesser of 50%/4GB"
               hash: 155af3386029a0e76b74ee60d58c32ba72073a82
               body: >
-                Copied from Fedora zram defaults [0]. This may be adjusted later after
+                Copied from Fedora zram defaults [0]. This may be adjusted later
+                after
 
                 doing our own profiling.
 
@@ -12053,7 +12286,8 @@
             - subject: "systemd/timeinit: improve RTC handling at boot"
               hash: 1c1374f3c8b5914b7e645f8068ebafc8b4cbbe3a
               body: >
-                The handling of the RTC at boot time has been improved as follows:
+                The handling of the RTC at boot time has been improved as
+                follows:
 
 
                 1) A 'timeinit-rtc.sh' script has been added to improve logging of
@@ -12101,7 +12335,8 @@
             - subject: "modemmanager: add u-blox-modeswitch scripts"
               hash: a30ab44f40f1c059e64075c567fc388800d960a4
               body: >
-                Add the u-blox-modeswitch scripts to modemmanager. The scripts are
+                Add the u-blox-modeswitch scripts to modemmanager. The scripts
+                are
 
                 generic and therefore it makes sense to provide them as part of
 
@@ -12138,7 +12373,8 @@
             - subject: Enable kernel user space probes support
               hash: 8af9bc8fbc58096d986d8db7df81a0c9505dc420
               body: >
-                This is needed to make use of eBPF and all the debugging and extra
+                This is needed to make use of eBPF and all the debugging and
+                extra
 
                 features it brings.
               footer:
@@ -12292,7 +12528,8 @@
                     - subject: Improve calculation for used system memory
                       hash: dd5f62227a0b0d2024db924e7028c9fec8b2b1d9
                       body: >
-                        The memory information reported by the supervisor currently
+                        The memory information reported by the supervisor
+                        currently
 
                         estimates the value of used memory as `MemTotal - MemFree`.
 
@@ -12361,7 +12598,8 @@
                     - subject: Attempt a state report once every maxReportFrequency
                       hash: 0e3c0263922043b9d53a7eb3545622106f10100c
                       body: >
-                        With the addition of the system information feature (CPU temp) etc if
+                        With the addition of the system information feature (CPU
+                        temp) etc if
 
                         there wasn't any changes in the docker or config state of the device,
 
@@ -12410,7 +12648,8 @@
                     - subject: "version: drop SUPERVISOR_VERSION env var"
                       hash: 8e65466f2d8540918b1fa8d8af88d0c21fcbf7f8
                       body: >
-                        In order to make supervisor upgrades more transparent, lets move away
+                        In order to make supervisor upgrades more transparent,
+                        lets move away
 
                         from this env var since it requires a container restart any time the supervisor
 
@@ -12432,7 +12671,8 @@
                     - subject: Fix supervisor deadlock during migration
                       hash: adffde932ec28b114a5821b9ae332a42bb330be2
                       body: >
-                        Due to the singleton work, when performing migration M00005 and there
+                        Due to the singleton work, when performing migration
+                        M00005 and there
 
                         are apps with services created in the database, a deadlock occurs
 
@@ -12469,7 +12709,8 @@
                     - subject: Fix config checks for ConfigFS backend
                       hash: a5f3002e708c949b6de3c8ba495b2a89c13214fc
                       body: >
-                        When trying to apply SSDT overlays in Up Board, the supervisor currently
+                        When trying to apply SSDT overlays in Up Board, the
+                        supervisor currently
 
                         gets stuck in a loop trying to apply target state. See #1465
 
@@ -12507,7 +12748,8 @@
                     - subject: "api: Implement scoped Supervisor API keys"
                       hash: c08de8701e49f417d2fc5849d237b9ed69b438e2
                       body: >
-                        Each service, when requesting access to the Supervisor API, will
+                        Each service, when requesting access to the Supervisor
+                        API, will
 
                         now get an individual key which can be scoped to specific resources.
 
@@ -12593,7 +12835,8 @@
             - subject: "chrony: set the source UDP port for NTP requests to 123"
               hash: 6b95bd55f12054d996a412e7a6bc202e518b4e29
               body: >
-                By default chrony uses a random UDP source port for each NTP request.
+                By default chrony uses a random UDP source port for each NTP
+                request.
 
                 This can cause problems with particular routers/firewalls (issues have
 
@@ -12642,7 +12885,8 @@
                 reboots"
               hash: 96c2c495819ba6175261a5179e1cdb4673552e6c
               body: >
-                In order to produce sensible timestamps for journald log messages:
+                In order to produce sensible timestamps for journald log
+                messages:
 
                 a) the system time needs to be maintained correctly over a reboot, and
 
@@ -12707,7 +12951,8 @@
             - subject: "resin-mounts: add bind mount service for /etc/fake-hwclock"
               hash: 394aa52f77ec222e6fda856a92cd499bd464fa07
               body: >
-                Add a persistent r/w location (root-overlay/etc/fake-hwclock/) to
+                Add a persistent r/w location (root-overlay/etc/fake-hwclock/)
+                to
 
                 the resin-state partition for storage of the fake-hwclock.data file.
 
@@ -12727,7 +12972,8 @@
             - subject: Add host extensions support
               hash: 1d33429f0bc925bc97b4b7820aeb812eac9098d2
               body: >
-                Add a new section that described the host extensions functionality.
+                Add a new section that described the host extensions
+                functionality.
 
 
                 Fixes #1984
@@ -12743,7 +12989,8 @@
             - subject: "packagegroup-resin: Add hostapp extensions update script"
               hash: a03e5c9eed5105c5af85c79df29546ec641d873c
               body: >
-                This commit adds the update-hostapp-extensions utility. It can be run
+                This commit adds the update-hostapp-extensions utility. It can
+                be run
 
                 with:
 
@@ -12758,7 +13005,8 @@
             - subject: "hostapp-extensions-update: Add host extensions update script"
               hash: 0fe293eb118913e667b52b2f6df032227719efc8
               body: >
-                This script triggers an installation or update of the hostapp extensions
+                This script triggers an installation or update of the hostapp
+                extensions
 
                 in the system.
 
@@ -12778,7 +13026,8 @@
             - subject: "resin-vars: Parse the HOSTEXT_IMAGES variable from config.json"
               hash: 761f517f955f829e12b2c7f0a0f88830ded39e13
               body: >
-                This variable allows the hostapp extensions updater script to update the
+                This variable allows the hostapp extensions updater script to
+                update the
 
                 hostapp extensions in the system.
               footer:
@@ -12791,7 +13040,8 @@
             - subject: "docker-disk: Add the host extension images to the data partition"
               hash: cd44a94cf1646828832070417a2deb9236b0f5ee
               body: >
-                Host extension images contain extra content that is overlayed over the
+                Host extension images contain extra content that is overlayed
+                over the
 
                 root filesystem at boot.
 
@@ -12813,7 +13063,8 @@
             - subject: "docker-disk: Generalize hostapp platform variable"
               hash: 416544bd9c7b7e9080857dc0258668f388a55aa7
               body: >
-                Rename HELLO_PLATFORM to HOSTAPP_PLATFORM so it can be used with any
+                Rename HELLO_PLATFORM to HOSTAPP_PLATFORM so it can be used with
+                any
 
                 app type.
               footer:
@@ -12826,7 +13077,8 @@
             - subject: "initrdscripts: Busybox switch_root does not support -c argument"
               hash: a62a8189825de9dbcf52dbb3116d213fc7ceb84f
               body: >
-                Calling busybox switch_root in this way has always been complaining but
+                Calling busybox switch_root in this way has always been
+                complaining but
 
                 the error log did not get to the console.
               footer:
@@ -12840,7 +13092,8 @@
                 mounted"
               hash: d70fbd050e5a1f7c695782b99187d583103111e0
               body: >
-                Now that the data partition will be mounted from the initramfs for host
+                Now that the data partition will be mounted from the initramfs
+                for host
 
                 extensions support, this script will only run if something went wrong.
               footer:
@@ -12853,7 +13106,8 @@
             - subject: "initrdscripts: Expand the resin-data filesystem"
               hash: 00cad826c157ac2d5c13137fb1023f1eb7570c58
               body: >
-                As the resin-data partition will be mounted in the initramfs, its
+                As the resin-data partition will be mounted in the initramfs,
+                its
 
                 filesystem needs to be expanded before that.
               footer:
@@ -12866,7 +13120,8 @@
             - subject: "initrdscripts: Add resin-data to fs UUID generation"
               hash: d2794dd2d559ca0c55a4cbab9ae5ef3c01ebdcf3
               body: >
-                The resin-data partition will be mounted in the initramfs for the host
+                The resin-data partition will be mounted in the initramfs for
+                the host
 
                 extension support so the UUID generation needs to happen before that.
               footer:
@@ -12879,7 +13134,8 @@
             - subject: "resin-data.mount: Remove default dependencies"
               hash: dc6cfa2e90b29b0fdcfc05c1b85e2196de4f950b
               body: >
-                With the data partition being mounted in the initramfs to support host
+                With the data partition being mounted in the initramfs to
+                support host
 
                 extensions, the runtime systemd-udev no longer sees the resin-data mount
 
@@ -12930,8 +13186,8 @@
             - subject: "mobynit: Separate recipe from balena-engine"
               hash: 6be3f1153d56c1c0c21e6d84db7be70be96bcd10
               body: >
-                This commit adds a new recipe to build mobynit independently from
-                balena-engine.
+                This commit adds a new recipe to build mobynit independently
+                from balena-engine.
               footer:
                 Change-type: patch
                 change-type: patch
@@ -13055,7 +13311,8 @@
             - subject: Respect balenaRootCA system-wide
               hash: 2218cb21d1fc813ac59c08b77046c5d014ad9a42
               body: >
-                We allow the user to specify a custom CA in the .balenaRootCA key
+                We allow the user to specify a custom CA in the .balenaRootCA
+                key
 
                 of config.json but at this moment each tool has to implement support
 
@@ -13282,7 +13539,8 @@
                         - commits:
                             - author: Paulo Castro
                               body: >-
-                                The change type is considered 'major' because, by default, errors are
+                                The change type is considered 'major' because,
+                                by default, errors are
 
                                 now thrown for relatively common occurrences such as authentication
 
@@ -13488,7 +13746,8 @@
                         - commits:
                             - author: Will Boyce
                               body: >-
-                                * Switch to `export ...` syntax (from `export = ...`)
+                                * Switch to `export ...` syntax (from `export =
+                                ...`)
 
                                 * Fix invalid export of class inheriting non-exported class
                               footers:
@@ -13740,7 +13999,8 @@
             - subject: Pack /lib/vdso/Makefile in kernel-modules-headers
               hash: 37ce34cbb4d1ddb8af5a0eafb40fc16436b6e2b8
               body: >
-                For the updated 5.4 kernel on RPI4, kernel-headers-test fails with
+                For the updated 5.4 kernel on RPI4, kernel-headers-test fails
+                with
 
                 arch/arm64/kernel/vdso/Makefile lib/vdso/Makefile No such file or directory
 
@@ -13797,7 +14057,8 @@
                     - subject: "bug: Allow DNS through firewall for local containers"
                       hash: e9b536a889542588e2f79247ed7937c709fdf3d2
                       body: >
-                        We provide a local DNS server for containers to use and this
+                        We provide a local DNS server for containers to use and
+                        this
 
                         was not allowed through the firewall when enabled.
                       footer:
@@ -13898,7 +14159,8 @@
                             - subject: Remove handlebars-helpers to shrink bundle size
                               hash: 1305553f48747e0e450c89254790e67674c252b7
                               body: >
-                                We can re-add specific helpers as necessary without needing to bloat
+                                We can re-add specific helpers as necessary
+                                without needing to bloat
 
                                 with the entirety of the helpers package
                               footer:
@@ -14008,7 +14270,8 @@
                                 - commits:
                                     - author: Juan Cruz Viotti
                                       body: >-
-                                        This is very similar to the cache class they use by default, with the
+                                        This is very similar to the cache class
+                                        they use by default, with the
 
                                         difference that it has a limit and won't grow indefinitely, causing
 
@@ -14053,7 +14316,8 @@
                                 - commits:
                                     - author: Lucian Buzzo
                                       body: >-
-                                        Only match elements with .filter() if the base schema (the schema with no
+                                        Only match elements with .filter() if
+                                        the base schema (the schema with no
 
                                         anyOf branches) matches the element.
                                       footers:
@@ -14173,7 +14437,8 @@
                                 - commits:
                                     - author: Giovanni Garufi
                                       body: >-
-                                        Merge multiple anyOf subschemas that match into a single one.
+                                        Merge multiple anyOf subschemas that
+                                        match into a single one.
 
                                         Add axioms in test
                                       footers:
@@ -14197,7 +14462,8 @@
                                 - commits:
                                     - author: Juan Cruz Viotti
                                       body: >-
-                                        This is a hack, and should be reverted once we get to the bottom of it.
+                                        This is a hack, and should be reverted
+                                        once we get to the bottom of it.
 
                                         It will impact performance, but right now there are things that should
 
@@ -14268,8 +14534,8 @@
                         - commits:
                             - author: Stevche Radevski
                               body: >-
-                                Handlebars supports very basic if condition checking, but it only checks
-                                for
+                                Handlebars supports very basic if condition
+                                checking, but it only checks for
 
                                 existence of a field. There are times when we want to combine conditions in order
 
@@ -14291,7 +14557,8 @@
                     - subject: Bump elliptic from 6.5.2 to 6.5.3
                       hash: c11004cd24fe66e6af7f16a79c0cc9e8847eb415
                       body: >
-                        Bumps [elliptic](https://github.com/indutny/elliptic) from 6.5.2 to 6.5.3.
+                        Bumps [elliptic](https://github.com/indutny/elliptic)
+                        from 6.5.2 to 6.5.3.
 
                         - [Release notes](https://github.com/indutny/elliptic/releases)
 
@@ -14336,7 +14603,8 @@
                                     - subject: Drop unnecessary async from request()
                                       hash: dfd4c8c39327fe2e1706a8180e3c3f56d4229b77
                                       body: >
-                                        This allows consumers like pinejs-client-supertest
+                                        This allows consumers like
+                                        pinejs-client-supertest
 
                                         to have all the methods returning different Promise
 
@@ -14505,7 +14773,8 @@
             - subject: "flasher-register: if no supervisor information found, report null"
               hash: dee971c0dbeb6e8363f3e321af582e99627626e9
               body: >
-                In b791055f3f6ffd6cc5796569a7321c5060129eea I attempted to have flasher
+                In b791055f3f6ffd6cc5796569a7321c5060129eea I attempted to have
+                flasher
 
                 images report their preconfigured supervisor version without a good
 
@@ -14559,8 +14828,8 @@
                 supervisor state"
               hash: 6208f065e59d9c15e10e872bff788c0b80020983
               body: >
-                Recently the supervisor added a codepath that assumes no files underneath
-                it will change during runtime.
+                Recently the supervisor added a codepath that assumes no files
+                underneath it will change during runtime.
 
                 OS update hooks can trigger a condition whereby the supervisor reboots the device during a HUP,
 
@@ -14597,7 +14866,8 @@
                     - subject: "common: Fix bug where aliases might be undefined"
                       hash: 60132134deffd770a40d1e6f18fdd87cb2f9f52e
                       body: >
-                        Should handle the scenario where the network aliases are undefined.
+                        Should handle the scenario where the network aliases are
+                        undefined.
                       footer:
                         Change-type: patch
                         change-type: patch
@@ -14613,7 +14883,8 @@
             - subject: "resin-supervisor: Create required directories before launch"
               hash: 7be7738c655e37e48c1a98f9e1e0ff2795d66bf8
               body: >
-                On commit a4ce26caadabcb1e87d944d78218cc32c579914e the supervisor moved
+                On commit a4ce26caadabcb1e87d944d78218cc32c579914e the
+                supervisor moved
 
                 from using --volume to using --mount to avoid the implicit creation of
 
@@ -14655,7 +14926,8 @@
                     - subject: Bump lodash from 4.17.15 to 4.17.19
                       hash: 01655b595555ae63ea1b70d623451c9ad3ec03dd
                       body: >
-                        Bumps [lodash](https://github.com/lodash/lodash) from 4.17.15 to 4.17.19.
+                        Bumps [lodash](https://github.com/lodash/lodash) from
+                        4.17.15 to 4.17.19.
 
                         - [Release notes](https://github.com/lodash/lodash/releases)
 
@@ -14783,7 +15055,8 @@
             - subject: Force choosing busybox-hwclock over util-linux-hwclock
               hash: 86dd4c761038ab0214a1fca8dd2839b4dbddfa39
               body: >
-                Otherwise, as util-linux has a higher default alternative priority, the
+                Otherwise, as util-linux has a higher default alternative
+                priority, the
 
                 version in util-linux is chosen. It would seem they are exchangeable, but
 
@@ -14808,7 +15081,8 @@
             - subject: "provisioning: provide base supervisor_version during provision"
               hash: b791055f3f6ffd6cc5796569a7321c5060129eea
               body: >
-                In order to get closer to formally requiring a target supervisor release
+                In order to get closer to formally requiring a target supervisor
+                release
 
                 in the model, we should expand our provisioning process to provide the
 
@@ -14859,7 +15133,8 @@
             - subject: "resin-supervisor: Create required directories before launch"
               hash: a93bd242d37246da83c1fa4368174d89b5c045f4
               body: >
-                On commit a4ce26caadabcb1e87d944d78218cc32c579914e the supervisor moved
+                On commit a4ce26caadabcb1e87d944d78218cc32c579914e the
+                supervisor moved
 
                 from using --volume to using --mount to avoid the implicit creation of
 
@@ -14930,7 +15205,8 @@
             - subject: "docker-disk: Update to still supported dind container"
               hash: e325ab34b9d7f14ad5a0d85b36b02ee1e2b7fdf8
               body: >
-                The `docker` Docker Hub repository lists what versions of the image
+                The `docker` Docker Hub repository lists what versions of the
+                image
 
                 are supported and 18.6 is not among them at all. Use the current stable
 
@@ -14990,7 +15266,8 @@
                 container.
               hash: 0fd442943d6b6c802df2f6e35d334ecde0f748e9
               body: >
-                This makes sure the source path refers to an existing file/directory on
+                This makes sure the source path refers to an existing
+                file/directory on
 
                 the host.
 
@@ -15033,7 +15310,8 @@
                     - subject: "bug: Fix unhandled promise rejection"
                       hash: 898c7e71dae28aa046bdd3e075ecf0d6aa364142
                       body: >
-                        When invoking iptables-restore it can fail. This wasn't handled
+                        When invoking iptables-restore it can fail. This wasn't
+                        handled
 
                         and this makes sure that it fails gracefully.
                       footer:
@@ -15118,7 +15396,8 @@
                     - subject: "avahi: Control with HOST_DISCOVERABILITY"
                       hash: 03ca0ee9add9872b5577833971b43682ae6cc427
                       body: >
-                        The host config variable HOST_DISCOVERABILITY can be set to
+                        The host config variable HOST_DISCOVERABILITY can be set
+                        to
 
                         true or false, controlling the state of the avahi service. This
 
@@ -15135,7 +15414,8 @@
                     - subject: "firewall: Add Host Firewall functionality"
                       hash: 28c5a44e714a3f155fbd528d0ec672dec1d96ef8
                       body: >
-                        Controlled by BALENA_HOST_FIREWALL_MODE, the firewall can
+                        Controlled by BALENA_HOST_FIREWALL_MODE, the firewall
+                        can
 
                         either be 'on' or 'off'.
 
@@ -15168,7 +15448,8 @@
                     - subject: "state: Report device MAC address to the API"
                       hash: 1b91ef3405d1d2013cbdd6381ed69256c6432d18
                       body: >
-                        When reporting device information, send the MAC address of any
+                        When reporting device information, send the MAC address
+                        of any
 
                         interfaces on the system. Also expose in the Supervisor API at
 
@@ -15415,7 +15696,9 @@
                                     - subject: "🐛: Fix missing `deprecated.getStringParams` function"
                                       hash: 53edb7e7485acd4310e9b04291894f6ab746285a
                                       body: >
-                                        The function `deprecated.getStringParams` was used, but
+                                        The function
+                                        `deprecated.getStringParams` was used,
+                                        but
 
                                         not defined.
                                       footer:
@@ -15547,7 +15830,8 @@
                                     - subject: Add 'upsert' method supporting natural keys, requires Pinejs ^10.19.1
                                       hash: c8ebfceec3ecc1cc57ee6942db35730c6d993192
                                       body: >
-                                        Detects unique constrain errors by 409 statusCodes.
+                                        Detects unique constrain errors by 409
+                                        statusCodes.
 
                                         Because of this, the upsert() method is only
 
@@ -15820,8 +16104,8 @@
                     - subject: Add label to expose gpu to container
                       hash: ae646a07ec6a6c96f7cb91f1d37898a94dbab47a
                       body: >
-                        In the absence of an upstream implementation of the DeviceRequest API
-                        introduced
+                        In the absence of an upstream implementation of the
+                        DeviceRequest API introduced
 
                         as part of Docker API v1.40 we roll our own using a feature label.
 
@@ -15854,7 +16138,8 @@
                     - subject: Move database app processing out to its own module
                       hash: b31d5007fba001fcb71f5103447823f9a27bbfaa
                       body: >
-                        This is part of the work to make the application-manager module much
+                        This is part of the work to make the application-manager
+                        module much
 
                         less monolithic, in preperation for system apps and more generally
 
@@ -15906,7 +16191,8 @@
                     - subject: "fix: API auth missing on state GET/PATCH"
                       hash: b89425c6079b74c709ef9872c6fc53726ffda6d3
                       body: >
-                        When performing a state GET/PATCH the authentication header was being
+                        When performing a state GET/PATCH the authentication
+                        header was being
 
                         missed off.
                       footer:
@@ -16057,8 +16343,8 @@
                     - subject: Make the db module a singleton
                       hash: 1d7381327e3114c0d005316846429d26b01a3e4c
                       body: >
-                        We were treating the database class as a singleton, but still having to
-                        pass
+                        We were treating the database class as a singleton, but
+                        still having to pass
 
                         around the db instance. Now we can simply require the db module and have
 
@@ -16158,7 +16444,8 @@
             - subject: "kernel-resin: Make USB_SERIAL and USB_SERIAL_GENERIC built-ins"
               hash: 32c3f173fa4b8dc69f5ce8dc404d36585ab94c5b
               body: >
-                These variables are defined as a bool and not tristate so they cannot be
+                These variables are defined as a bool and not tristate so they
+                cannot be
 
                 configured as a module.
               footer:
@@ -16170,7 +16457,8 @@
             - subject: "kernel-resin: Fix configuration warnings from newer kernels"
               hash: 819b7276aaa7ac4b4492fb9800ea074085c1ca82
               body: >
-                Also, make the security section not checked by the builder as these
+                Also, make the security section not checked by the builder as
+                these
 
                 configurations have disappeared from kernels > v4.8
               footer:
@@ -16182,7 +16470,8 @@
             - subject: "kernel-resin: Update balena kernel configuration for updated engine"
               hash: f57846a1246e8fff506c95ee22c3347d83a5ec2e
               body: >
-                Also, move configuration that will not be present in newer kernels to
+                Also, move configuration that will not be present in newer
+                kernels to
 
                 RESIN_CONFIGS_DEP so the kernel check task does not complain when not
 
@@ -16229,7 +16518,8 @@
             - subject: "systemd-zram-swap: Add compressed memory swap support"
               hash: 4c5156543852a6c2d963bf33f4e4307a7cb303cb
               body: >
-                This enables a compressed RAM swap of 25% of total system memory or 1GB,
+                This enables a compressed RAM swap of 25% of total system memory
+                or 1GB,
 
                 whichever smallest.
 
@@ -16261,7 +16551,8 @@
             - subject: "kernel-resin: Built-in zram configuration"
               hash: 2fcf092e08349bc66a2a90172668024e8a589d22
               body: >
-                In preparation to using zram swap drives make this configuration built-in
+                In preparation to using zram swap drives make this configuration
+                built-in
 
                 so it is available in the initramfs.
               footer:
@@ -16276,7 +16567,8 @@
             - subject: "resin-ntp-config: merge 'burst' command with 'add server' line"
               hash: 034ff61a58f30a980514157412c0455b52ddf744
               body: >
-                When the user supplies an additional NTP server source which is a
+                When the user supplies an additional NTP server source which is
+                a
 
                 pool URL the 'burst' command may fail. This occurs when the pool
 
@@ -16324,7 +16616,8 @@
             - subject: "initrdscripts: rootfs: Fix comparison to account for empty variable"
               hash: 63b3fac98b09f2a98ca44223f98cbc7c419197e3
               body: >
-                Enclosing bootparam_root in between quotes makes the comparison work as
+                Enclosing bootparam_root in between quotes makes the comparison
+                work as
 
                 expected with an empty argument.
               footer:
@@ -16352,7 +16645,8 @@
             - subject: Set chrony default servers as pools
               hash: 881e217ac1b1818237afb20312fd593259f44e2a
               body: >
-                the `maxsources` directive is simply to maintain the current behavior of
+                the `maxsources` directive is simply to maintain the current
+                behavior of
 
                 resolving four servers for synchronization. as noted in chrony's docs:
 
@@ -16424,7 +16718,8 @@
             - subject: "openvpn: Add runtime dependency on bash"
               hash: f84dcfdd4493ee23c84940348dbbffff9ced48a2
               body: >
-                The dependency is introduced by the upstream.sh and downstream.sh scripts.
+                The dependency is introduced by the upstream.sh and
+                downstream.sh scripts.
 
                 Bash is also a dependency not only for internal packages but for external
 
@@ -16481,8 +16776,8 @@
                 source bootloaders
               hash: f41735550c6e29ecd520e58f84c2281e4daf6c9f
               body: >
-                Devices with closed source bootloaders that cannot be made to pass the
-                UUID
+                Devices with closed source bootloaders that cannot be made to
+                pass the UUID
 
                 of the booting device (like smartphones, Jetson NX and Xabier), need to
 
@@ -16503,8 +16798,8 @@
             - subject: Fallback to labels and partlabels for devices with custom HUPs
               hash: e267e1dd2fcd4a841b09ba204bee6a58403a316c
               body: >
-                Devices with custom HUPs, like Jetson devices that run BSP partition
-                update
+                Devices with custom HUPs, like Jetson devices that run BSP
+                partition update
 
                 scripts, do not have state symlinks when updating from legacy pre state
 
@@ -16554,7 +16849,8 @@
             - subject: Remove busybox-syslog to use only systemd's journald
               hash: 9a1cedd66bbf298385c0a8460b3f9c3bb2da2f9e
               body: >
-                All logging is handled by journald so remove the default dependency on
+                All logging is handled by journald so remove the default
+                dependency on
 
                 busybox-syslog. It is still available to be explicitely included in
 
@@ -16729,7 +17025,8 @@
             - subject: Use /tmp as bootparam_root storage
               hash: bab3cd7f50022127bfef50fde9cd445b6b55a7b2
               body: >
-                From v2.49, the hostapp-update utility creates the /run directory in the
+                From v2.49, the hostapp-update utility creates the /run
+                directory in the
 
                 root filesystem, however when huping from previous versions /run is not there.
 
@@ -16817,7 +17114,8 @@
                     - subject: "versionbot: Add changelog yml file"
                       hash: 9b35f5e9cb6b27b92f7dc578a92532ade36c7a36
                       body: >
-                        This file allows other components to uniquely parse the information that
+                        This file allows other components to uniquely parse the
+                        information that
 
                         is contained in the changelog. It will be automatically managed by
 
@@ -17019,7 +17317,8 @@
                     - subject: Remove legacy fallback to DROP rule in iptables
                       hash: 31957566e5f5b21910988319472721ce2a931a38
                       body: >
-                        This has not been necessary for a long time, and wwe can now remove it.
+                        This has not been necessary for a long time, and wwe can
+                        now remove it.
                       footer:
                         Change-type: patch
                         change-type: patch
@@ -17029,7 +17328,8 @@
                     - subject: Add an ESTABLISHED flag to API iptables rules
                       hash: 7b1f03ced509cdbdbea950e079ba2fab5c3699bb
                       body: >
-                        This allows a response to an input with dport=`supevisor api port` and
+                        This allows a response to an input with dport=`supevisor
+                        api port` and
 
                         is required when the host OS is doing stateful firewalling.
 
@@ -17101,7 +17401,8 @@
                     - subject: Remove coverage running and modules
                       hash: 6c360c2273ad2ab66ed254a1172f138d4c1430d8
                       body: >
-                        The coverage no longer works with es2020, and nobody really pays any
+                        The coverage no longer works with es2020, and nobody
+                        really pays any
 
                         attention to the coverage as it is.
                       footer:
@@ -17397,7 +17698,8 @@
                     - subject: ⚡ Update synchronisation scripts for supervisor development
                       hash: 8ab63656bd483645fe0238fee2a1824158f3f453
                       body: >
-                        We move the old sync.js script to tools/, and delete the now-broken
+                        We move the old sync.js script to tools/, and delete the
+                        now-broken
 
                         sync-debug.js.
 
@@ -17414,7 +17716,8 @@
                     - subject: 🔧 Move to an alpine base image and drop i386-nlp support
                       hash: 3690acbd70df726030b648a1c32a9b2b21015232
                       body: >
-                        We also remove the Makefile to go to a simpler build system, as long with
+                        We also remove the Makefile to go to a simpler build
+                        system, as long with
 
                         the retry_docker_push.sh file. We remove the rest of the automation tools
 
@@ -17513,7 +17816,8 @@
             - subject: Update os-config from 1.1.1 to 1.1.3
               hash: 6119e57e24ecf30077da00d47057b688940e43ae
               body: >
-                Updates for rust 1.36 and improvements related to getrandom on devices
+                Updates for rust 1.36 and improvements related to getrandom on
+                devices
 
                 with lower entropy.
 
@@ -17545,7 +17849,8 @@
                         signed-off-by: Zahari Petkov <zahari@balena.io>
                       subject: Pin serde version to v1.0.94
                       body: >-
-                        Needed since meta-rust is not configuring the i686-poky-linux
+                        Needed since meta-rust is not configuring the
+                        i686-poky-linux
 
                         target correctly for 64-bit atomics support.
                 - version: os-config-1.1.2
@@ -17558,8 +17863,8 @@
                         signed-off-by: Zahari Petkov <zahari@balena.io>
                       subject: Block on random until success
                       body: >-
-                        On Raspberry Pi Zero W sometimes getrandom is not ready yet at the moment
-                        of
+                        On Raspberry Pi Zero W sometimes getrandom is not ready
+                        yet at the moment of
 
                         os-config launch:
 
@@ -17586,7 +17891,8 @@
             - subject: "balena-host: Ignore environment file if it does not exist"
               hash: 692a06a70536b9fcda79d5a0b28b23f384b9bb78
               body: >
-                Instruct the service to ignore the environment file if it does not exist.
+                Instruct the service to ignore the environment file if it does
+                not exist.
 
                 This avoids the service failing if the file does not exist.
               footer:
@@ -17598,7 +17904,8 @@
             - subject: Bump balena-engine to 18.09.17
               hash: ab54fcc710e8a7ef1857dae40710f6d2972e2ef7
               body: >
-                Fixes the bug in mobynit caused by the recent work on the graphdriver
+                Fixes the bug in mobynit caused by the recent work on the
+                graphdriver
 
                 system
               footer:
@@ -17610,7 +17917,8 @@
             - subject: "networkmanager: Use absolute path in drop-in"
               hash: 27f6f9467853b8308b5f27121878c61fc0d8dbf4
               body: >
-                systemd requires executable paths to be absolute. This causes an error
+                systemd requires executable paths to be absolute. This causes an
+                error
 
                 in the system journal.
               footer:
@@ -17660,7 +17968,8 @@
             - subject: Add initramfs module to regenerate default filesystem UUIDs
               hash: b802528c7427f50e96b88665f53071f1408b0baa
               body: >
-                This module is launched at early boot and regenerates filesystem UUIDs
+                This module is launched at early boot and regenerates filesystem
+                UUIDs
 
                 if required.
 
@@ -17677,7 +17986,8 @@
             - subject: Create udev state symlinks for all partitions
               hash: b7f63b18bcebf663d4d4d366dc78abe08c15925d
               body: >
-                When a partition filesystem label is detected, udev checks whether the
+                When a partition filesystem label is detected, udev checks
+                whether the
 
                 device belongs to the same disk as the root partitition passed in the
 
@@ -17702,7 +18012,8 @@
             - subject: "initramfs-framework: Add os-helpers to module prepare"
               hash: 291930ecd3fc7d02ae0b0f6a4012c34f0e697c10
               body: >
-                The different initramfs modules make use of os-helpers so let the
+                The different initramfs modules make use of os-helpers so let
+                the
 
                 prepare module source them.
 
@@ -17720,7 +18031,8 @@
             - subject: Fix initramfs fsck warnings for the boot partition
               hash: 67a59e09c3ae628b4a44828b9152050b9374c2c3
               body: >
-                When running fsck, the tool will complain when needed gconv modules are
+                When running fsck, the tool will complain when needed gconv
+                modules are
 
                 missing. Include them in the initramfs where we fsck the boot partition.
               footer:
@@ -17734,7 +18046,8 @@
             - subject: Switch to built-in FAT kernel configs
               hash: d892362e92f8af709aa000dfb328f2931aedfb85
               body: >
-                balenaOS uses FAT as a fs type for the boot/first partition. This is
+                balenaOS uses FAT as a fs type for the boot/first partition.
+                This is
 
                 currently hardcoded so let's have the related kernel configs built in
 
@@ -17961,7 +18274,8 @@
                     - subject: Bump acorn from 5.7.3 to 5.7.4
                       hash: f8363fc72b21386cc3561be576d8f21ec0463c89
                       body: >
-                        Bumps [acorn](https://github.com/acornjs/acorn) from 5.7.3 to 5.7.4.
+                        Bumps [acorn](https://github.com/acornjs/acorn) from
+                        5.7.3 to 5.7.4.
 
                         - [Release notes](https://github.com/acornjs/acorn/releases)
 
@@ -17988,7 +18302,8 @@
                     - subject: Allow semver comparison on l4t versions in contracts
                       hash: 5c50f656c33954de6f4c07f8b6c892b4bf9953cf
                       body: >
-                        We add an implicit .0 to the end of l4t versions which do not fulfill
+                        We add an implicit .0 to the end of l4t versions which
+                        do not fulfill
 
                         semver, which allows us to always match using comparison operators, such
 
@@ -18074,7 +18389,8 @@
                 package various iwlwifi firmware separately
               hash: bd9aff4b3bdfdfe9b5c8dd1bbee397154d6144fd
               body: >
-                We also package separately the firmware for Intel Wireless-AC 9260
+                We also package separately the firmware for Intel Wireless-AC
+                9260
 
                 cards and also package separetely the wifi and bluetooth firmware for
 
@@ -18115,7 +18431,8 @@
                 in balena.service)
               hash: f4df857f8fb2b811d9e23b0419c99894eaa5bb32
               body: >
-                We need to allow user containers to do some clean-up if they wish to on
+                We need to allow user containers to do some clean-up if they
+                wish to on
 
                 reboot / shutdown through systemctl so let's add KillMode set to process
 
@@ -18165,7 +18482,8 @@
             - subject: Fix a typo in a NetworkManager plugin path
               hash: ebd97f14fbbb71663e24590e9f1a3c1b9d42d8bd
               body: >
-                ppp version is 2.4.7. Without defining the right path, the path defaults
+                ppp version is 2.4.7. Without defining the right path, the path
+                defaults
 
                 to v2.4.5 in NM configure scripts.
 
@@ -18189,7 +18507,8 @@
             - subject: Remove unnecessary openvpn v2.4.4 recipe in meta-resin-pyro.
               hash: bf3bacb6d44863687365129e1c282d36003ceaa9
               body: >
-                This is an old version of openvpn. Devices still on pyro should be using
+                This is an old version of openvpn. Devices still on pyro should
+                be using
 
                 the openvpn version from meta-balena-common and not this one. Removing
 
@@ -18309,7 +18628,8 @@
             - subject: Add periodic vacuuming of journald log files
               hash: e45761e1e3b57a1f42075924741063ac94fc788c
               body: >
-                Daily vacuuming of log files to avoid the partition filling up if
+                Daily vacuuming of log files to avoid the partition filling up
+                if
 
                 corrupted files appear.
 
@@ -18402,7 +18722,8 @@
             - subject: Increase DNS clients timeout to 15 seconds
               hash: b4122eeea971dfc9325885cc7c896c733cf60920
               body: >
-                The DNS clients (applications) resolver libraries use the timeout value in
+                The DNS clients (applications) resolver libraries use the
+                timeout value in
 
                 /etc/resolv.conf to set the time between DNS attempts. The default is 5
 
@@ -18441,7 +18762,8 @@
             - subject: Enable memory overcommit
               hash: 20d9e3114dc28683ea2c15cecfcae6ff93d22bec
               body: >
-                Move the memory overcommit settings from the Raspberry Pi integration
+                Move the memory overcommit settings from the Raspberry Pi
+                integration
 
                 layer to meta-balena so it applies to all device types.
 
@@ -18576,7 +18898,8 @@
                 CTRL+C in all OS versions
               hash: 621037371b3c272ecb6bfd50cfbdad4eca0a02ea
               body: >
-                We do not want by default that any OS variants allow for stopping the
+                We do not want by default that any OS variants allow for
+                stopping the
 
                 autoboot in any way and letting users enter the u-boot shell. This can
 
@@ -18594,7 +18917,8 @@
             - subject: Increase NTP polling time to around 4.5 hours.
               hash: 4a47b9297b37277a9aece0ea322e706dbe473f12
               body: >
-                This commit increases the default NTP poll rate to around 4.5 hours.
+                This commit increases the default NTP poll rate to around 4.5
+                hours.
 
 
                 BalenaOS uses chronyd for time synchronization, and it allows to specify
@@ -18712,7 +19036,8 @@
             - subject: Remove networkmanager stale temporary files at startup
               hash: 1234b29d7a4b007fd25247d38d9027e4f6e9e709
               body: >
-                Reports indicate that NetworkManager can leave stale temporary files on
+                Reports indicate that NetworkManager can leave stale temporary
+                files on
 
                 the state partition that over time can affect the device's operability.
 
@@ -18935,7 +19260,8 @@
             - subject: No user impact, subtle fix in rollback version checks
               hash: 38717507b93962d199e07d9093382b8db4ec5d81
               body: >
-                ESR releases have the VERSION string in /etc/os-release in a date
+                ESR releases have the VERSION string in /etc/os-release in a
+                date
 
                 format. 2019.10.0 etc.
 
@@ -19001,7 +19327,8 @@
                 some reason
               hash: 074f42aeaf98d2ede68a29d7f7d97cd17dc61f15
               body: >
-                The default behaviour is Restart=on-abort inherited from upstream.
+                The default behaviour is Restart=on-abort inherited from
+                upstream.
 
                 Lets make it Restart=always
 
@@ -19067,7 +19394,8 @@
                 is no delay
               hash: ff9e5c26ce7caa694725d7009943db0713655be6
               body: >
-                Customers usually don't need this delay during u-boot. Also in some
+                Customers usually don't need this delay during u-boot. Also in
+                some
 
                 cases, hardware attached on the uart pins might pause uboot preventing
 
@@ -19110,7 +19438,8 @@
             - subject: "resin-supervisor: Expose container ID via env variable"
               hash: 27d76cd9441ad427342f53b7e5b865129dd05557
               body: >
-                The supervisor needs to know its container ID on the context of different
+                The supervisor needs to know its container ID on the context of
+                different
 
                 engine objects cleanup tasks, so it can understand what objects are
 
@@ -19156,7 +19485,8 @@
                 precautionary measure.
               hash: 67bff0700e921a8adbceb4a3b77af2ed39415fa8
               body: >
-                PasswordAuthentication defaults to yes. Make it no for production
+                PasswordAuthentication defaults to yes. Make it no for
+                production
 
                 images.
 
@@ -19178,7 +19508,8 @@
             - subject: Update balena-engine to 18.9.10
               hash: 9fa56fef4b2b34671951a09e241bb2623dd6d96c
               body: >
-                Includes feature to populate container environment with container id
+                Includes feature to populate container environment with
+                container id
 
                 variable and bug fix for tagging deltas on the fly.
               footer:
@@ -19234,7 +19565,8 @@
             - subject: Add support for balena cloud SSH public keys
               hash: 76e774ff132d7cf23a729c3d587c9fd1354a969f
               body: >
-                When we have an API endpoint and key, we can query the API to get the
+                When we have an API endpoint and key, we can query the API to
+                get the
 
                 user public keys and use them to try to authenticate over SSH.
               footer:
@@ -19248,7 +19580,8 @@
             - subject: Map any user to root using libnss-ato
               hash: 55ba5767199205ee945a5e69152a28e023e35397
               body: >
-                This module was included to be able to map any user to root. This
+                This module was included to be able to map any user to root.
+                This
 
                 is required by the balena-cloud backend.
               footer:
@@ -19262,7 +19595,8 @@
             - subject: Add option to disable kernel headers from being built.
               hash: 1f5940898a654c770858f802ea978ddb986082f4
               body: >
-                These can take quite a bit of build time. Add an option to disable
+                These can take quite a bit of build time. Add an option to
+                disable
 
                 the recipes from being built.
 
@@ -19309,7 +19643,8 @@
                 reason
               hash: b5574aeb86ea6b6763f1c25c4b53a45d3e207eb5
               body: >
-                We would just check for the existence of console=null in kernel cmdline
+                We would just check for the existence of console=null in kernel
+                cmdline
 
 
                 A better way would be to check the presence of a valid symlink for fd0,
@@ -19328,7 +19663,8 @@
             - subject: Add automated testing for external kernel module header tarballs
               hash: aef272d20b471308790bfa63426f73a3ce334884
               body: >
-                We'd like to run a simple hello-world external module build test using
+                We'd like to run a simple hello-world external module build test
+                using
 
                 the headers we have generated. This recipe does that in a docker
 
@@ -19370,7 +19706,8 @@
                 balenaEngine
               hash: a79f18a3e094721d1fc134afbae7a4773b697414
               body: >
-                The default driver is cgroupfs. We switch to systemd so that there is
+                The default driver is cgroupfs. We switch to systemd so that
+                there is
 
                 one cgroup manager in our OS.
 
@@ -19429,7 +19766,8 @@
                 when altboot triggered
               hash: 856a3d1ad8dbf3b7a87689bbedac23c9148b3d79
               body: >
-                PR #1441 changed mnt-sysroot-inactive to an automount. But there is no
+                PR #1441 changed mnt-sysroot-inactive to an automount. But there
+                is no
 
                 way to easily add a udev dependency to the automount. As a result,
 
@@ -19464,7 +19802,8 @@
             - subject: Fix a hang in initramfs for warrior production images
               hash: 4c44265a7dd13760a89c235068500bf6f315f651
               body: >
-                When `console=null` is passed in the kernel cmdline for production
+                When `console=null` is passed in the kernel cmdline for
+                production
 
                 images, the system doesn't boot. Traced to initramfs not starting any
 
@@ -19497,7 +19836,8 @@
             - subject: Avoid overlayfs mounts in poky's volatile-binds
               hash: b7b6163d955a3bf76a1759b60ed82ccc5fcce6d0
               body: >
-                Our root filesystem is overlayfs or aufs. When latter, the system
+                Our root filesystem is overlayfs or aufs. When latter, the
+                system
 
                 crashes when reading a lower directory file. We avoid this by always
 
@@ -19531,7 +19871,8 @@
                 filled the state partition. Vacuum the journal on boot.
               hash: 8284da08f245ed6da8308d558bb8dfcc66de9691
               body: >
-                We have found a rare corner case bug where the journal bloats beyond
+                We have found a rare corner case bug where the journal bloats
+                beyond
 
                 its limit and fills the state partition. Triggering a vacuum on reboot
 
@@ -19615,7 +19956,8 @@
                 rollback.
               hash: 7e5843d6542d13d278d2a42da2f787ada8bfa229
               body: >
-                After a HUP, until rollbacks clears its state, the supervisor(or user)
+                After a HUP, until rollbacks clears its state, the supervisor(or
+                user)
 
                 can trigger good reboots. These reboots might be seen by the bootloader
 
@@ -19641,7 +19983,8 @@
                 2 seconds delay for development images
               hash: f50952f6e91541f4c07ef14612a71174b9417124
               body: >
-                We'd like to split dev and prod uboot config fragments. Dev images can
+                We'd like to split dev and prod uboot config fragments. Dev
+                images can
 
                 have a 2 second u-boot delay to facilitate debugging. While prod images
 
@@ -19660,7 +20003,8 @@
                 Required for rollbacks to work
               hash: 7051a1bda83d53e08148eea953ee2653fd915743
               body: >
-                We'd like to enable some config options for all devices via meta-balena
+                We'd like to enable some config options for all devices via
+                meta-balena
 
 
                 The support is mainline since warrior. Lets copy it in meta-balena
@@ -19685,7 +20029,8 @@
                 meta-balena.
               hash: aa0a389ea92a71123813f291833fea61f4965164
               body: >
-                U-boot has its own bootcount framework. However, that will require
+                U-boot has its own bootcount framework. However, that will
+                require
 
                 handling in each device type. We will use u-boot shell commands
 
@@ -19844,7 +20189,8 @@
                 container as well
               hash: 15169084fe9355e6be997712a614e383a71555c9
               body: >
-                Occasionally balena ps and balena info work but the balena daemon is
+                Occasionally balena ps and balena info work but the balena
+                daemon is
 
                 unable to start a new container. This is usually when something in runc
 
@@ -19921,7 +20267,8 @@
             - subject: Reduce data partition size from 1G to 192M
               hash: 2270940edfd32a4dd3a3670aa1fb62eb2557f706
               body: >
-                The data partition contains the supervisor which is only about 61M on
+                The data partition contains the supervisor which is only about
+                61M on
 
                 the pi3. We compress the data partition later on so don't notice these
 
@@ -20093,7 +20440,8 @@
                 issue on kernel 5.0.3
               hash: 10846e50674185b7c3126e45ad42f3927c822415
               body: >
-                This version fixes the use of wrong fixdep binary (the bug makes it use
+                This version fixes the use of wrong fixdep binary (the bug makes
+                it use
 
                 target fixdep binary instead of cross fixdep binary) used for compiling
 
@@ -20154,7 +20502,8 @@
             - subject: Fix kernel-devsrc on thud when kernel version < 4.10
               hash: c4cd6307ac3ae86a8d34b91d9dc82b6d3310db9b
               body: >
-                Thud breaks when building against kernel version < 4.10. This is a known
+                Thud breaks when building against kernel version < 4.10. This is
+                a known
 
                 issue which is fixed in poky warrior[1]. This patch includes a
 
@@ -20176,7 +20525,8 @@
             - subject: Fix VERSION_ID os-release to be semver complient
               hash: fecb50757c10e392d46dec6fd24360f778a87a43
               body: >
-                Poky, following os-release(5), sanitizes VERSION_ID accordingly but in
+                Poky, following os-release(5), sanitizes VERSION_ID accordingly
+                but in
 
                 doing so it produces a nonisemver compliant version. For example:
 
@@ -20198,8 +20548,8 @@
             - subject: Introduce META_BALENA_VERSION in os-release
               hash: b0e0c77a26f3fad51e2923ab416fdd2af2a5a033
               body: >
-                Since #1550, os-release doesn't reference meta-balena distro version
-                anymore. Restore
+                Since #1550, os-release doesn't reference meta-balena distro
+                version anymore. Restore
 
                 that by providing this information in a new variable called META_BALENA_VERSION.
 
@@ -20215,7 +20565,8 @@
                 file at build time and using stale values.
               hash: b40271867c3249566775cfb870a6176bc47d503f
               body: >
-                Currently once config_resin.h is generated, a change in these variables
+                Currently once config_resin.h is generated, a change in these
+                variables
 
                 doesn't regenerate the file. Add vardeps so that bitbake can regenerate
 
@@ -20236,7 +20587,8 @@
             - subject: Use all.rp_filter=2 as the default value in balenaOS
               hash: 2fe90f3316a9394db0a060ec976d23fa97d4f00a
               body: >
-                This change backports a PR[1] that is already in systemd and will come
+                This change backports a PR[1] that is already in systemd and
+                will come
 
                 included by default from the version in Yocto warrior.
 
@@ -20266,7 +20618,8 @@
             - subject: Persist bluetooth storage data over reboots
               hash: 3815e42f24167c0ce84a39cf0653434bacb0bd88
               body: >
-                Currently, bluez's storage data is set to /var/lib/bluetooth which
+                Currently, bluez's storage data is set to /var/lib/bluetooth
+                which
 
                 in turn is a tmpfs location. We want this location persistent so we can
 
@@ -20289,7 +20642,8 @@
             - subject: Drop support for morty and krogoth Yocto versions
               hash: 85c1eda1eeade2e5d5a1153d9c737225de0b3ee2
               body: >
-                We have been deprecating these layers since v2.30.0. It's time to drop
+                We have been deprecating these layers since v2.30.0. It's time
+                to drop
 
                 this support completely.
               footer:
@@ -20314,7 +20668,8 @@
             - subject: Set both VERSION_ID and VERSION in os-release to host OS version
               hash: 40347f618b3b70ccc5f40e924990197ae9fa7e6b
               body: >
-                VERSION and VERSION_ID had a slightly different semantics in balenaOS.
+                VERSION and VERSION_ID had a slightly different semantics in
+                balenaOS.
 
                 VERSION was referring to the BalenaOS (host OS) version (which is coming from
 
@@ -20336,7 +20691,8 @@
             - subject: Bump balena-engine to 18.9.6
               hash: 3af08fe6d30b5f0f8148c6820cda1cca3076bf00
               body: >
-                In preparation for warrior. Bumps containerd which works with the newer
+                In preparation for warrior. Bumps containerd which works with
+                the newer
 
                 systemd in warrior.
               footer:
@@ -20350,7 +20706,8 @@
             - subject: Downgrade balena-supervisor to v9.15.7
               hash: c3616e19967e30726048018161fd4763d3d45773
               body: >
-                This is done because a feature (RESIN_SUPERVISOR_MIXPANEL_REPORT) needs
+                This is done because a feature
+                (RESIN_SUPERVISOR_MIXPANEL_REPORT) needs
 
                 more work before releasing in production.
               footer:
@@ -20364,7 +20721,8 @@
             - subject: Switch from dropbear to openSSH
               hash: ef33f21cdb7283c6f62590b1fe3d37c7fbd4df99
               body: >
-                This is done for the "AuthorizedKeysCommand" in openSSH which in turn is
+                This is done for the "AuthorizedKeysCommand" in openSSH which in
+                turn is
 
                 used by the balena backend.
 
