@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v3.2.6
+## (2023-08-23)
+
+
+<details>
+<summary> Update layers/meta-balena to e390695280de65b7e451afe624daaeea31dde595 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.2.6
+> ### (2023-08-23)
+> 
+> * resin-u-boot.class: Fix for older u-boot versions [Alex Gonzalez]
+> 
+
+</details>
+
 # v3.2.5+rev2
 ## (2023-08-23)
 
