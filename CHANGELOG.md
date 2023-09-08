@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v4.0.1
+## (2023-09-08)
+
+
+<details>
+<summary> Update layers/meta-balena to 6db6c7c9774bf58dc4676816280f81fae83df78e [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-4.0.1
+> ### (2023-09-08)
+> 
+> * classes: sign: add a retry to the signing call [Alex Gonzalez]
+> 
+
+</details>
+
 # v4.0.0
 ## (2023-09-06)
 
