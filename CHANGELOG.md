@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v4.0.4
+## (2023-09-11)
+
+
+<details>
+<summary> Update layers/meta-balena to 5ebb6671a99eaaa577e03fd16290d25493d05ee2 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-4.0.4
+> ### (2023-09-11)
+> 
+> * renovate updates patch only [ab77]
+> 
+
+</details>
+
 # v4.0.3
 ## (2023-09-09)
 
