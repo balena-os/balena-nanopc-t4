@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v4.0.5
+## (2023-09-13)
+
+
+<details>
+<summary> Update layers/meta-balena to cd6279920e902422377cd21d81584ccf1791676c [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-4.0.5
+> ### (2023-09-13)
+> 
+> * tests: os: retry healthcheck disable [rcooke-warwick]
+> 
+
+</details>
+
 # v4.0.4
 ## (2023-09-11)
 
