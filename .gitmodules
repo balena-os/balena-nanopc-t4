@@ -1,18 +1,24 @@
 [submodule "balena-yocto-scripts"]
 	path = balena-yocto-scripts
 	url = https://github.com/balena-os/balena-yocto-scripts.git
+	branch = master
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
+	branch = thud
 [submodule "layers/meta-nanopc-t4"]
 	path = layers/meta-nanopc-t4
 	url = https://github.com/balena-os/meta-nanopc-t4.git
+	branch = thud
 [submodule "layers/poky"]
 	path = layers/poky
 	url = https://github.com/balena-os/poky
+	branch = thud
 [submodule "layers/meta-balena"]
 	path = layers/meta-balena
 	url = https://github.com/balena-os/meta-balena.git
+	branch = master
 [submodule "contracts"]
 	path = contracts
 	url = https://github.com/balena-io/contracts.git
+	branch = master
