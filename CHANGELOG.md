@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v4.0.9+rev1
+## (2023-09-18)
+
+* Update .gitmodules with submodule branch information [Kyle Harding]
+
 # v4.0.9
 ## (2023-09-16)
 
