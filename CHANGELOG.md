@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v4.0.24
+## (2023-10-11)
+
+
+<details>
+<summary> Update layers/meta-balena to f98f94b3181bfd112b2b88287ae29b134bb4c1ab [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-4.0.24
+> ### (2023-10-11)
+> 
+> * classes: image_types_balena: do not hardcode path to data image [Alex Gonzalez]
+> 
+
+</details>
+
 # v4.0.23+rev1
 ## (2023-10-11)
 
