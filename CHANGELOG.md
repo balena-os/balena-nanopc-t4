@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v4.0.31
+## (2023-10-24)
+
+
+<details>
+<summary> Update layers/meta-balena to 88fa82e720d8cff1a8e9221703661cb3eee4ad6f [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-4.0.31
+> ### (2023-10-24)
+> 
+> * Revert "kernel-balena: Remove apparmor support" [Alex Gonzalez]
+> 
+
+</details>
+
 # v4.0.30
 ## (2023-10-23)
 
