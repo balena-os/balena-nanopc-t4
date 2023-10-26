@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v4.1.1+rev1
+## (2023-10-26)
+
+
+<details>
+<summary> Update contracts to 109179385bb4b862cd7572be14d4c5edddbd93c9 [Self-hosted Renovate Bot] </summary>
+
+> ## contracts-2.0.81
+> ### (2023-10-26)
+> 
+> * hw.device-type: Add imx8mm-lpddr4-evk device [Alex J Lennon]
+> 
+
+</details>
+
 # v4.1.1
 ## (2023-10-25)
 
