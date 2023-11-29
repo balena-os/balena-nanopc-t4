@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.0.1
+## (2023-11-29)
+
+
+<details>
+<summary> Update layers/meta-balena to 0fed99ef0c338962d463b38eb58cd64cdf5804ae [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.0.1
+> ### (2023-11-29)
+> 
+> * Make Engine healthcheck performance test aware of device type [Leandro Motta Barros]
+> 
+
+</details>
+
 # v5.0.0
 ## (2023-11-28)
 
