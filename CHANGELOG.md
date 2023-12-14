@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.0.10
+## (2023-12-14)
+
+
+<details>
+<summary> Update layers/meta-balena to 3f7d62c3108cf8852fc22f67fd2ed910ef12ed19 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.0.10
+> ### (2023-12-13)
+> 
+> * hostapp-update-hooks: add debug mode [Alex Gonzalez]
+> 
+
+</details>
+
 # v5.0.9+rev1
 ## (2023-12-13)
 
