@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.1.2+rev1
+## (2023-12-22)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 0008306e565a95aa51d04a8a0fcc318df3df59a2 [Self-hosted Renovate Bot] </summary>
+
+> ## balena-yocto-scripts-1.19.41
+> ### (2023-12-22)
+> 
+> * automation/balena-deploy: Pin to known working version of balena-img [Alexandru Costache]
+> 
+
+</details>
+
 # v5.1.2
 ## (2023-12-21)
 
