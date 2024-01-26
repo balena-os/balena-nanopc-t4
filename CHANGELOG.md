@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.1.15
+## (2024-01-26)
+
+
+<details>
+<summary> Update layers/meta-balena to ce995ef6820181ce652fee2358913203e7a7b183 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.1.15
+> ### (2024-01-26)
+> 
+> * networkmanager: make FORWARD rules for shared interfaces last in chain [Michal Toman]
+> 
+
+</details>
+
 # v5.1.14
 ## (2024-01-24)
 
