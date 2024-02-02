@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.1.22
+## (2024-02-02)
+
+
+<details>
+<summary> Update layers/meta-balena to 2ba79c7ce73fde702831a041729da21bdff65627 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.1.22
+> ### (2024-02-02)
+> 
+> * balena-rollback/rollback-health: Allow old OS hooks to access efivars [Alexandru Costache]
+> 
+
+</details>
+
 # v5.1.21
 ## (2024-02-01)
 
