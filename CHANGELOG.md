@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.1.26+rev2
+## (2024-02-08)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 6ccd3b1013b6d25ea9990a07a06bee864fe0a172 [Self-hosted Renovate Bot] </summary>
+
+> ## balena-yocto-scripts-1.21.2
+> ### (2024-02-08)
+> 
+> * automation/include: Pass helper image version [Florin Sarbu]
+> 
+
+</details>
+
 # v5.1.26+rev1
 ## (2024-02-07)
 
