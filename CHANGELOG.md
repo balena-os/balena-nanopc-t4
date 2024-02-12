@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.1.30
+## (2024-02-12)
+
+
+<details>
+<summary> Update layers/meta-balena to c9e64a42b8de857356e587b551fc25e83df441a1 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.1.30
+> ### (2024-02-12)
+> 
+> * balena-image-bootloader-initramfs.bb: Add fsck module [Florin Sarbu]
+> 
+
+</details>
+
 # v5.1.29
 ## (2024-02-12)
 
