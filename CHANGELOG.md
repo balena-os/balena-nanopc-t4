@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.1.47+rev1
+## (2024-03-05)
+
+* pass input parameters to common esr workflow [Alex Gonzalez]
+
 # v5.1.47
 ## (2024-03-03)
 
