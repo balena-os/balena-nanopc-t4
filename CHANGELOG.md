@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.1.52
+## (2024-03-11)
+
+
+<details>
+<summary> Update layers/meta-balena to 71c89b66afa1cbf4113ed369b2cb7dd7035791b4 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.1.52
+> ### (2024-03-11)
+> 
+> * images: balena-image-initramfs: remove uneeded kernel image [Alex Gonzalez]
+> * classes: kernel-balena-noimage: add extra space [Alex Gonzalez]
+> 
+
+</details>
+
 # v5.1.51
 ## (2024-03-08)
 
