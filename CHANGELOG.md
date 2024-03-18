@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.2.1
+## (2024-03-18)
+
+
+<details>
+<summary> Update layers/meta-balena to 74e89b4f4904b418882cb3dd9ef2c0bd360d8713 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.2.1
+> ### (2024-03-18)
+> 
+> * networkmanager: Wait for iptables lock in shared dispatcher script [Michal Toman]
+> 
+
+</details>
+
 # v5.2.0
 ## (2024-03-16)
 
