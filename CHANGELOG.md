@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.2.4+rev4
+## (2024-04-11)
+
+
+<details>
+<summary> Update contracts to bdc5ec8ab29021205ce85c9b59f4952b1c4a1283 [Self-hosted Renovate Bot] </summary>
+
+> ## contracts-2.0.102
+> ### (2024-04-11)
+> 
+> * Remove Fedora 36 since it's EOL [Thodoris Greasidis]
+> 
+
+</details>
+
 # v5.2.4+rev3
 ## (2024-04-10)
 
