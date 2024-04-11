@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.2.4+rev5
+## (2024-04-11)
+
+
+<details>
+<summary> Update contracts to d06ad25196f67c4d20ad309941192fdddf80e307 [Self-hosted Renovate Bot] </summary>
+
+> ## contracts-2.0.103
+> ### (2024-04-11)
+> 
+> * Remove Ubuntu Lunar 23.04 since it's EOL [Thodoris Greasidis]
+> 
+
+</details>
+
 # v5.2.4+rev4
 ## (2024-04-11)
 
