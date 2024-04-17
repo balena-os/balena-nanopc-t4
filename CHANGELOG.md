@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.2.8
+## (2024-04-17)
+
+
+<details>
+<summary> Update layers/meta-balena to 5d7a7ecfdc69c481e6e762e38e66b8b291a70e32 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.2.8
+> ### (2024-04-17)
+> 
+> * Test: Unmanaged: Replace ping command in tests with curl [Vipul Gupta (@vipulgupta2048)]
+> 
+
+</details>
+
 # v5.2.7
 ## (2024-04-17)
 
