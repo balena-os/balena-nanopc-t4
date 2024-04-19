@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.2.8+rev1
+## (2024-04-19)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 45b33b1ab2a550bd8292e61139c7e1316d75219c [Self-hosted Renovate Bot] </summary>
+
+> ## balena-yocto-scripts-1.21.7
+> ### (2024-04-19)
+> 
+> * Add missing $select for release_asset.asset_key [Thodoris Greasidis]
+> 
+
+</details>
+
 # v5.2.8
 ## (2024-04-17)
 
