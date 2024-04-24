@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.3.1
+## (2024-04-24)
+
+
+<details>
+<summary> Update layers/meta-balena to 2e58bc5bb95af8ab7f27a3943ebb34761424445c [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.3.1
+> ### (2024-04-24)
+> 
+> * tests: os: address race in internet con. sharing tests [rcooke-warwick]
+> 
+
+</details>
+
 # v5.3.0
 ## (2024-04-24)
 
