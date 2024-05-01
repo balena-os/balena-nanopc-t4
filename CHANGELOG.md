@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.3.3
+## (2024-05-01)
+
+
+<details>
+<summary> Update layers/meta-balena to cc46d73fa73a599f744a2f06a6c6983d76a45a41 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.3.3
+> ### (2024-05-01)
+> 
+> * docs: elaborate automated testing requirement in board support guide [rcooke-warwick]
+> 
+
+</details>
+
 # v5.3.2+rev2
 ## (2024-04-30)
 
