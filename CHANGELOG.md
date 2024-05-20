@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.3.6
+## (2024-05-20)
+
+
+<details>
+<summary> Update layers/meta-balena to c7d68bb9a14aba972c692212dd41264f78527c38 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.3.6
+> ### (2024-05-20)
+> 
+> * peak: Update to version 8.17.0 [Florin Sarbu]
+> 
+
+</details>
+
 # v5.3.5
 ## (2024-05-16)
 
