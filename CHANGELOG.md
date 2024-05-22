@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.3.7
+## (2024-05-22)
+
+
+<details>
+<summary> Update layers/meta-balena to 98a8dc813fb1df71c510732e14fa31446ef883e6 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.3.7
+> ### (2024-05-22)
+> 
+> * tests: os: modem: fix curl command [rcooke-warwick]
+> 
+
+</details>
+
 # v5.3.6
 ## (2024-05-20)
 
