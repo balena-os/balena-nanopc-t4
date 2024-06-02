@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.3.14
+## (2024-06-02)
+
+
+<details>
+<summary> Update layers/meta-balena to 9e95be489587395fec796dc6969fc7d78cf81f77 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.3.14
+> ### (2024-06-02)
+> 
+> * rtl8192cu: Remove this unmaintained out-of-tree kernel driver [Florin Sarbu]
+> 
+
+</details>
+
 # v5.3.13+rev1
 ## (2024-06-02)
 
