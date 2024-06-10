@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.3.19
+## (2024-06-10)
+
+
+<details>
+<summary> Update layers/meta-balena to 6d6ebe2b54ad45236c5fe53c1cc046cf350efdbe [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.3.19
+> ### (2024-06-10)
+> 
+> * kernel-balena: do not use cache for signed kernel modules [Alex Gonzalez]
+> 
+
+</details>
+
 # v5.3.18
 ## (2024-06-10)
 
