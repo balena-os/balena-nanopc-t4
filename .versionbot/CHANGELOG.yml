@@ -1,4 +1,58 @@
 - commits:
+    - subject: Update balena-yocto-scripts to bdd131fd36a3edcc9a1bb2af493794ced60379a6
+      hash: 072d321c11ee1fe593b1d51a0c29e09ee8696bed
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to bdd131fd36a3edcc9a1bb2af493794ced60379a6
+        changelog-entry: Update balena-yocto-scripts to bdd131fd36a3edcc9a1bb2af493794ced60379a6
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Update job conditions to allow non-PR events for internal branches
+              hash: 2d0f1029d7b5489feb7c98d749ff66c8faf2f1e7
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Hardcode environment paths at the job level
+              hash: 5dc710c0cc5d8a1c0da97bbb9d39fdb51f5a4497
+              body: |
+                This is easier to read and less likely to break
+                with unexpected values.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Replace test inputs with a single JSON matrix input
+              hash: 0d6cb8ac05fec8dd314f12e5335f847ef3f8ab78
+              body: |
+                This allows full control over which test conditions are
+                used for each test job without combinatorial explosion.
+
+                For example, different environments could be used for
+                specific test suites, or the cloud suite could be run
+                twice while the other suites run once.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.22.4
+          title: ""
+          date: 2024-06-14T15:57:11.418Z
+  version: 5.3.21+rev2
+  title: ""
+  date: 2024-06-14T20:55:00.243Z
+- commits:
     - subject: Update balena-yocto-scripts to cd813faad0e261ad00f791c8788c8f70a0a32a2d
       hash: 8cb45b67eb6d11cdc4e1fa3fe9d22c390fada2c1
       body: Update balena-yocto-scripts
