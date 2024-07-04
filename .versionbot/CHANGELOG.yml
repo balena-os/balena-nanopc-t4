@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to e1d709a6f00e8dd3271a3c84d9fb6430cedec485
+      hash: f6f4c8a9d6d85014a945e9ae72b758e7acd395bd
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to e1d709a6f00e8dd3271a3c84d9fb6430cedec485
+        changelog-entry: Update layers/meta-balena to e1d709a6f00e8dd3271a3c84d9fb6430cedec485
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "workflows: fix linter errors"
+              hash: cd2e5faba65a6598952999953fcd4eb64520ac3a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-5.3.24
+          title: ""
+          date: 2024-07-04T17:12:37.404Z
+  version: 5.3.24
+  title: ""
+  date: 2024-07-04T20:12:49.025Z
+- commits:
     - subject: Update layers/meta-balena to e6c2037615db74af70250c5d3351c44e2ee31fbb
       hash: 43c8eb0384431f3831ea54bb956c1d27694ee69a
       body: Update layers/meta-balena

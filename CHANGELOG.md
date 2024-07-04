@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.3.24
+## (2024-07-04)
+
+
+<details>
+<summary> Update layers/meta-balena to e1d709a6f00e8dd3271a3c84d9fb6430cedec485 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.3.24
+> ### (2024-07-04)
+> 
+> * workflows: fix linter errors [Alex Gonzalez]
+> 
+
+</details>
+
 # v5.3.23
 ## (2024-07-02)
 
