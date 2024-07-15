@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file
 
+# v5.4.0+rev1
+## (2024-07-15)
+
+
+<details>
+<summary> Update contracts to 17b44ca078f3bca2193858559d1276cc48680531 [Self-hosted Renovate Bot] </summary>
+
+> ## contracts-2.0.107
+> ### (2024-07-15)
+> 
+> * beagleplay: Fix provisioning instructions [Alexandru]
+> 
+
+</details>
+
 # v5.4.0
 ## (2024-07-13)
 
