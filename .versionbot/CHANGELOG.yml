@@ -1,4 +1,48 @@
 - commits:
+    - subject: Update contracts to 6d69a05508a9232ba593962c62dc9dd133dee616
+      hash: e1a9ed9c909f2b32d7fd14697e27141a2b6bb6ab
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 6d69a05508a9232ba593962c62dc9dd133dee616
+        changelog-entry: Update contracts to 6d69a05508a9232ba593962c62dc9dd133dee616
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hw.device-type: Update provisioning instructions for AGX Orin 64GB"
+              hash: f8d665f044ea2e39a100fb865ffd5f8a8f4ae65f
+              body: >
+                The AGX Orin 64GB should be provisioned on the eMMC by default
+                as per the internal thread
+                https://balena.zulipchat.com/#narrow/stream/346009-aspect.2Fcustomer-success/topic/Get.20feedback.20on.20draft.20balenaOS.20with.20L4T.2036.2E3.20for.20Jetson.20Orin/near/455889690
+
+
+                We thus update the provisioning instructions accordingly
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+          version: contracts-2.0.109
+          title: ""
+          date: 2024-08-06T08:44:06.923Z
+        - commits:
+            - subject: "hw.device-type: Add new device-type Jetson AGX Orin 64GB Devkit"
+              hash: b329046af8d6427955627231ba0d332d23dc0f87
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.108
+          title: ""
+          date: 2024-07-25T08:53:00.318Z
+  version: 6.0.2+rev1
+  title: ""
+  date: 2024-08-06T12:21:08.332Z
+- commits:
     - subject: Update layers/meta-balena to ba25d479aec53db0a1f20667026e57fe47461ebb
       hash: c5a4aa9ff0ade0d491c54708fc6bb8bb237ef663
       body: Update layers/meta-balena
